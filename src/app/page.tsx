@@ -632,7 +632,9 @@ export default function HomePage() {
                 onClick={() => { setSelectedProvider(null); setStep("data-source"); }}
                 className="group card-premium flex min-h-[250px] flex-col p-6 text-left transition-colors duration-200 ease-out hover:bg-brand-soft/30 hover:ring-brand/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
               >
-                <FocusWordmark className="mb-5 h-12 w-44" />
+                <div className="mb-5 flex min-h-[5rem] items-start">
+                  <FocusWordmark className="h-12 w-44 max-w-full" />
+                </div>
                 <h4 className="font-semibold text-ink text-[15px]">
                   {locale === "es" ? "Análisis multicloud" : "Multicloud analysis"}
                 </h4>
@@ -1226,11 +1228,11 @@ function CloudCard({ provider, label, description, formats, Logo, highlighted = 
           : "hover:bg-brand-soft/30 hover:ring-brand/30"
       }`}
     >
-      <div className="mb-5 flex items-start justify-between gap-3">
-        <Logo className="h-12 w-44" />
+      <div className="mb-5 flex min-h-[5rem] flex-col items-start gap-2">
+        <Logo className="h-12 w-44 max-w-full shrink-0" />
         {highlighted && (
-          <span className="inline-flex items-center gap-1.5 pt-1 text-xs font-semibold text-positive">
-            <CheckCircle size={17} weight="fill" aria-hidden="true" />
+          <span className="inline-flex min-h-6 items-center gap-1.5 whitespace-nowrap text-xs font-semibold text-positive">
+            <CheckCircle className="shrink-0" size={16} weight="fill" aria-hidden="true" />
             {locale === "es" ? "Integración en vivo" : "Live integration"}
           </span>
         )}
