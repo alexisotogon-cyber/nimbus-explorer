@@ -61,25 +61,36 @@ Las demos usan datos sintéticos reproducibles. La misma combinación de
 proveedor, complejidad y variante genera siempre el mismo resultado.
 
 
-## Capturas e imágenes de Nimbus Explorer
+## Nimbus en acción
 
-### Selección del proveedor
+### 1. Un punto de entrada para cada nube
 
-![Selección de proveedor de nube](docs/images/inicio.png)
+[![Selección de AWS, Azure, Google Cloud y FOCUS](docs/images/01-proveedores.png)](docs/images/01-proveedores.png)
 
-<br><br>
+### 2. La factura convertida en una decisión financiera
 
-### Carga de datos de AWS
+[![Resumen ejecutivo con gasto, ahorro y conciliación](docs/images/03-resumen-ejecutivo.png)](docs/images/03-resumen-ejecutivo.png)
 
-![Panel AWS para carga de datos](docs/images/aws.png)
+### 3. Cada oportunidad explica qué hacer y qué validar
 
-<br><br>
+[![Oportunidad FinOps con ahorro, evidencia y siguiente acción](docs/images/04-oportunidad-finops.png)](docs/images/04-oportunidad-finops.png)
 
+<details>
+<summary><strong>Ver el recorrido completo</strong></summary>
 
+### Carga de datos y demos reproducibles
 
+![Carga de facturación AWS](docs/images/02-carga-aws.png)
 
+### Escenarios de ahorro
 
+![Simulador determinístico de escenarios](docs/images/05-escenarios.png)
 
+### Atlas con el contexto de la auditoría
+
+![Atlas sobre los resultados del análisis](docs/images/06-atlas-contextual.png)
+
+</details>
 
 ## Qué lo hace diferente
 
