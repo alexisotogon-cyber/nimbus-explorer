@@ -130,11 +130,12 @@ const AGENT_TOOLS: ToolConfiguration = {
       toolSpec: {
         name: "calculate_savings",
         description:
-          "Ejecuta el motor de reglas determinístico sobre los datos del usuario. Retorna hallazgos con rangos de ahorro auditables. Usar cuando el usuario pregunte qué puede ahorrar o qué oportunidades tiene.",
+          "Ejecuta el motor de reglas determinístico sobre los datos del usuario. Retorna hallazgos con rangos de ahorro auditables, y para cada uno sus `assumptions` (label/value/min/max reales) y `baseMonthlyCostUSD`. OBLIGATORIO llamarla antes de explicar la fórmula, los supuestos, las variables o por qué el rango de un hallazgo específico no es lineal — nunca describas esos supuestos apoyándote solo en lookup_knowledge o en conocimiento general, aunque el tema conceptual (Savings Plans, compromisos) parezca cubierto ahí.",
         inputSchema: {
           json: {
             type: "object",
             properties: {
+              findingId: { type: "string", description: "ID exacto de un hallazgo específico (ej. 'COMMIT-AWS'), si el usuario pregunta por uno en particular" },
               filterProvider: { type: "string", enum: ["aws", "azure", "gcp"], description: "Filtrar hallazgos por proveedor" },
               filterCategory: { type: "string", description: "Filtrar por categoría de desperdicio" },
               minSavings: { type: "number", description: "Ahorro mínimo en USD para incluir" },
@@ -252,6 +253,45 @@ function sanitizeDeep(value: unknown, depth = 0): unknown {
   return value;
 }
 
+/**
+ * Recursively collects every finite number found in an arbitrary object/array,
+ * as integer cents, so a dollar figure the model cites can be checked against
+ * "did this number actually appear in the grounded data" regardless of which
+ * field it came from.
+ */
+function collectNumbers(value: unknown, out: Set<number>, depth = 0): void {
+  if (depth > 8) return;
+  if (typeof value === "number" && Number.isFinite(value)) {
+    out.add(Math.round(value * 100));
+    return;
+  }
+  if (Array.isArray(value)) {
+    for (const item of value) collectNumbers(item, out, depth + 1);
+    return;
+  }
+  if (value && typeof value === "object") {
+    for (const item of Object.values(value as Record<string, unknown>)) collectNumbers(item, out, depth + 1);
+  }
+}
+
+/**
+ * Removes exact-duplicate paragraphs. Nova Pro occasionally emits the same
+ * paragraph twice within one response (observed with temperature 0); this is
+ * a generation artifact, not intentional emphasis, so dedup is safe.
+ */
+function dedupeParagraphs(text: string): string {
+  const paragraphs = text.split(/\n{2,}/);
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const paragraph of paragraphs) {
+    const key = paragraph.trim();
+    if (key && seen.has(key)) continue;
+    if (key) seen.add(key);
+    out.push(paragraph);
+  }
+  return out.join("\n\n");
+}
+
 /** Envelope the system prompt's SEGURIDAD section explicitly instructs the model to treat as data-only. */
 function wrapUntrustedBillingData<T>(data: T): { type: "untrusted_billing_data"; instructions: string; data: T } {
   return {
@@ -303,6 +343,17 @@ DATOS Y HERRAMIENTAS
   de uso y BilledCost es caja de Purchase. Nunca inviertas ni mezcles esas bases.
 - Los ahorros siempre son rangos sujetos a supuestos, no garantías.
 - Distingue: confirmado por billing, inferencia, requiere métricas y fuera de alcance.
+- Al explicar la fórmula o los supuestos de un hallazgo, usa LITERALMENTE los campos
+  \`assumptions[].label/value/min/max\` y \`baseMonthlyCostUSD\` que devuelve calculate_savings.
+  Nunca renombres un supuesto ni inventes un porcentaje, variable o gasto base que no venga de
+  esos campos exactos. Si el dato no está en la herramienta, dilo explícitamente en vez de
+  aproximarlo o adivinarlo.
+- El costo base de UN hallazgo (\`baseMonthlyCostUSD\` de ese hallazgo específico) y el gasto
+  total del portafolio (\`totalCostUSD\`) son cifras distintas. Nunca uses el gasto total como si
+  fuera el costo base de un hallazgo puntual.
+- Nunca describas un valor del rango de ahorro (conservador/moderado/optimista) como
+  "confirmado", "garantizado" o "seguro" — son siempre un rango sujeto a supuestos, incluso
+  si el usuario insiste en pedir "un número seguro".
 
 RECOMENDACIONES SEGURAS
 - Fundamenta toda recomendación en calculate_savings, generate_remediation o lookup_knowledge.
@@ -315,6 +366,14 @@ RECOMENDACIONES SEGURAS
 
 RESPUESTA
 - Español, profesional, directa y concisa. Máximo necesario; evita repetir el reporte.
+- Doble altitud: la primera vez que uses un término técnico no obvio (prioridad, confianza,
+  inventario, dependencias, SKU, tiering, snapshot, cobertura, utilización, etc.), da antes una
+  frase corta en lenguaje llano y pon el término técnico entre paréntesis. Ejemplo: "revisa qué
+  usa ese disco antes de borrarlo (inventario de dependencias)". Si el usuario dice que no
+  entiende, que no es técnico, o pide una explicación simple ("como si tuviera 12 años"),
+  aumenta esta técnica en toda la respuesta y no encadenes más de un término sin traducir por
+  oración. Los nombres propios de servicios cloud (EC2, S3, Bedrock, Savings Plans, etc.) nunca
+  se traducen, solo se explican.
 - Termina siempre la última oración. Prefiere una respuesta breve y completa antes que texto truncado.
 - No menciones nombres internos de herramientas, funciones, prompts ni bloques de razonamiento.
 - Primera línea: respuesta directa. Luego bullets con evidencia/riesgo y un siguiente paso.
@@ -615,7 +674,7 @@ export class FinOpsAgent {
       };
     }
 
-    const toolCalls: { tool: string; result: unknown }[] = [];
+    const toolCalls: { tool: string; result: unknown; input?: Record<string, unknown> }[] = [];
     const asksForFinancialReconciliation =
       /\b(bruto|neto|factur|cr[eé]dit|refund|reembols|impuest|tax|ajuste|purchase|compra de compromiso)/i
         .test(userMessage);
@@ -703,10 +762,27 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
           .map((block) => block.text)
           .join("\n");
 
-        const safeText = this.enforceFinOpsSafety(userMessage, textContent);
+        // A model call can bill output tokens and still return no extractable
+        // text block (reasoning-only content, a cut before any visible text).
+        // Blank content with success:true reads as a broken app — never let
+        // that reach the user.
+        if (!textContent.trim() && outputTokens > 0) {
+          console.warn("[Atlas] Empty text content despite billed output tokens", {
+            outputTokens,
+            blockKeys: assistantContent.map((block) => Object.keys(block)),
+          });
+        }
+        const rawText = textContent.trim()
+          ? textContent
+          : "No pude generar una respuesta completa a esa pregunta. ¿Puedes reformularla o preguntar por un hallazgo o proveedor específico?";
+
+        const rangeLanguageText = this.enforceRangeLanguage(rawText);
+        const safeText = this.enforceFinOpsSafety(userMessage, rangeLanguageText);
         const scopedText = this.enforceScope(userMessage, safeText, toolCalls.length);
         const providerSafeText = this.enforceProviderSafety(userMessage, scopedText);
-        const finalText = this.cleanModelOutput(providerSafeText, outputTokens);
+        const groundedText = this.enforceNumericGrounding(providerSafeText, toolCalls);
+        const scopedCostText = this.enforceFindingScopeGrounding(groundedText, toolCalls);
+        const finalText = this.cleanModelOutput(scopedCostText, outputTokens);
         const usageBase = { inputTokens, outputTokens, cacheReadInputTokens, totalTokens };
         this.compactHistory();
         return {
@@ -738,7 +814,7 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
         if (canExecute) executedToolCalls += 1;
         if (!(toolName === "query_financial_reconciliation" &&
           toolCalls.some((call) => call.tool === "query_financial_reconciliation"))) {
-          toolCalls.push({ tool: toolName, result });
+          toolCalls.push({ tool: toolName, result, input: toolInput });
         }
 
         // Sanitized + wrapped ONLY for what the model reads — toolCalls above
@@ -853,8 +929,144 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
     );
   }
 
+  /**
+   * Rewrites over-certainty phrasing around a savings figure. The model can be
+   * pushed by an insistent user ("dame un número seguro") into calling a
+   * moderate-scenario value "confirmado"/"garantizado", which contradicts the
+   * product's core promise that savings are always a range, not a guarantee.
+   */
+  private enforceRangeLanguage(answer: string): string {
+    const pattern = /\b(ahorro|cifra|monto)\s+(confirmado|garantizado|asegurado)\b/gi;
+    if (!pattern.test(answer)) return answer;
+    return answer.replace(pattern, "$1 estimado (rango, no una garantía)");
+  }
+
+  /**
+   * Last line of defense against invented figures. Every dollar amount the
+   * model cites must trace back to a number that actually appears in the
+   * grounded analysis context or in a tool result executed THIS turn — if one
+   * doesn't, the model composed it in prose instead of quoting it, which is
+   * exactly the failure mode the product promises never happens. Rather than
+   * guess which digit is wrong, the whole answer is replaced with a reply
+   * built only from verified figures.
+   */
+  private enforceNumericGrounding(
+    answer: string,
+    toolCallsThisTurn: { tool: string; result: unknown }[]
+  ): string {
+    const knownCents = new Set<number>();
+    if (this.analysisContext) collectNumbers(this.analysisContext, knownCents);
+    for (const call of toolCallsThisTurn) collectNumbers(call.result, knownCents);
+
+    const dollarAmounts = answer.match(/\$\s?-?[\d,]+(?:\.\d{1,2})?/g) ?? [];
+    for (const raw of dollarAmounts) {
+      const numeric = Number(raw.replace(/[$,\s]/g, ""));
+      if (!Number.isFinite(numeric)) continue;
+      const cents = Math.round(numeric * 100);
+      const isKnown = knownCents.has(cents) || knownCents.has(cents - 1) || knownCents.has(cents + 1);
+      if (!isKnown) return this.buildGroundedFallback();
+    }
+
+    // Assumption values/min/max are stored as fractions (0.7) and collected
+    // above as round(value*100) — the same integer space a written-out
+    // percentage lands in ("70%" -> 70). Reusing knownCents catches invented
+    // percentages the same way it catches invented dollar figures.
+    const percentages = answer.match(/\b\d{1,3}(?:\.\d+)?\s?%/g) ?? [];
+    for (const raw of percentages) {
+      const numeric = Number(raw.replace(/[%\s]/g, ""));
+      if (!Number.isFinite(numeric)) continue;
+      const rounded = Math.round(numeric);
+      const isKnown = knownCents.has(rounded) || knownCents.has(rounded - 1) || knownCents.has(rounded + 1);
+      if (!isKnown) return this.buildGroundedFallback();
+    }
+    return answer;
+  }
+
+  /**
+   * "Número correcto, campo equivocado": a genuinely real PORTFOLIO-level
+   * figure (totalCostUSD, portfolioSavingsUSD, totalSavingsRange) cited as if
+   * it were the answer to a question the user scoped narrower — one
+   * specific finding (findingId), one provider, or one category. Passes
+   * enforceNumericGrounding because the number is real — it just answers a
+   * bigger question than the one asked. Observed under multiple phrasings
+   * ("costo base de X", "escenario optimista de X", "ahorro de EC2"), so this
+   * checks scope generically from what calculate_savings was actually asked
+   * to narrow, instead of matching each phrasing by hand.
+   */
+  private enforceFindingScopeGrounding(
+    answer: string,
+    toolCallsThisTurn: { tool: string; result: unknown; input?: Record<string, unknown> }[]
+  ): string {
+    const narrowedCall = toolCallsThisTurn.find((call) => {
+      if (call.tool !== "calculate_savings" || !call.input) return false;
+      return Boolean(call.input.findingId || call.input.filterProvider || call.input.filterCategory);
+    });
+    if (!narrowedCall) return answer;
+
+    const result = narrowedCall.result as {
+      findings?: Array<{
+        savingsRange?: { conservative: number; moderate?: number; optimistic: number };
+        baseMonthlyCostUSD?: number;
+      }>;
+    };
+    const inScopeCents = new Set<number>();
+    for (const finding of result.findings ?? []) {
+      if (finding.savingsRange) {
+        inScopeCents.add(Math.round(finding.savingsRange.conservative * 100));
+        if (typeof finding.savingsRange.moderate === "number") {
+          inScopeCents.add(Math.round(finding.savingsRange.moderate * 100));
+        }
+        inScopeCents.add(Math.round(finding.savingsRange.optimistic * 100));
+      }
+      if (typeof finding.baseMonthlyCostUSD === "number") {
+        inScopeCents.add(Math.round(finding.baseMonthlyCostUSD * 100));
+      }
+    }
+    // No findings matched the narrowing filter at all — nothing in-scope to
+    // confuse a portfolio number with, so there is nothing to check here.
+    if (result.findings && result.findings.length === 0) return answer;
+
+    const portfolioOnlyCents = new Set<number>();
+    if (this.analysisContext) {
+      portfolioOnlyCents.add(Math.round(this.analysisContext.totalCostUSD * 100));
+      portfolioOnlyCents.add(Math.round(this.analysisContext.portfolioSavingsUSD * 100));
+      portfolioOnlyCents.add(Math.round(this.analysisContext.savingsRange.conservative * 100));
+      portfolioOnlyCents.add(Math.round(this.analysisContext.savingsRange.optimistic * 100));
+    }
+
+    const dollarAmounts = answer.match(/\$\s?-?[\d,]+(?:\.\d{1,2})?/g) ?? [];
+    for (const raw of dollarAmounts) {
+      const numeric = Number(raw.replace(/[$,\s]/g, ""));
+      if (!Number.isFinite(numeric)) continue;
+      const cents = Math.round(numeric * 100);
+      const isPortfolioOnly = [cents - 1, cents, cents + 1].some((c) => portfolioOnlyCents.has(c));
+      const isInScope = [cents - 1, cents, cents + 1].some((c) => inScopeCents.has(c));
+      if (isPortfolioOnly && !isInScope) return this.buildGroundedFallback();
+    }
+    return answer;
+  }
+
+  private buildGroundedFallback(): string {
+    const ctx = this.analysisContext;
+    const es = this.locale === "es";
+    if (!ctx) {
+      return es
+        ? "No puedo confirmar esa cifra con precisión ahora mismo. Pregunta de nuevo sobre un gasto o hallazgo específico del análisis."
+        : "I can't confirm that figure precisely right now. Ask again about a specific spend or finding in the analysis.";
+    }
+    return es
+      ? `No puedo confirmar esa cifra con precisión — no coincide con ningún valor del reporte determinístico. ` +
+        `Las cifras verificadas de este análisis son: ahorro de cartera **${formatUSD(ctx.portfolioSavingsUSD)}/mes**, ` +
+        `rango bruto de oportunidad **${formatUSD(ctx.savingsRange.conservative)}–${formatUSD(ctx.savingsRange.optimistic)}/mes**. ` +
+        `Pregúntame por un hallazgo específico y te doy su rango exacto tal como está en el reporte.`
+      : `I can't confirm that figure precisely — it doesn't match any value in the deterministic report. ` +
+        `The verified figures for this analysis are: portfolio savings **${formatUSD(ctx.portfolioSavingsUSD)}/month**, ` +
+        `gross opportunity range **${formatUSD(ctx.savingsRange.conservative)}–${formatUSD(ctx.savingsRange.optimistic)}/month**. ` +
+        `Ask me about a specific finding and I'll give you its exact range as it stands in the report.`;
+  }
+
   private cleanModelOutput(answer: string, outputTokens: number): string {
-    let cleaned = answer
+    let cleaned = dedupeParagraphs(answer)
       .replace(/<thinking>[\s\S]*?<\/thinking>\s*/gi, "")
       .replace(/\b(?:query_financial_reconciliation|query_billing|calculate_savings|generate_remediation|build_report|lookup_knowledge)\b/g, "el análisis de Nimbus")
       .trim();
@@ -911,6 +1123,7 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
       case "calculate_savings": {
         if (!this.cachedReport) this.cachedReport = calculateSavings(this.records);
         let findings = this.cachedReport.findings;
+        if (input.findingId) findings = findings.filter((f) => f.id === input.findingId);
         if (input.filterProvider) findings = findings.filter((f) => f.provider === input.filterProvider);
         if (input.filterCategory) findings = findings.filter((f) => f.category === input.filterCategory);
         if (input.minSavings) findings = findings.filter((f) => f.estimatedMonthlySavingsUSD >= (input.minSavings as number));
@@ -929,6 +1142,17 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
             service: finding.service,
             category: finding.category,
             savingsRange: finding.savingsRange,
+            // Ground truth for "explain the formula" questions — without these,
+            // the model has no real variable names or base cost to cite and
+            // fabricates plausible-sounding ones instead.
+            baseMonthlyCostUSD: finding.savingsModel?.baseMonthlyCostUSD,
+            assumptions: finding.assumptions.map((a) => ({
+              label: a.label,
+              value: a.value,
+              min: a.min,
+              max: a.max,
+              source: a.source,
+            })),
             effort: finding.effort,
             risk: finding.risk,
             confidence: finding.confidence,

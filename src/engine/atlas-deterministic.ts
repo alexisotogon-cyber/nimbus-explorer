@@ -21,6 +21,30 @@ function normalize(text: string): string {
 const REQUIRES_EXPLANATION =
   /\b(explica|por que|compara|prioriza|plan|estrateg|recomiend|como redu|como ahorr|deberia|riesgo|ventaja|alternativa|interpreta|explain|why|compare|prioritize|strategy|recommend|how (to )?(save|reduce)|should|risk|advantage|alternative|interpret)/;
 
+/**
+ * A user who signals they are not technical needs the model's doble-altitud
+ * phrasing (plain language first, jargon in parens), not a fixed canned
+ * template — every deterministic reply in this file is written in normal
+ * FinOps register and does not adapt. Routing these to the LLM (return null)
+ * is cheaper and safer than rewriting every branch below for two audiences.
+ */
+/**
+ * Finding ids in this codebase look like "NAT-GW-aws-us-east-1" or
+ * "COMMIT-AWS" — an uppercase rule prefix followed by hyphenated segments.
+ * If the user names one explicitly, they want THAT finding's own numbers,
+ * not the portfolio-wide scenario preset the canned reply below always
+ * returns — checked against the ORIGINAL (case-preserved) message, since
+ * `query` below is lowercased.
+ */
+const FINDING_ID_PATTERN = /\b[A-Z]{2,}(-[A-Za-z0-9]+){1,6}\b/;
+
+// NOTE: no trailing \b — several alternatives end on a word STEM
+// ("tecnolog", "tecnic") that is a prefix of a longer word in the actual
+// message ("tecnologia", "tecnico"), and \b requires a boundary right after
+// the stem, which never exists when the word continues with more letters.
+const REQUESTS_PLAIN_LANGUAGE =
+  /\b(no entiendo|no se nada|no s[ée] nada|no soy tecnic|no soy experto|soy nuevo en esto|no s[ée] de tecnolog|no s[ée] nada de tecnolog|no supiera (nada )?de tecnolog|explica(melo)? (facil|simple|sencillo)|como si tuviera \d+ anos|como si no supiera|en palabras simples|sin tecnicismos|no entiendo nada|no manejo (los )?terminos|i don'?t understand|explain like i'?m|in simple terms|i'?m not technical|i'?m new to this)/;
+
 export function tryBuildDeterministicAtlasAnswer(
   message: string,
   context: AnalysisContext,
@@ -38,6 +62,7 @@ export function tryBuildDeterministicAtlasAnswer(
     };
   }
   if (!query) return null;
+  if (REQUESTS_PLAIN_LANGUAGE.test(query)) return null;
   const es = locale === "es";
   const money = (value: number) => formatCurrency(value, locale);
 
@@ -408,7 +433,19 @@ export function tryBuildDeterministicAtlasAnswer(
     };
   }
 
-  const asksScenario = /\b(escenario|conservador|optimista|supuesto|scenario|assumption|conservative|optimistic)\b/.test(query);
+  // An analytical question ("¿por qué el rango no es lineal?", "explica el
+  // supuesto") that happens to mention "optimista"/"conservador" must reach
+  // the LLM, not the canned scenario-preset reply below — otherwise the user
+  // gets an irrelevant "open the Scenarios tab" answer instead of an
+  // explanation, and the LLM never gets a chance to ground its answer in the
+  // finding's real assumptions. Same for a message naming one specific
+  // finding by id: the canned reply below only knows the PORTFOLIO-wide
+  // scenario preset, so "confirm the optimistic value of NAT-GW-..." would
+  // otherwise get the portfolio total mislabeled as that finding's own value.
+  const asksScenario =
+    /\b(escenario|conservador|optimista|supuesto|scenario|assumption|conservative|optimistic)\b/.test(query) &&
+    !REQUIRES_EXPLANATION.test(query) &&
+    !FINDING_ID_PATTERN.test(message);
   if (asksScenario) {
     const requestedPreset = /\b(optimista|optimistic)\b/.test(query)
       ? "optimistic"
@@ -427,7 +464,14 @@ export function tryBuildDeterministicAtlasAnswer(
     };
   }
 
-  if (/\b(atribuir|atribucion|equipo|proyecto|aplicacion|owner|ownership|attribution)\b/.test(query) && /\b(ia|ai|ml|gasto|cost)\b/.test(query)) {
+  // "equipo"/"gasto" alone are far too generic (any message describing a
+  // company — "nuestro equipo de datos", "más gasto en cloud" — contains
+  // them) to independently trigger this branch. The original regex treated
+  // "equipo"/"proyecto"/etc. as interchangeable with the attribution word
+  // itself; the fix makes the attribution word mandatory instead of just one
+  // alternative among many.
+  const asksAttribution = /\b(atribuir|atribucion|owner|ownership|attribution)\b/.test(query);
+  if (asksAttribution && /\b(ia|ai|ml|gasto|cost)\b/.test(query)) {
     const attribution = context.aiAttribution;
     return {
       content: !attribution
