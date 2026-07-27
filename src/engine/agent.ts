@@ -130,7 +130,7 @@ const AGENT_TOOLS: ToolConfiguration = {
       toolSpec: {
         name: "calculate_savings",
         description:
-          "Ejecuta el motor de reglas determinístico sobre los datos del usuario. Retorna hallazgos con rangos de ahorro auditables, y para cada uno sus `assumptions` (label/value/min/max reales) y `baseMonthlyCostUSD`. OBLIGATORIO llamarla antes de explicar la fórmula, los supuestos, las variables o por qué el rango de un hallazgo específico no es lineal — nunca describas esos supuestos apoyándote solo en lookup_knowledge o en conocimiento general, aunque el tema conceptual (Savings Plans, compromisos) parezca cubierto ahí.",
+          "Ejecuta el motor de reglas determinístico sobre los datos del usuario. Retorna hallazgos con rangos de ahorro auditables, y para cada uno su `description` (texto exacto del hallazgo), `assumptions` (label/value/min/max reales) y `baseMonthlyCostUSD`. OBLIGATORIO llamarla, con `findingId` cuando el usuario nombre o numere un hallazgo específico, ANTES de explicar ese hallazgo — su fórmula, sus supuestos, de qué trata, o por qué su rango no es lineal. El resumen de contexto inicial de la sesión solo trae título y rango de los 3-5 hallazgos principales, nunca su descripción completa: responder 'qué es el hallazgo X' sin llamar a esta herramienta primero es la causa más común de que Atlas mezcle el contenido de un hallazgo con el de otro.",
         inputSchema: {
           json: {
             type: "object",
@@ -337,6 +337,11 @@ DATOS Y HERRAMIENTAS
   está viendo. Úsalo para resolver "esto", "esta sección" y preguntas sobre la pantalla.
 - Bruto/neto/créditos/impuestos/reembolsos/Purchase: usa query_financial_reconciliation.
 - Gasto y servicios: query_billing. Ahorros: calculate_savings. Acciones: generate_remediation.
+- El resumen inicial de la sesión SOLO trae título y rango de los 3-5 hallazgos principales,
+  nunca su \`description\` completa. Antes de decir de qué trata un hallazgo (por nombre,
+  ID o número de posición), llama a calculate_savings con \`findingId\` y usa su campo
+  \`description\` — no lo compongas de memoria ni mezcles el contenido de otro hallazgo
+  parecido (dos hallazgos de IA distintos, por ejemplo, no comparten descripción).
 - Reporte ejecutivo: build_report. Conceptos o buenas prácticas: lookup_knowledge primero.
 - Si una cifra o capacidad no está disponible, dilo; "no disponible" no significa cero.
 - En FOCUS respeta usageCostBasis y commitmentPurchaseCostBasis: EffectiveCost es devengo
@@ -1139,6 +1144,11 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
           findings: findings.slice(0, 10).map((finding) => ({
             id: finding.id,
             title: finding.title,
+            // The ground-truth explanation of what this finding IS — without
+            // it, "explícame el hallazgo X" has nothing to quote and the
+            // model improvises, sometimes blending in another finding's
+            // content (observed: AI-VIS-SPEND explained with AI-TAG's text).
+            description: finding.description,
             provider: finding.provider,
             service: finding.service,
             category: finding.category,
