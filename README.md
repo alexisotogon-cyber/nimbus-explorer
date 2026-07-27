@@ -60,15 +60,17 @@ y las respuestas financieras factuales siguen funcionando.
 Las demos usan datos sintéticos reproducibles. La misma combinación de
 proveedor, complejidad y variante genera siempre el mismo resultado.
 
-<!-- Reemplaza este comentario con capturas finales sin datos sensibles.
 
-## Nimbus en acción
 
-![Resumen ejecutivo](docs/nimbus-resumen.png)
-![Escenarios de ahorro](docs/nimbus-escenarios.png)
-![Atlas contextual](docs/nimbus-atlas.png)
+[Resumen ejecutivo de Nimbus Explorer](docs/images/inicio.png)
 
--->
+
+
+
+
+
+
+
 
 ## Qué lo hace diferente
 
