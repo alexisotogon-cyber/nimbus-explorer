@@ -4,7 +4,7 @@
 auditables. El motor calcula; Atlas explica y prioriza sin inventar cifras.**
 
 Proyecto construido con Kiro y servicios de AWS para el
-[**Hackathon IA Masivo Online AWS por Código Facilito (Kiro + AWS)**](https://docs.google.com/document/d/1t2dTuy-Fv9tLVlB_YMentggLBh-98kbS8oKdYJdCW3o/edit?tab=t.0).
+[**Hackathon AWS por Código Facilito (Kiro + AWS)**](https://docs.google.com/document/d/1t2dTuy-Fv9tLVlB_YMentggLBh-98kbS8oKdYJdCW3o/edit?tab=t.0).
 
 **Vertical:** Agentes especializados  
 **Estado:** prototipo funcional  
@@ -13,9 +13,8 @@ Proyecto construido con Kiro y servicios de AWS para el
 **Demo pública:** `PENDIENTE — agrega aquí la URL final`  
 **Video (máximo 5 minutos):** `PENDIENTE — agrega aquí la URL pública`
 
-> **La idea en una frase:** un agente FinOps que puede auditar incluso el gasto
-> de inteligencia artificial, pero que deliberadamente no delega las cifras
-> financieras a un LLM.
+> **La idea en una frase:** Nimbus transforma datos de facturación multicloud
+> en prioridades FinOps claras, medibles y accionables.
 
 ## El problema
 
