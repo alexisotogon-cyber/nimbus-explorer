@@ -383,11 +383,14 @@ sesiones, rate limits y presupuestos de Atlas.
 
 ## Equipo
 
-`PENDIENTE — nombres, roles y enlaces profesionales de los integrantes`
+**Alexis Soto González**
+
+Creador y desarrollador principal — producto, arquitectura FinOps,
+experiencia de usuario e integración con AWS/Kiro.
 
 ## Licencia
 
-`PENDIENTE — agrega una licencia de código abierto, por ejemplo MIT`
+Este proyecto se distribuye bajo la [licencia MIT](LICENSE).
 
 ---
 
