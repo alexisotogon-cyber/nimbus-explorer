@@ -41,7 +41,16 @@ export function tryBuildDeterministicAtlasAnswer(
   const es = locale === "es";
   const money = (value: number) => formatCurrency(value, locale);
 
-  if (/^(hola|buenas|hello|hi|gracias|thanks|thank you|como estas|como te va|que tal|how are you)[?!. ]*$/.test(query)) {
+  if (/^(gracias|muchas gracias|mil gracias|thanks|thank you)[?!. ]*$/.test(query)) {
+    return {
+      content: es
+        ? "Con gusto. Si quieres continuar, puedo ayudarte con una cifra, un hallazgo o el siguiente paso de esta auditoría."
+        : "You are welcome. I can continue with a figure, a finding, or the next step in this audit.",
+      toolCalls: [],
+    };
+  }
+
+  if (/^(hola|holi|buenas|buenos dias|buenas tardes|buenas noches|hey|hello|hi|como estas|como te va|que tal|how are you)[?!. ]*$/.test(query)) {
     return {
       content: es
         ? /como estas|como te va|que tal/.test(query)
@@ -102,6 +111,65 @@ export function tryBuildDeterministicAtlasAnswer(
       content: es
         ? "Atlas es la guía FinOps de Nimbus. Explica la factura, los hallazgos y la sección que tienes abierta usando los resultados determinísticos del análisis. **No calcula ni modifica cifras**, y no ejecuta cambios en tu nube."
         : "Atlas is Nimbus's FinOps guide. It explains the bill, findings, and the section you currently have open using deterministic analysis results. It **does not calculate or alter figures**, and it never changes your cloud.",
+      toolCalls: [],
+    };
+  }
+
+  if (/\b(que es|como funciona|para que sirve|what is|how does)\s+(aws\s+)?bedrock\b/.test(query)) {
+    return {
+      content: es
+        ? "Amazon Bedrock es el servicio administrado de AWS que permite invocar modelos fundacionales. En Nimbus, Bedrock sólo se usa para redactar respuestas abiertas de Atlas; los cálculos financieros, la conciliación, los escenarios y los hallazgos siguen siendo determinísticos."
+        : "Amazon Bedrock is AWS's managed service for invoking foundation models. Nimbus uses it only for Atlas's open-ended explanations; financial calculations, reconciliation, scenarios, and findings remain deterministic.",
+      toolCalls: [],
+    };
+  }
+
+  if (/\b(que pasa si|si)\s+(bedrock|atlas ia|la ia)\s+(falla|no funciona|esta caido)|fallback|modo emergencia|circuit breaker\b/.test(query)) {
+    return {
+      content: es
+        ? "Si Bedrock falla, Nimbus conserva el análisis completo y Atlas sigue respondiendo las consultas determinísticas con 0 tokens. Las explicaciones abiertas se pausan temporalmente y no deben cambiar ninguna cifra del tablero."
+        : "If Bedrock fails, Nimbus keeps the full analysis available and Atlas continues answering deterministic questions with 0 tokens. Open-ended explanations pause temporarily and must not change any dashboard figure.",
+      toolCalls: [],
+    };
+  }
+
+  if (/\b(que usa ia|que es deterministico|que calcula atlas|atlas calcula|que depende de ia|what uses ai|what is deterministic)\b/.test(query)) {
+    return {
+      content: es
+        ? "Nimbus calcula de forma determinística la carga, validación, conciliación, gasto, hallazgos, escenarios y exportaciones. Atlas usa IA únicamente para explicar preguntas abiertas; no recalcula ni modifica las cifras."
+        : "Nimbus deterministically calculates upload validation, reconciliation, spend, findings, scenarios, and exports. Atlas uses AI only for open-ended explanations; it does not recalculate or alter figures.",
+      toolCalls: [],
+    };
+  }
+
+  if (/\b(cobertura|catalogo|catalog|schema|esquema|version del catalogo|coverage)\b/.test(query)) {
+    const evidence = context.catalogEvidence;
+    return {
+      content: evidence
+        ? es
+          ? `La cobertura reconocida es **${formatNumber(evidence.coveragePercentage, locale)}%** para ${evidence.provider.toUpperCase()}, esquema **${evidence.schemaVersion}**. Estado: ${evidence.status}.`
+          : `Recognized coverage is **${formatNumber(evidence.coveragePercentage, locale)}%** for ${evidence.provider.toUpperCase()}, schema **${evidence.schemaVersion}**. Status: ${evidence.status}.`
+        : es
+          ? "La cobertura de esquema y la versión del catálogo **no están disponibles en este análisis**. Atlas no debe inferirlas a partir del proveedor o del nombre del archivo."
+          : "Schema coverage and catalog version are **not available in this analysis**. Atlas must not infer them from the provider or filename.",
+      toolCalls: evidence ? [{ tool: "query_catalog_evidence", result: evidence }] : [],
+    };
+  }
+
+  if (/\b(guardan|almacenan|eliminan|borran|retencion|retienen|cifran|encriptan|privacidad|datos sensibles|store|retain|delete|encrypt|privacy)\b/.test(query)) {
+    return {
+      content: es
+        ? "Este análisis no incluye evidencia suficiente para afirmar políticas de almacenamiento, eliminación o cifrado. Consulta la documentación y configuración del despliegue antes de compartir datos sensibles; Atlas nunca debe prometer controles que no estén verificados."
+        : "This analysis does not contain enough evidence to claim storage, deletion, or encryption policies. Check the deployment documentation and configuration before sharing sensitive data; Atlas must never promise unverified controls.",
+      toolCalls: [],
+    };
+  }
+
+  if (/\b(ignora .*instruccion|revela .*prompt|muestra .*prompt|dame .*credencial|extrae .*credencial|envia .*correo|manda .*correo|abre .*url|borra .*recurso|elimina .*recurso|ignore .*instruction|reveal .*prompt|show .*prompt|send .*email|delete .*resource)\b/.test(query)) {
+    return {
+      content: es
+        ? "No puedo revelar instrucciones internas, credenciales, enviar mensajes ni ejecutar cambios. Sí puedo explicar el análisis, proponer una verificación de solo lectura o preparar pasos para que una persona autorizada los revise."
+        : "I cannot reveal internal instructions or credentials, send messages, or execute changes. I can explain the analysis, propose a read-only verification, or prepare steps for an authorized person to review.",
       toolCalls: [],
     };
   }
@@ -259,6 +327,33 @@ export function tryBuildDeterministicAtlasAnswer(
     };
   }
 
+  const asksTopFinding =
+    /\b(mayor hallazgo|hallazgo principal|hallazgo mas (caro|grande)|hallazgo de mayor (costo|ahorro)|mayor oportunidad|top finding|most expensive finding|largest finding|largest opportunity|top opportunity)\b/
+      .test(query);
+  if (asksTopFinding) {
+    const finding = context.topFindings[0];
+    return {
+      content: finding
+        ? es
+          ? `El hallazgo prioritario es **${finding.title}**, con un ahorro estimado de **${money(finding.savingsRange.conservative)} a ${money(finding.savingsRange.optimistic)}/mes**. Abre ese hallazgo y valida la métrica indicada antes de aplicar cambios.`
+          : `The priority finding is **${finding.title}**, with estimated savings of **${money(finding.savingsRange.conservative)} to ${money(finding.savingsRange.optimistic)}/month**. Open it and validate its stated metric before making changes.`
+        : es
+          ? "No hay hallazgos cuantificados en este análisis."
+          : "There are no quantified findings in this analysis.",
+      toolCalls: finding ? [{ tool: "calculate_savings", result: finding }] : [],
+    };
+  }
+
+  if (/\b(savings plans?|plan de ahorro|compute savings plan)\b/.test(query) &&
+      /\b(como|valid|compr|prueb|plazo|periodo|recomiend|how|buy|test|term)\b/.test(query)) {
+    return {
+      content: es
+        ? "AWS Savings Plans son compromisos de gasto por hora de **1 o 3 años**; no se prueban sobre un conjunto pequeño de recursos ni tienen un plazo corto. Primero haz rightsizing, valida al menos 30–60 días de consumo estable y revisa Coverage, Utilization y la recomendación nativa de Cost Explorer antes de comprometerte."
+        : "AWS Savings Plans are **1- or 3-year** hourly spend commitments; they are not tested on a small resource set and do not offer a short term. Rightsize first, validate at least 30–60 days of stable usage, and review Coverage, Utilization, and Cost Explorer's native recommendation before committing.",
+      toolCalls: [],
+    };
+  }
+
   const asksScenario = /\b(escenario|conservador|optimista|supuesto|scenario|assumption|conservative|optimistic)\b/.test(query);
   if (asksScenario) {
     return {
@@ -296,7 +391,7 @@ export function tryBuildDeterministicAtlasAnswer(
   }
 
   const asksSpend =
-    /\b(cuanto (estoy )?gast|gasto total|costo total|total gastado|gasto bruto|costo bruto|gasto mensual proyectado|costo mensual proyectado|how much (am i )?(spending|spend)|total spend|total cost|gross spend|gross cost|projected monthly spend)/
+    /\b(cuanto (estoy |llevo |he )?gast|cuanto llevo de gasto|gasto acumulado|gasto total|costo total|total gastado|gasto bruto|costo bruto|gasto mensual proyectado|costo mensual proyectado|how much (am i |have i )?(spending|spent|spend)|total spend|total cost|gross spend|gross cost|projected monthly spend)/
       .test(query);
   const asksNet = /\b(neto|factura neta|net|net invoice|net bill)\b/.test(query);
   const asksCredits = /\b(credito|creditos|reembolso|reembolsos|descuento excluido|credit|credits|refund|refunds)\b/.test(query);
@@ -304,9 +399,7 @@ export function tryBuildDeterministicAtlasAnswer(
   const asksRows = /\b(cuantas filas|filas procesadas|filas usadas|registros procesados|how many rows|rows processed|rows used|records processed)\b/.test(query);
   const asksProviders = /\b(que proveedores|cuales proveedores|nubes contiene|proveedores contiene|which providers|which clouds|providers detected)\b/.test(query);
   const asksServices = /\b(en que servicios|servicio mas caro|principal servicio|top servicios|top services|most expensive service|highest spend service)\b/.test(query);
-  const asksFinding =
-    /\b(mayor hallazgo|hallazgo principal|hallazgo mas (caro|grande)|hallazgo de mayor (costo|ahorro)|mayor oportunidad|top finding|most expensive finding|largest finding|largest opportunity|top opportunity)\b/
-      .test(query);
+  const asksFinding = asksTopFinding;
 
   if (!(asksSpend || asksNet || asksCredits || asksTax || asksRows || asksProviders || asksServices || asksFinding)) {
     return null;

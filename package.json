@@ -12,6 +12,7 @@
     "test:billing": "tsx test-data/test-billing-modern.mjs",
     "test:demos": "tsx test-data/test-demo-determinism.mjs",
     "test:p1": "tsx test-data/test-p1-fixes.mjs",
+    "test:atlas": "tsx test-data/test-atlas-conversation.mjs",
     "test:projection": "tsx test-data/test-projection-clarity.mjs",
     "test:concurrent-next": "node scripts/test-concurrent-next.mjs"
   },

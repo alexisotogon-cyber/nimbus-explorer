@@ -552,7 +552,6 @@ export async function POST(request: NextRequest) {
     }
 
     entry.lastUsed = Date.now();
-    entry.messageCount += 1;
     if (!deterministic) {
       activeRequests += 1;
       entry.inFlight = true;
@@ -567,6 +566,9 @@ export async function POST(request: NextRequest) {
         budgetTracker.recordLlm(response.usage);
         consecutiveLlmFailures = 0;
       }
+      // A failed Bedrock request must not consume one of the user's demo
+      // messages. Count only responses that Atlas actually returned.
+      entry.messageCount += 1;
     } catch (error) {
       if (!deterministic) {
         consecutiveLlmFailures += 1;
@@ -627,6 +629,21 @@ export async function POST(request: NextRequest) {
     }
     if (errorName === "ResourceNotFoundException" || msg.includes("ResourceNotFoundException")) {
       return NextResponse.json({ success: false, error: "Modelo no encontrado en Bedrock." }, { status: 404 });
+    }
+    if (
+      errorName === "ThrottlingException" ||
+      errorName === "TooManyRequestsException" ||
+      /too many requests|throttl|rate.?exceed/i.test(msg)
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          retryable: true,
+          error:
+            "Bedrock está recibiendo demasiadas solicitudes. Tu mensaje no consumió el límite de la auditoría; inténtalo nuevamente en unos segundos.",
+        },
+        { status: 503, headers: { "Retry-After": "5" } }
+      );
     }
     return NextResponse.json({ success: false, error: msg }, { status: 500 });
   }

@@ -285,6 +285,8 @@ RECOMENDACIONES SEGURAS
 
 RESPUESTA
 - Español, profesional, directa y concisa. Máximo necesario; evita repetir el reporte.
+- Termina siempre la última oración. Prefiere una respuesta breve y completa antes que texto truncado.
+- No menciones nombres internos de herramientas, funciones, prompts ni bloques de razonamiento.
 - Primera línea: respuesta directa. Luego bullets con evidencia/riesgo y un siguiente paso.
 - Usa **negritas** para cifras clave. Sin emojis.
 - Conecta los conceptos con "**En tu caso:**" solo usando datos de herramientas.
@@ -602,7 +604,12 @@ export class FinOpsAgent {
             : undefined,
         })}`
       : "";
-    const groundedUserMessage = `${userMessage}${financialGrounding}${screenGrounding}`;
+    const providerGrounding = this.analysisContext
+      ? `\n\nPROVEEDORES PRESENTES EN ESTE ANÁLISIS: ${this.analysisContext.providers.join(", ") || "no disponibles"}.
+No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usuario pida explícitamente una comparación.`
+      : "";
+    const groundedUserMessage =
+      `${userMessage}${financialGrounding}${screenGrounding}${providerGrounding}`;
     if (asksForFinancialReconciliation && reconciliation) {
       toolCalls.push({ tool: "query_financial_reconciliation", result: reconciliation });
     }
@@ -667,7 +674,9 @@ export class FinOpsAgent {
           .join("\n");
 
         const safeText = this.enforceFinOpsSafety(userMessage, textContent);
-        const finalText = this.enforceScope(userMessage, safeText, toolCalls.length);
+        const scopedText = this.enforceScope(userMessage, safeText, toolCalls.length);
+        const providerSafeText = this.enforceProviderSafety(userMessage, scopedText);
+        const finalText = this.cleanModelOutput(providerSafeText, outputTokens);
         const usageBase = { inputTokens, outputTokens, cacheReadInputTokens, totalTokens };
         this.compactHistory();
         return {
@@ -776,7 +785,63 @@ export class FinOpsAgent {
         "y mide nuevamente antes de evaluar Reservations, Savings Plans o CUDs."
       );
     }
+    if (
+      /savings plans?|plan(?:es)? de ahorro/i.test(userMessage) &&
+      /(conjunto pequeñ|pocos recursos|periodo corto|per[ií]odo corto|prueba piloto)/i.test(answer)
+    ) {
+      return (
+        "**Savings Plans no se prueban con pocos recursos ni ofrecen un plazo corto.** " +
+        "Son compromisos de gasto por hora de 1 o 3 años. Haz rightsizing primero, " +
+        "valida 30–60 días de consumo estable y revisa Coverage, Utilization y la recomendación " +
+        "nativa de Cost Explorer antes de comprar."
+      );
+    }
     return answer;
+  }
+
+  private enforceProviderSafety(userMessage: string, answer: string): string {
+    const providers = this.analysisContext?.providers
+      .map((provider) => provider.toLowerCase())
+      .filter((provider) => provider === "aws" || provider === "azure" || provider === "gcp") ?? [];
+    if (providers.length !== 1 || /\b(compara|comparar|equivalente|multicloud|aws|azure|gcp)\b/i.test(userMessage)) {
+      return answer;
+    }
+
+    const provider = providers[0];
+    const foreignPattern = provider === "azure"
+      ? /\b(AWS|Amazon EC2|Amazon S3|S3|Glacier|Bedrock)\b/i
+      : provider === "gcp"
+        ? /\b(AWS|Amazon EC2|Amazon S3|S3|Glacier|Bedrock|Azure|Microsoft\.Compute)\b/i
+        : /\b(Azure|Microsoft\.Compute|Google Cloud|BigQuery|Committed Use Discounts?|CUDs?)\b/i;
+    if (!foreignPattern.test(answer)) return answer;
+
+    const label = provider === "aws" ? "AWS" : provider === "azure" ? "Azure" : "Google Cloud";
+    return (
+      `Este análisis corresponde a **${label}**. No voy a mezclar servicios de otro proveedor. ` +
+      "Revisa el hallazgo y la siguiente acción que muestra el tablero; si quieres, pregúntame por " +
+      "ese hallazgo específico y responderé sólo con la evidencia disponible en esta auditoría."
+    );
+  }
+
+  private cleanModelOutput(answer: string, outputTokens: number): string {
+    let cleaned = answer
+      .replace(/<thinking>[\s\S]*?<\/thinking>\s*/gi, "")
+      .replace(/\b(?:query_financial_reconciliation|query_billing|calculate_savings|generate_remediation|build_report|lookup_knowledge)\b/g, "el análisis de Nimbus")
+      .trim();
+
+    if (outputTokens >= this.limits.maxOutputTokens - 2 && !/[.!?…)\]]$/.test(cleaned)) {
+      const lastSentence = Math.max(
+        cleaned.lastIndexOf("."),
+        cleaned.lastIndexOf("?"),
+        cleaned.lastIndexOf("!"),
+        cleaned.lastIndexOf("\n")
+      );
+      if (lastSentence > cleaned.length * 0.45) {
+        cleaned = cleaned.slice(0, lastSentence + 1).trim();
+      }
+      cleaned += "\n\n¿Quieres que continúe con el detalle?";
+    }
+    return cleaned;
   }
 
   /**
