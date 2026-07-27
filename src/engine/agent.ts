@@ -265,6 +265,18 @@ function collectNumbers(value: unknown, out: Set<number>, depth = 0): void {
     out.add(Math.round(value * 100));
     return;
   }
+  if (typeof value === "string") {
+    // Free-text fields (finding.description, calculationBreakdown, reference)
+    // carry their own dollar figures as prose, not as separate numeric JSON
+    // fields — without this, quoting them verbatim looks "unverified" to the
+    // grounding check below, exactly the number this field was added for.
+    const dollarMatches = value.match(/\$\s?-?[\d,]+(?:\.\d{1,2})?/g) ?? [];
+    for (const raw of dollarMatches) {
+      const numeric = Number(raw.replace(/[$,\s]/g, ""));
+      if (Number.isFinite(numeric)) out.add(Math.round(numeric * 100));
+    }
+    return;
+  }
   if (Array.isArray(value)) {
     for (const item of value) collectNumbers(item, out, depth + 1);
     return;
@@ -272,6 +284,20 @@ function collectNumbers(value: unknown, out: Set<number>, depth = 0): void {
   if (value && typeof value === "object") {
     for (const item of Object.values(value as Record<string, unknown>)) collectNumbers(item, out, depth + 1);
   }
+}
+
+/**
+ * True if `cents` is within natural prose-rounding distance of some value in
+ * `known` — max($1, 0.1% of the known value). Wide enough that "casi $3,950"
+ * for a real $3,949.41 doesn't misfire, narrow enough that a genuinely wrong
+ * figure (the fabricated $1,821.20 vs. real $1,831.55 that motivated these
+ * guards, a $10.35 gap) still fails every comparison.
+ */
+function closeMatch(cents: number, known: number[] | Set<number>): boolean {
+  for (const value of known) {
+    if (Math.abs(value - cents) <= Math.max(100, Math.round(value * 0.001))) return true;
+  }
+  return false;
 }
 
 /**
@@ -974,8 +1000,7 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
       const numeric = Number(raw.replace(/[$,\s]/g, ""));
       if (!Number.isFinite(numeric)) continue;
       const cents = Math.round(numeric * 100);
-      const isKnown = knownCents.has(cents) || knownCents.has(cents - 1) || knownCents.has(cents + 1);
-      if (!isKnown) return this.buildGroundedFallback();
+      if (!closeMatch(cents, knownCents)) return this.buildGroundedFallback();
     }
 
     // NOTE: percentages are deliberately NOT grounded the same way dollar
@@ -1045,8 +1070,8 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
       const numeric = Number(raw.replace(/[$,\s]/g, ""));
       if (!Number.isFinite(numeric)) continue;
       const cents = Math.round(numeric * 100);
-      const isPortfolioOnly = [cents - 1, cents, cents + 1].some((c) => portfolioOnlyCents.has(c));
-      const isInScope = [cents - 1, cents, cents + 1].some((c) => inScopeCents.has(c));
+      const isPortfolioOnly = closeMatch(cents, portfolioOnlyCents);
+      const isInScope = closeMatch(cents, inScopeCents);
       if (isPortfolioOnly && !isInScope) return this.buildGroundedFallback();
     }
     return answer;
