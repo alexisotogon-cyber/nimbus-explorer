@@ -13,3 +13,4 @@ semantic-review/
 *.tsbuildinfo
 next-env.d.ts
 test-data/audit/out-*
+deploy-*.zip
