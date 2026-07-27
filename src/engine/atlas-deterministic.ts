@@ -41,7 +41,7 @@ export function tryBuildDeterministicAtlasAnswer(
   const es = locale === "es";
   const money = (value: number) => formatCurrency(value, locale);
 
-  if (/^(gracias|muchas gracias|mil gracias|thanks|thank you)[?!. ]*$/.test(query)) {
+  if (/^(gracias|muchas gracias|mil gracias|thanks|thank you)\b/.test(query)) {
     return {
       content: es
         ? "Con gusto. Si quieres continuar, puedo ayudarte con una cifra, un hallazgo o el siguiente paso de esta auditoría."
@@ -50,7 +50,7 @@ export function tryBuildDeterministicAtlasAnswer(
     };
   }
 
-  if (/^(hola|holi|buenas|buenos dias|buenas tardes|buenas noches|hey|hello|hi|como estas|como te va|que tal|how are you)[?!. ]*$/.test(query)) {
+  if (/^(hola|holi|buenas|buenos dias|buenas tardes|buenas noches|hey|que onda|hello|hi|como estas|como te va|como andas|que tal|how are you)\b/.test(query)) {
     return {
       content: es
         ? /como estas|como te va|que tal/.test(query)
@@ -133,7 +133,7 @@ export function tryBuildDeterministicAtlasAnswer(
     };
   }
 
-  if (/\b(que usa ia|que es deterministico|que calcula atlas|atlas calcula|que depende de ia|what uses ai|what is deterministic)\b/.test(query)) {
+  if (/\b(que usa ia|que partes? usa(n)? ia|que .*depende.* ia|que es deterministico|que partes? (son|dependen de) deterministicas?|que calcula atlas|atlas calcula|que depende de ia|que depende y que no depende de ia|what uses ai|what .*depends on ai|what is deterministic|what depends on ai)\b/.test(query)) {
     return {
       content: es
         ? "Nimbus calcula de forma determinística la carga, validación, conciliación, gasto, hallazgos, escenarios y exportaciones. Atlas usa IA únicamente para explicar preguntas abiertas; no recalcula ni modifica las cifras."
@@ -165,7 +165,7 @@ export function tryBuildDeterministicAtlasAnswer(
     };
   }
 
-  if (/\b(ignora .*instruccion|revela .*prompt|muestra .*prompt|dame .*credencial|extrae .*credencial|envia .*correo|manda .*correo|abre .*url|borra .*recurso|elimina .*recurso|ignore .*instruction|reveal .*prompt|show .*prompt|send .*email|delete .*resource)\b/.test(query)) {
+  if (/\b(ignora .*instruccion|revela .*prompt|muestra .*prompt|dame .*credencial|extrae .*credencial|envia .*correo|manda .*correo|abre .*url|borr(?:a|ar|e) .*recurso|elimina(?:r)? .*recurso|ignore .*instruction|reveal .*prompt|show .*prompt|send .*email|delete .*resource)\b/.test(query)) {
     return {
       content: es
         ? "No puedo revelar instrucciones internas, credenciales, enviar mensajes ni ejecutar cambios. Sí puedo explicar el análisis, proponer una verificación de solo lectura o preparar pasos para que una persona autorizada los revise."
@@ -174,8 +174,17 @@ export function tryBuildDeterministicAtlasAnswer(
     };
   }
 
+  if (/\b(receta|cocinar|ingredientes|hornear|futbol|horoscopo|poema|cancion|dieta)\b/.test(query)) {
+    return {
+      content: es
+        ? "Ese tema queda fuera de Atlas. Sí puedo ayudarte con cloud, FinOps, facturación, arquitectura relacionada con costos, los datos cargados y las acciones del tablero."
+        : "That topic is outside Atlas. I can help with cloud, FinOps, billing, cost-related architecture, the uploaded data, and dashboard actions.",
+      toolCalls: [],
+    };
+  }
+
   const asksVisibleContext =
-    /\b(que (estoy viendo|hay en (esta )?pantalla)|explica (esta|la) pantalla|explica (esta|la) seccion|que significa esto|esto que es|donde estoy|what am i (seeing|looking at)|explain (this|the) screen|what is on (this|the) screen|what does this mean|where am i)\b/
+    /\b(que (estoy viendo|hay en (esta )?pantalla)|explica (esta|la) pantalla|explica (esta|la) seccion|que significa (esto|eso|lo de arriba)|eso que (aparece|sale|veo) arriba|esto que es|donde estoy|what am i (seeing|looking at)|explain (this|the) screen|what is on (this|the) screen|what does this mean|where am i)\b/
       .test(query);
   if (asksVisibleContext && screenContext) {
     const finding = screenContext.expandedFinding;
@@ -313,7 +322,7 @@ export function tryBuildDeterministicAtlasAnswer(
     };
   }
 
-  const asksPriority = /\b(que (puedo|debo) hacer primero|por donde empiezo|como (puedo )?ahorrar|acciones? prioritarias?|what should i do first|how (can i )?save|priorit)/.test(query);
+  const asksPriority = /\b(que (puedo|debo) hacer primero|que hago primero|por donde empiezo|como (puedo )?ahorrar|acciones? prioritarias?|acciones? concretas?|que hago esta semana|plan de accion|what should i do first|how (can i )?save|priorit)/.test(query);
   if (asksPriority) {
     const findings = context.topFindings.slice(0, 3);
     const actions = findings.length
@@ -327,20 +336,65 @@ export function tryBuildDeterministicAtlasAnswer(
     };
   }
 
+  const asksTopService =
+    /\b(servicio (mas|con mayor) (caro|costoso|gasto)|principal servicio|top servicios?|servicio representa|most expensive service|highest spend service|top services?)\b/
+      .test(query);
+  if (asksTopService) {
+    const services = context.topServices.slice(0, /\b(top|servicios)\b/.test(query) ? 3 : 1);
+    const rows = services.map(
+      (service, index) =>
+        `${index + 1}. **${service.service}**: ${money(service.costUSD)} (${formatNumber(service.percentage, locale)}%)`
+    );
+    return {
+      content: services.length
+        ? `${es ? "Servicio con mayor gasto" : "Highest-spend service"}:\n\n${rows.join("\n")}`
+        : es
+          ? "No hay servicios con gasto positivo en este análisis."
+          : "There are no services with positive spend in this analysis.",
+      toolCalls: services.length ? [{ tool: "query_billing", result: { topServices: services } }] : [],
+    };
+  }
+
   const asksTopFinding =
     /\b(mayor hallazgo|hallazgo principal|hallazgo mas (caro|grande)|hallazgo de mayor (costo|ahorro)|mayor oportunidad|top finding|most expensive finding|largest finding|largest opportunity|top opportunity)\b/
       .test(query);
   if (asksTopFinding) {
-    const finding = context.topFindings[0];
+    const finding = context.highestSavingsFinding;
     return {
       content: finding
         ? es
-          ? `El hallazgo prioritario es **${finding.title}**, con un ahorro estimado de **${money(finding.savingsRange.conservative)} a ${money(finding.savingsRange.optimistic)}/mes**. Abre ese hallazgo y valida la métrica indicada antes de aplicar cambios.`
-          : `The priority finding is **${finding.title}**, with estimated savings of **${money(finding.savingsRange.conservative)} to ${money(finding.savingsRange.optimistic)}/month**. Open it and validate its stated metric before making changes.`
+          ? `El hallazgo con **mayor ahorro actual** es **${finding.title}**: **${money(finding.estimatedMonthlySavingsUSD)}/mes**, con un rango de **${money(finding.savingsRange.conservative)} a ${money(finding.savingsRange.optimistic)}/mes**. “Mayor ahorro” no significa necesariamente “mayor prioridad”; la prioridad también considera esfuerzo, riesgo y confianza.`
+          : `The finding with the **highest current savings** is **${finding.title}**: **${money(finding.estimatedMonthlySavingsUSD)}/month**, with a range of **${money(finding.savingsRange.conservative)} to ${money(finding.savingsRange.optimistic)}/month**. Highest savings does not necessarily mean highest priority; priority also considers effort, risk, and confidence.`
         : es
           ? "No hay hallazgos cuantificados en este análisis."
           : "There are no quantified findings in this analysis.",
       toolCalls: finding ? [{ tool: "calculate_savings", result: finding }] : [],
+    };
+  }
+
+  if (
+    /\b(compromisos?|savings plans?|reservas?|reservations?|cuds?|doble conteo|double count)\b/.test(query) &&
+    !/\b(como|valid|compr|prueb|plazo|periodo|recomiend|how|buy|test|term)\b/.test(query)
+  ) {
+    const evidence = context.commitmentEvidence;
+    const opportunity = evidence.missingCommitmentFinding;
+    const status = evidence.purchasesUSD > 0
+      ? es
+        ? `El archivo detecta **${money(evidence.purchasesUSD)}** en compras de compromiso. Se muestran aparte con base **${evidence.purchaseBasis ?? "no disponible"}** y no se suman al costo efectivo de uso, para evitar doble conteo.`
+        : `The file detects **${money(evidence.purchasesUSD)}** in commitment purchases. They are shown separately using a **${evidence.purchaseBasis ?? "not available"}** basis and are not added to effective usage cost, preventing double counting.`
+      : es
+        ? "El archivo **no muestra compras de compromiso separadas** en la conciliación."
+        : "The file **does not show separate commitment purchases** in reconciliation.";
+    const finding = opportunity
+      ? es
+        ? ` Nimbus sí detectó una oportunidad por falta de compromiso: **${opportunity.title}**, con ahorro actual de **${money(opportunity.estimatedMonthlySavingsUSD)}/mes**. Esto es una recomendación, no evidencia de una compra existente.`
+        : ` Nimbus did detect a missing-commitment opportunity: **${opportunity.title}**, with current savings of **${money(opportunity.estimatedMonthlySavingsUSD)}/month**. This is a recommendation, not evidence of an existing purchase.`
+      : es
+        ? " No hay un hallazgo cuantificado de compromiso faltante en este análisis."
+        : " There is no quantified missing-commitment finding in this analysis.";
+    return {
+      content: `${status}${finding}`,
+      toolCalls: [{ tool: "query_financial_reconciliation", result: context.financialReconciliation }],
     };
   }
 
@@ -356,11 +410,38 @@ export function tryBuildDeterministicAtlasAnswer(
 
   const asksScenario = /\b(escenario|conservador|optimista|supuesto|scenario|assumption|conservative|optimistic)\b/.test(query);
   if (asksScenario) {
+    const requestedPreset = /\b(optimista|optimistic)\b/.test(query)
+      ? "optimistic"
+      : /\b(conservador|conservative)\b/.test(query)
+        ? "conservative"
+        : "current";
+    const preset = screenContext?.scenario?.presets[requestedPreset];
+    const presetLabel = es
+      ? requestedPreset === "optimistic" ? "Optimista" : requestedPreset === "conservative" ? "Conservador" : "Actual"
+      : requestedPreset === "optimistic" ? "Optimistic" : requestedPreset === "conservative" ? "Conservative" : "Current";
     return {
       content: es
-        ? `Los escenarios no cambian tu factura: recalculan el ahorro posible al variar supuestos verificables. En este análisis, el ahorro de cartera actual es ${money(context.portfolioSavingsUSD)}/mes. Úsalos para comparar una decisión conservadora con una de mayor potencial; el tablero y las exportaciones usan la misma cifra seleccionada.`
-        : `Scenarios do not change your bill: they recalculate possible savings as verifiable assumptions change. In this analysis, current portfolio savings are ${money(context.portfolioSavingsUSD)}/month. Use them to compare a conservative decision with higher potential; the dashboard and exports use the same selected figure.`,
+        ? `El escenario **${presetLabel}** estima **${money(preset?.monthlySavingsUSD ?? context.portfolioSavingsUSD)}/mes** y **${money(preset?.annualSavingsUSD ?? context.portfolioSavingsUSD * 12)}/año**. Atlas no puede seleccionar el preset por ti: abre **Escenarios** y pulsa **${presetLabel}** para aplicarlo al tablero y las exportaciones. No modifica tu factura ni tu infraestructura.`
+        : `The **${presetLabel}** scenario estimates **${money(preset?.monthlySavingsUSD ?? context.portfolioSavingsUSD)}/month** and **${money(preset?.annualSavingsUSD ?? context.portfolioSavingsUSD * 12)}/year**. Atlas cannot select the preset for you: open **Scenarios** and choose **${presetLabel}** to apply it to the dashboard and exports. It does not modify your bill or infrastructure.`,
       toolCalls: [{ tool: "calculate_savings", result: { portfolioSavingsUSD: context.portfolioSavingsUSD } }],
+    };
+  }
+
+  if (/\b(atribuir|atribucion|equipo|proyecto|aplicacion|owner|ownership|attribution)\b/.test(query) && /\b(ia|ai|ml|gasto|cost)\b/.test(query)) {
+    const attribution = context.aiAttribution;
+    return {
+      content: !attribution
+        ? es
+          ? "No se detectó gasto de IA/ML en este análisis, así que no hay atribución que evaluar."
+          : "No AI/ML spend was detected in this analysis, so there is no attribution to evaluate."
+        : attribution.attributable
+          ? es
+            ? `Se observaron **${money(attribution.observedCostUSD)}** de gasto IA/ML y **${formatNumber(attribution.coveragePercentage, locale)}%** tiene identificador de recurso. Eso permite atribución parcial; para equipo o proyecto aún necesitas tags o dimensiones organizativas consistentes.`
+            : `Observed AI/ML spend is **${money(attribution.observedCostUSD)}**, and **${formatNumber(attribution.coveragePercentage, locale)}%** has a resource identifier. That supports partial attribution; team or project attribution still needs consistent tags or organizational dimensions.`
+          : es
+            ? `Se observaron **${money(attribution.observedCostUSD)}** de gasto IA/ML, pero la cobertura de identificadores es **0%**. Con este archivo no puedes atribuirlo de forma verificable a equipo o proyecto; agrega tags, cuenta, proyecto o aplicación al export.`
+            : `Observed AI/ML spend is **${money(attribution.observedCostUSD)}**, but resource-ID coverage is **0%**. This file cannot verifiably attribute it to a team or project; add tags, account, project, or application dimensions to the export.`,
+      toolCalls: [],
     };
   }
 

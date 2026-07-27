@@ -53,7 +53,37 @@ export interface AnalysisContext {
   /** Portfolio total (anti-double-counting already applied) — the number Atlas must quote as "how much you can save". */
   portfolioSavingsUSD: number;
   savingsRange: { conservative: number; optimistic: number };
-  topFindings: Array<{ id: string; title: string; savingsRange: { conservative: number; optimistic: number } }>;
+  topFindings: Array<{
+    id: string;
+    title: string;
+    provider: string;
+    service: string;
+    category: string;
+    estimatedMonthlySavingsUSD: number;
+    priorityScore: number;
+    nextAction: string;
+    savingsRange: { conservative: number; optimistic: number };
+  }>;
+  highestSavingsFinding?: {
+    id: string;
+    title: string;
+    estimatedMonthlySavingsUSD: number;
+    savingsRange: { conservative: number; optimistic: number };
+  };
+  commitmentEvidence: {
+    purchasesUSD: number;
+    purchaseBasis: string | null;
+    missingCommitmentFinding?: {
+      title: string;
+      estimatedMonthlySavingsUSD: number;
+      savingsRange: { conservative: number; optimistic: number };
+    };
+  };
+  aiAttribution?: {
+    observedCostUSD: number;
+    coveragePercentage: number;
+    attributable: boolean;
+  };
   /** Same deterministic file review rendered in FileCheckPanel. */
   uploadDiagnosis?: FileDiagnosis;
   catalogEvidence?: {
@@ -730,7 +760,7 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
     return {
       role: "assistant",
       content:
-        "Alcancé el límite de herramientas para esta pregunta. Acota la consulta a un hallazgo o proveedor para continuar sin elevar el costo.",
+        "Puedo darte una respuesta más precisa si acotas la consulta a un hallazgo o proveedor. El análisis determinístico sigue disponible y sus cifras no cambian.",
       toolCalls,
       mode: "llm",
       usage: {

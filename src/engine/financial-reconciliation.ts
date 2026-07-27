@@ -13,10 +13,26 @@ export function buildFinancialReconciliation(
   projectedMonthlyGrossUsageUSD: number,
   diagnostics?: ParseDiagnostics
 ): FinancialReconciliation {
-  const grossUsageRaw = records.reduce((sum, record) => sum + record.cost, 0);
-  const creditsRaw = diagnostics?.creditTotalUSD ?? 0;
-  const taxesRaw = diagnostics?.taxTotalUSD ?? 0;
-  const purchasesRaw = diagnostics?.commitmentPurchaseTotalUSD ?? 0;
+  const chargeType = (record: NormalizedCostRecord) =>
+    (record.chargeType || "Usage").toLowerCase();
+  const derivedCredits = records
+    .filter((record) => /(credit|refund)/.test(chargeType(record)))
+    .reduce((sum, record) => sum + Math.abs(record.cost), 0);
+  const derivedTaxes = records
+    .filter((record) => /tax/.test(chargeType(record)))
+    .reduce((sum, record) => sum + record.cost, 0);
+  const derivedPurchases = records
+    .filter((record) => /purchase/.test(chargeType(record)))
+    .reduce((sum, record) => sum + record.cost, 0);
+  const grossUsageRaw = records
+    .filter((record) =>
+      record.cost > 0 &&
+      !/(credit|refund|tax|purchase|adjustment)/.test(chargeType(record))
+    )
+    .reduce((sum, record) => sum + record.cost, 0);
+  const creditsRaw = diagnostics?.creditTotalUSD ?? derivedCredits;
+  const taxesRaw = diagnostics?.taxTotalUSD ?? derivedTaxes;
+  const purchasesRaw = diagnostics?.commitmentPurchaseTotalUSD ?? derivedPurchases;
   const grossUsageCostUSD = round2(grossUsageRaw);
   const creditsAndRefundsUSD = round2(creditsRaw);
   const taxesUSD = round2(taxesRaw);
@@ -26,7 +42,11 @@ export function buildFinancialReconciliation(
   const netUsageCostExcludingCommitmentPurchasesUSD = round2(
     grossUsageRaw - creditsRaw + taxesRaw
   );
-  const hasDiagnostics = diagnostics !== undefined;
+  const hasDiagnostics =
+    diagnostics !== undefined ||
+    derivedCredits > 0 ||
+    derivedTaxes !== 0 ||
+    derivedPurchases !== 0;
   const mixesCommitmentCashAndAccrual = commitmentPurchasesUSD > 0;
   const usageCostBasis = records.some((record) => record.effectiveCost !== undefined)
     ? "effective-cost"

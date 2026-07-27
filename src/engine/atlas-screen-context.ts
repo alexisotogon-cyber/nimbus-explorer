@@ -1,4 +1,5 @@
 import type { AuditReport, ScenarioResult } from "./types";
+import { calculateScenario } from "./scenarios";
 
 export type AtlasReportTab = "overview" | "findings" | "scenarios" | "markdown";
 
@@ -19,6 +20,11 @@ export interface AtlasScreenContext {
     deltaFromCurrentUSD: number;
     changedVariables: number;
     revision: number;
+    presets: {
+      conservative: { monthlySavingsUSD: number; annualSavingsUSD: number };
+      current: { monthlySavingsUSD: number; annualSavingsUSD: number };
+      optimistic: { monthlySavingsUSD: number; annualSavingsUSD: number };
+    };
   };
   expandedFinding?: {
     id: string;
@@ -80,6 +86,36 @@ export function resolveAtlasScreenContext(
     activeTab: input.activeTab,
     scenario: scenario
       ? {
+          ...(() => {
+            const conservative = calculateScenario(report, {
+              preset: "conservative",
+              overrides: {},
+            });
+            const current = calculateScenario(report, {
+              preset: "current",
+              overrides: {},
+            });
+            const optimistic = calculateScenario(report, {
+              preset: "optimistic",
+              overrides: {},
+            });
+            return {
+              presets: {
+                conservative: {
+                  monthlySavingsUSD: conservative.monthlySavingsUSD,
+                  annualSavingsUSD: conservative.annualSavingsUSD,
+                },
+                current: {
+                  monthlySavingsUSD: current.monthlySavingsUSD,
+                  annualSavingsUSD: current.annualSavingsUSD,
+                },
+                optimistic: {
+                  monthlySavingsUSD: optimistic.monthlySavingsUSD,
+                  annualSavingsUSD: optimistic.annualSavingsUSD,
+                },
+              },
+            };
+          })(),
           preset: scenario.input.preset,
           monthlySavingsUSD: scenario.monthlySavingsUSD,
           annualSavingsUSD: scenario.annualSavingsUSD,

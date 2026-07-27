@@ -50,18 +50,23 @@ export function queryBilling(records: NormalizedCostRecord[]): BillingQueryResul
     };
   }
 
-  const dates = records.map((r) => r.date).filter(Boolean).sort();
+  const usageRecords = records.filter((record) => {
+    const chargeType = (record.chargeType || "Usage").toLowerCase();
+    return record.cost > 0 &&
+      !/(credit|refund|tax|purchase|adjustment)/.test(chargeType);
+  });
+  const dates = usageRecords.map((r) => r.date).filter(Boolean).sort();
   const periodStart = dates[0] || "";
   const periodEnd = dates[dates.length - 1] || "";
   const uniqueDays = new Set(dates).size;
-  const totalCostUSD = records.reduce((sum, r) => sum + r.cost, 0);
+  const totalCostUSD = usageRecords.reduce((sum, r) => sum + r.cost, 0);
 
   // Providers
   const providers = Array.from(new Set(records.map((r) => r.provider)));
 
   // Group by native service
   const byService: Record<string, number> = {};
-  for (const r of records) {
+  for (const r of usageRecords) {
     byService[r.nativeService] = (byService[r.nativeService] || 0) + r.cost;
   }
 
@@ -81,7 +86,7 @@ export function queryBilling(records: NormalizedCostRecord[]): BillingQueryResul
   }));
 
   const dailyAverage = uniqueDays > 0 ? totalCostUSD / uniqueDays : 0;
-  const monthlySummary = records.every(
+  const monthlySummary = usageRecords.length > 0 && usageRecords.every(
     (record) =>
       record.source?.extensions?.analysisLevel === "summary" &&
       record.source?.extensions?.granularity === "monthly"
@@ -98,7 +103,7 @@ export function queryBilling(records: NormalizedCostRecord[]): BillingQueryResul
     periodStart,
     periodEnd,
     totalDays: uniqueDays,
-    recordCount: records.length,
+    recordCount: usageRecords.length,
     serviceBreakdown,
     dailyAverage: Math.round(dailyAverage * 100) / 100,
     projectedMonthlyCost: Math.round(projectedMonthlyCost * 100) / 100,

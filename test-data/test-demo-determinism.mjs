@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 
 const { generateDemoCSV, generateDemoData } = await import("../src/engine/demo-data.ts");
+const { calculateSavings } = await import("../src/engine/tools/calculate-savings.ts");
 
 const base = { provider: "aws", complexity: "medium", variant: "standard" };
 assert.deepEqual(generateDemoData(base), generateDemoData(base), "the same demo config must be reproducible");
@@ -15,5 +16,15 @@ assert.ok(ai.some((row) => /bedrock|sagemaker/i.test(`${row.nativeService} ${row
 
 const credits = generateDemoData({ provider: "aws", complexity: "medium", variant: "credits" });
 assert.ok(credits.some((row) => row.chargeType === "Credit" && row.cost < 0), "credits demo must include explicit negative credit rows");
+const creditsReport = calculateSavings(credits);
+assert.ok(
+  creditsReport.financialReconciliation.creditsAndRefundsUSD > 0,
+  "credits demo must reconcile a non-zero credit amount"
+);
+assert.ok(
+  creditsReport.financialReconciliation.grossUsageCostUSD >
+    creditsReport.financialReconciliation.netUsageCostExcludingCommitmentPurchasesUSD,
+  "credits demo net usage must be lower than gross usage"
+);
 
 console.log("PASS demos: deterministic complexity and variants");

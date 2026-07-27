@@ -196,8 +196,51 @@ function buildAnalysisContext(
       .map((f) => ({
         id: f.id,
         title: f.title,
+        provider: f.provider,
+        service: f.service,
+        category: f.category,
+        estimatedMonthlySavingsUSD: f.estimatedMonthlySavingsUSD,
+        priorityScore: f.priorityScore,
+        nextAction: f.remediation.description,
         savingsRange: { conservative: f.savingsRange.conservative, optimistic: f.savingsRange.optimistic },
       })),
+    highestSavingsFinding: report.findings
+      .filter((finding) => finding.estimatedMonthlySavingsUSD > 0)
+      .sort((left, right) =>
+        right.estimatedMonthlySavingsUSD - left.estimatedMonthlySavingsUSD
+      )
+      .slice(0, 1)
+      .map((finding) => ({
+        id: finding.id,
+        title: finding.title,
+        estimatedMonthlySavingsUSD: finding.estimatedMonthlySavingsUSD,
+        savingsRange: {
+          conservative: finding.savingsRange.conservative,
+          optimistic: finding.savingsRange.optimistic,
+        },
+      }))[0],
+    commitmentEvidence: {
+      purchasesUSD: report.financialReconciliation.commitmentPurchasesUSD,
+      purchaseBasis: report.financialReconciliation.commitmentPurchaseCostBasis,
+      missingCommitmentFinding: report.findings
+        .filter((finding) => finding.category === "missing-commitment")
+        .slice(0, 1)
+        .map((finding) => ({
+          title: finding.title,
+          estimatedMonthlySavingsUSD: finding.estimatedMonthlySavingsUSD,
+          savingsRange: {
+            conservative: finding.savingsRange.conservative,
+            optimistic: finding.savingsRange.optimistic,
+          },
+        }))[0],
+    },
+    aiAttribution: report.aiSpendSummary
+      ? {
+          observedCostUSD: report.aiSpendSummary.observedCostUSD,
+          coveragePercentage: report.aiSpendSummary.attributionCoveragePercentage,
+          attributable: report.aiSpendSummary.attributionCoveragePercentage > 0,
+        }
+      : undefined,
     uploadDiagnosis,
     catalogEvidence: report.billingCoverage
       ? {
@@ -219,6 +262,7 @@ function buildAnalysisContext(
  * NOTE: No credentials are accepted from the client. Bedrock creds come from env.
  */
 export async function POST(request: NextRequest) {
+  let remainingForError: number | undefined;
   try {
     const body = await request.json();
     const { sessionId, message } = body;
@@ -449,6 +493,7 @@ export async function POST(request: NextRequest) {
         { status: 429 }
       );
     }
+    remainingForError = limits.maxMessagesPerSession - entry.messageCount;
 
     const currentAnalysis = getAnalysis(analysisId);
     if (!currentAnalysis) {
@@ -500,6 +545,7 @@ export async function POST(request: NextRequest) {
           {
             success: false,
             atlasUnavailable: true,
+            remaining: limits.maxMessagesPerSession - entry.messageCount,
             error:
               "Atlas está en modo emergencia: las llamadas de IA están deshabilitadas, pero las respuestas factuales siguen disponibles.",
           },
@@ -510,6 +556,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json(
           {
             success: false,
+            remaining: limits.maxMessagesPerSession - entry.messageCount,
             error:
               "Atlas IA no está configurado en el servidor. Las consultas factuales determinísticas siguen disponibles.",
           },
@@ -522,6 +569,7 @@ export async function POST(request: NextRequest) {
           {
             success: false,
             atlasUnavailable: true,
+            remaining: limits.maxMessagesPerSession - entry.messageCount,
             error:
               "Atlas IA está temporalmente pausado por protección de costos o fallos. El análisis determinístico sigue disponible.",
           },
@@ -534,6 +582,7 @@ export async function POST(request: NextRequest) {
           {
             success: false,
             budgetLimited: true,
+            remaining: limits.maxMessagesPerSession - entry.messageCount,
             error: `${budgetCheck.reason} El análisis y las respuestas factuales siguen disponibles.`,
           },
           { status: 429 }
@@ -544,6 +593,7 @@ export async function POST(request: NextRequest) {
           {
             success: false,
             rateLimited: true,
+            remaining: limits.maxMessagesPerSession - entry.messageCount,
             error: "Atlas ya está procesando una consulta. Espera a que termine antes de enviar otra.",
           },
           { status: 429 }
@@ -569,6 +619,7 @@ export async function POST(request: NextRequest) {
       // A failed Bedrock request must not consume one of the user's demo
       // messages. Count only responses that Atlas actually returned.
       entry.messageCount += 1;
+      remainingForError = limits.maxMessagesPerSession - entry.messageCount;
     } catch (error) {
       if (!deterministic) {
         consecutiveLlmFailures += 1;
@@ -639,6 +690,7 @@ export async function POST(request: NextRequest) {
         {
           success: false,
           retryable: true,
+          remaining: remainingForError,
           error:
             "Bedrock está recibiendo demasiadas solicitudes. Tu mensaje no consumió el límite de la auditoría; inténtalo nuevamente en unos segundos.",
         },
