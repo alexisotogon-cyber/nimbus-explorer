@@ -1006,12 +1006,7 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
       const numeric = Number(raw.replace(/[$,\s]/g, ""));
       if (!Number.isFinite(numeric)) continue;
       const cents = Math.round(numeric * 100);
-      if (!closeMatch(cents, knownCents)) {
-        if (process.env.ATLAS_GROUNDING_DEBUG === "1") {
-          return `[DEBUG cifra no reconocida: "${raw}" = ${cents} cents. Conocidas (muestra): ${Array.from(knownCents).slice(0, 40).join(", ")}]\n\n${answer}`;
-        }
-        return this.buildGroundedFallback();
-      }
+      if (!closeMatch(cents, knownCents)) return this.buildGroundedFallback();
     }
 
     // NOTE: percentages are deliberately NOT grounded the same way dollar
@@ -1045,25 +1040,14 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
     });
     if (!narrowedCall) return answer;
 
-    const result = narrowedCall.result as {
-      findings?: Array<{
-        savingsRange?: { conservative: number; moderate?: number; optimistic: number };
-        baseMonthlyCostUSD?: number;
-      }>;
-    };
+    const result = narrowedCall.result as { findings?: unknown[] };
+    // Collect every number in the narrowed finding(s), including inside
+    // free-text fields like `description` — a finding's own description
+    // often cites a portfolio-level figure for context (e.g. "51.4% de tu
+    // factura total de $7,678.19"), and that's in-scope precisely because
+    // it came from THIS finding's own data, not a substitution from another.
     const inScopeCents = new Set<number>();
-    for (const finding of result.findings ?? []) {
-      if (finding.savingsRange) {
-        inScopeCents.add(Math.round(finding.savingsRange.conservative * 100));
-        if (typeof finding.savingsRange.moderate === "number") {
-          inScopeCents.add(Math.round(finding.savingsRange.moderate * 100));
-        }
-        inScopeCents.add(Math.round(finding.savingsRange.optimistic * 100));
-      }
-      if (typeof finding.baseMonthlyCostUSD === "number") {
-        inScopeCents.add(Math.round(finding.baseMonthlyCostUSD * 100));
-      }
-    }
+    for (const finding of result.findings ?? []) collectNumbers(finding, inScopeCents);
     // No findings matched the narrowing filter at all — nothing in-scope to
     // confuse a portfolio number with, so there is nothing to check here.
     if (result.findings && result.findings.length === 0) return answer;
