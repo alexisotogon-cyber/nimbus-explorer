@@ -65,7 +65,7 @@ proveedor, complejidad y variante genera siempre el mismo resultado.
 
 ### 1. Un punto de entrada para cada nube
 
-[![Selección de AWS, Azure, Google Cloud y FOCUS](docs/images/01-proveedores.png)](docs/images/01-proveedores.png)
+[![Selección de AWS, Azure, Google Cloud y FOCUS en modo claro](docs/images/01-proveedores-claro.png)](docs/images/01-proveedores-claro.png)
 
 ### 2. La factura convertida en una decisión financiera
 
