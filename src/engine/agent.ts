@@ -995,12 +995,23 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
     if (this.analysisContext) collectNumbers(this.analysisContext, knownCents);
     for (const call of toolCallsThisTurn) collectNumbers(call.result, knownCents);
 
+    // Every monthly figure in this product has a legitimate annualized twin
+    // (×12 — the app itself computes annualSavingsUSD this way in scenarios).
+    // Stating "$X/año" for a known "$X/mes" is arithmetic, not invention;
+    // without this, that single extra step reads as an unverified number.
+    for (const monthly of Array.from(knownCents)) knownCents.add(Math.round(monthly * 12));
+
     const dollarAmounts = answer.match(/\$\s?-?[\d,]+(?:\.\d{1,2})?/g) ?? [];
     for (const raw of dollarAmounts) {
       const numeric = Number(raw.replace(/[$,\s]/g, ""));
       if (!Number.isFinite(numeric)) continue;
       const cents = Math.round(numeric * 100);
-      if (!closeMatch(cents, knownCents)) return this.buildGroundedFallback();
+      if (!closeMatch(cents, knownCents)) {
+        if (process.env.ATLAS_GROUNDING_DEBUG === "1") {
+          return `[DEBUG cifra no reconocida: "${raw}" = ${cents} cents. Conocidas (muestra): ${Array.from(knownCents).slice(0, 40).join(", ")}]\n\n${answer}`;
+        }
+        return this.buildGroundedFallback();
+      }
     }
 
     // NOTE: percentages are deliberately NOT grounded the same way dollar
