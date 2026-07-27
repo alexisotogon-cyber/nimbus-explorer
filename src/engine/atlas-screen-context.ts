@@ -7,6 +7,12 @@ export type AtlasReportTab = "overview" | "findings" | "scenarios" | "markdown";
 export interface AtlasScreenContextInput {
   activeTab: AtlasReportTab;
   expandedFindingId?: string;
+  /**
+   * IDs only, in the exact order the dashboard renders them (report-dashboard.tsx's
+   * `sortedFindings`) — never trust display copy (titles/numbers) from the client,
+   * that gets looked up server-side from the stored analysis below.
+   */
+  visibleFindingIds?: string[];
 }
 
 /** Server-resolved context; finding metadata comes from the stored analysis. */
@@ -37,6 +43,14 @@ export interface AtlasScreenContext {
     confidence: string;
     nextAction: string;
   };
+  /**
+   * The findings the user is actually looking at, in that exact order. Ordinal
+   * references ("hallazgo 1", "el primero") MUST resolve against this list, not
+   * against the server's own priority ranking — the dashboard groups findings
+   * into sections (e.g. "Grandes proyectos") that restart their own numbering,
+   * so "1" here is a hint to check, never a guarantee.
+   */
+  findingsList?: Array<{ position: number; id: string; title: string }>;
 }
 
 const REPORT_TABS = new Set<AtlasReportTab>([
@@ -69,7 +83,12 @@ export function parseAtlasScreenContextInput(value: unknown): AtlasScreenContext
     raw.expandedFindingId.length <= 200
       ? raw.expandedFindingId
       : undefined;
-  return { activeTab, expandedFindingId };
+  const visibleFindingIds =
+    Array.isArray(raw.visibleFindingIds) &&
+    raw.visibleFindingIds.every((id) => typeof id === "string" && id.length <= 200)
+      ? (raw.visibleFindingIds as string[]).slice(0, 50)
+      : undefined;
+  return { activeTab, expandedFindingId, visibleFindingIds };
 }
 
 export function resolveAtlasScreenContext(
@@ -80,6 +99,14 @@ export function resolveAtlasScreenContext(
   const finding = input.activeTab === "findings" && input.expandedFindingId
     ? report.findings.find((candidate) => candidate.id === input.expandedFindingId)
     : undefined;
+
+  const findingsById = new Map(report.findings.map((f) => [f.id, f]));
+  const findingsList = input.visibleFindingIds
+    ?.map((id, index) => {
+      const match = findingsById.get(id);
+      return match ? { position: index + 1, id: match.id, title: safeLabel(match.title) } : undefined;
+    })
+    .filter((entry): entry is { position: number; id: string; title: string } => !!entry);
 
   return {
     view: "dashboard",
@@ -140,5 +167,6 @@ export function resolveAtlasScreenContext(
           nextAction: safeLabel(finding.remediation.description),
         }
       : undefined,
+    findingsList: findingsList && findingsList.length > 0 ? findingsList : undefined,
   };
 }

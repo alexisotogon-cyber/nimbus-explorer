@@ -691,7 +691,13 @@ export class FinOpsAgent {
           expandedFinding: screenContext.expandedFinding
             ? wrapUntrustedBillingData(screenContext.expandedFinding)
             : undefined,
-        })}`
+          findingsList: screenContext.findingsList
+            ? wrapUntrustedBillingData(screenContext.findingsList)
+            : undefined,
+        })}` +
+        (screenContext.findingsList
+          ? `\n\nADVERTENCIA SOBRE NUMERACIÓN: la lista findingsList arriba es la única fuente válida para "hallazgo 1/2/3" o "el primero/segundo" — NUNCA la sustituyas por tu propia priorización interna. El tablero agrupa hallazgos en varias secciones (ej. "Grandes proyectos") que cada una reinicia su propia numeración desde 1, así que un mismo número puede referirse a hallazgos distintos según la sección que el usuario esté viendo. Si el hallazgo que el usuario describe (por número o de forma vaga) no coincide claramente con esta lista, o si el número podría corresponder a más de un hallazgo real, PREGUNTA el título exacto antes de responder — no asumas cuál es.`
+          : "")
       : "";
     const providerGrounding = this.analysisContext
       ? `\n\nPROVEEDORES PRESENTES EN ESTE ANÁLISIS: ${this.analysisContext.providers.join(", ") || "no disponibles"}.
@@ -967,18 +973,13 @@ No recomiendes servicios, enlaces o acciones de otro proveedor salvo que el usua
       if (!isKnown) return this.buildGroundedFallback();
     }
 
-    // Assumption values/min/max are stored as fractions (0.7) and collected
-    // above as round(value*100) — the same integer space a written-out
-    // percentage lands in ("70%" -> 70). Reusing knownCents catches invented
-    // percentages the same way it catches invented dollar figures.
-    const percentages = answer.match(/\b\d{1,3}(?:\.\d+)?\s?%/g) ?? [];
-    for (const raw of percentages) {
-      const numeric = Number(raw.replace(/[%\s]/g, ""));
-      if (!Number.isFinite(numeric)) continue;
-      const rounded = Math.round(numeric);
-      const isKnown = knownCents.has(rounded) || knownCents.has(rounded - 1) || knownCents.has(rounded + 1);
-      if (!isKnown) return this.buildGroundedFallback();
-    }
+    // NOTE: percentages are deliberately NOT grounded the same way dollar
+    // amounts are. A percentage is very often legitimate arithmetic the model
+    // did on two already-grounded numbers (e.g. "$400 is 35% of your $1,143
+    // bill") rather than an invented figure, and confirmed in production this
+    // was blocking correct, helpful answers (e.g. "top 2 services by spend").
+    // Dollar amounts don't have that ambiguity — a wrong one is unambiguously
+    // wrong — so only those are worth the false-positive risk of blocking.
     return answer;
   }
 

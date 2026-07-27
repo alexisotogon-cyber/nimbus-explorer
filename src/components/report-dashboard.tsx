@@ -94,8 +94,9 @@ export function ReportDashboard({
       activeTab,
       expandedFindingId:
         activeTab === "findings" ? expandedFinding ?? undefined : undefined,
+      visibleFindingIds: sortedFindings.map((f) => f.id),
     });
-  }, [activeTab, expandedFinding, onAtlasScreenContextChange]);
+  }, [activeTab, expandedFinding, sortedFindings, onAtlasScreenContextChange]);
 
   const goToFinding = (id: string) => {
     setActiveTab("findings");
