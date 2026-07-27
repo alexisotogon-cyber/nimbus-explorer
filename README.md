@@ -61,9 +61,10 @@ Las demos usan datos sintéticos reproducibles. La misma combinación de
 proveedor, complejidad y variante genera siempre el mismo resultado.
 
 
+## Capturas e Imagenes del proyecto Nimbus
 
-[Resumen ejecutivo de Nimbus Explorer](docs/images/inicio.png)
-
+[Selección de proveedor de nube](docs/images/inicio.png)
+[Panel AWS para carga de datos](docs/images/aws.png)
 
 
 
