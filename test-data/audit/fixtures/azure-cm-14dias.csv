@@ -1,0 +1,71 @@
+Date,SubscriptionId,ResourceGroup,MeterCategory,MeterSubCategory,MeterName,ConsumedService,ResourceLocation,CostInBillingCurrency,Quantity
+2026-06-01,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-01,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-01,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-01,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-01,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-02,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-02,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-02,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-02,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-02,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-03,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-03,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-03,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-03,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-03,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-04,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-04,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-04,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-04,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-04,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-05,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-05,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-05,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-05,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-05,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-06,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-06,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-06,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-06,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-06,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-07,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-07,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-07,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-07,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-07,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-08,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-08,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-08,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-08,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-08,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-09,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-09,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-09,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-09,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-09,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-10,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-10,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-10,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-10,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-10,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-11,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-11,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-11,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-11,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-11,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-12,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-12,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-12,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-12,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-12,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-13,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-13,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-13,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-13,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-13,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24
+2026-06-14,sub-0001,rg-audit,Virtual Machines,Dv3/DSv3 Series,D4s v3,Microsoft.Compute,eastus,45.00,24
+2026-06-14,sub-0001,rg-audit,Storage,Premium SSD Managed Disks,P10 Disks,Microsoft.Compute,eastus,18.00,24
+2026-06-14,sub-0001,rg-audit,Storage,General Block Blob,Hot LRS Data Stored,Microsoft.Storage,eastus,14.00,24
+2026-06-14,sub-0001,rg-audit,Bandwidth,Inter-Region,Data Transfer Out,Microsoft.Network,eastus,9.00,24
+2026-06-14,sub-0001,rg-audit,SQL Database,Single Standard,S2 DTUs,Microsoft.Sql,eastus,22.00,24

@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+.claude/
+.next/
+.next-dev/
+out/
+tmp/
+semantic-review/
+.env
+.env.local
+.env.production.local
+.env.development.local
+*.tsbuildinfo
+next-env.d.ts
+test-data/audit/out-*

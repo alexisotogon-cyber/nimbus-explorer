@@ -1,0 +1,163 @@
+{
+  "caso-prueba-aws.csv": {
+    "records": 210,
+    "totalCostUSD": 1591.66,
+    "totalSavingsUSD": 439.49,
+    "findings": 8,
+    "periodStart": "2026-06-21",
+    "periodEnd": "2026-07-20",
+    "findingIds": [
+      "EXCESSIVE-SNAP-aws-us-east-1",
+      "IDLE-IP-aws-us-east-1",
+      "LEGACY-GEN-t2-xlarge-us-west-2",
+      "NAT-GW-aws-us-east-1",
+      "OBJ-TIERING-aws-us-east-1",
+      "UNATTACHED-BLOCK-aws-us-east-1",
+      "UTIL-REVIEW-aws-BoxUsage-m6i-xlarge",
+      "UTIL-REVIEW-aws-BoxUsage-t2-xlarge"
+    ],
+    "perFinding": {
+      "EXCESSIVE-SNAP-aws-us-east-1": 74.97,
+      "IDLE-IP-aws-us-east-1": 2.88,
+      "LEGACY-GEN-t2-xlarge-us-west-2": 13.72,
+      "NAT-GW-aws-us-east-1": 269.92,
+      "OBJ-TIERING-aws-us-east-1": 46.02,
+      "UNATTACHED-BLOCK-aws-us-east-1": 31.98,
+      "UTIL-REVIEW-aws-BoxUsage-m6i-xlarge": 0,
+      "UTIL-REVIEW-aws-BoxUsage-t2-xlarge": 0
+    },
+    "droppedRows": {
+      "unparsableAmount": 0,
+      "unparsableDate": 0,
+      "ambiguousDateOrder": false
+    }
+  },
+  "caso-prueba-focus.csv": {
+    "records": 181,
+    "totalCostUSD": 1702.14,
+    "totalSavingsUSD": 428.48,
+    "findings": 8,
+    "periodStart": "2026-06-21",
+    "periodEnd": "2026-07-20",
+    "findingIds": [
+      "AI-BDR-BATCH",
+      "AI-TAG-ATTRIBUTION",
+      "AI-VIS-SPEND",
+      "EXCESSIVE-SNAP-aws-us-east-1",
+      "NAT-GW-aws-us-east-1",
+      "OBJ-TIERING-aws-us-east-1",
+      "UTIL-REVIEW-aws-EC2-Instance-Running-m6i-xlarge",
+      "UTIL-REVIEW-azure-Virtual-Machines-D4s-v5---eastus"
+    ],
+    "perFinding": {
+      "AI-BDR-BATCH": 37.49,
+      "AI-TAG-ATTRIBUTION": 0,
+      "AI-VIS-SPEND": 0,
+      "EXCESSIVE-SNAP-aws-us-east-1": 74.97,
+      "NAT-GW-aws-us-east-1": 270,
+      "OBJ-TIERING-aws-us-east-1": 46.02,
+      "UTIL-REVIEW-aws-EC2-Instance-Running-m6i-xlarge": 0,
+      "UTIL-REVIEW-azure-Virtual-Machines-D4s-v5---eastus": 0
+    },
+    "droppedRows": {
+      "unparsableAmount": 0,
+      "unparsableDate": 0,
+      "ambiguousDateOrder": false
+    }
+  },
+  "caso-complejo-azure-focus.csv": {
+    "records": 675,
+    "totalCostUSD": 4772.27,
+    "totalSavingsUSD": 1023.85,
+    "findings": 11,
+    "periodStart": "2026-06-18",
+    "periodEnd": "2026-07-22",
+    "findingIds": [
+      "AI-BDR-BATCH",
+      "AI-SM-ENDPOINT",
+      "AI-TAG-ATTRIBUTION",
+      "AI-VIS-SPEND",
+      "COMMIT-AZURE",
+      "EXCESSIVE-SNAP-azure-eastus2",
+      "IDLE-IP-azure-eastus2",
+      "NAT-GW-azure-eastus2",
+      "UNATTACHED-BLOCK-azure-eastus2",
+      "UTIL-REVIEW-azure-Consumption-Plan-Execution",
+      "UTIL-REVIEW-azure-Standard-D4s-v5-Compute-Hours"
+    ],
+    "perFinding": {
+      "AI-BDR-BATCH": 119.54,
+      "AI-SM-ENDPOINT": 168.83,
+      "AI-TAG-ATTRIBUTION": 0,
+      "AI-VIS-SPEND": 0,
+      "COMMIT-AZURE": 485.08,
+      "EXCESSIVE-SNAP-azure-eastus2": 27.07,
+      "IDLE-IP-azure-eastus2": 2.89,
+      "NAT-GW-azure-eastus2": 60.08,
+      "UNATTACHED-BLOCK-azure-eastus2": 160.36,
+      "UTIL-REVIEW-azure-Consumption-Plan-Execution": 0,
+      "UTIL-REVIEW-azure-Standard-D4s-v5-Compute-Hours": 0
+    },
+    "droppedRows": {
+      "unparsableAmount": 0,
+      "unparsableDate": 0,
+      "ambiguousDateOrder": false
+    }
+  },
+  "caso-focus-gcp-sin-servicecategory.csv": {
+    "records": 56,
+    "totalCostUSD": 962.46,
+    "totalSavingsUSD": 199.04,
+    "findings": 4,
+    "periodStart": "2026-01-01",
+    "periodEnd": "2026-01-14",
+    "findingIds": [
+      "COMMIT-GCP",
+      "OBJ-TIERING-gcp-us-central1",
+      "UNATTACHED-BLOCK-gcp-us-central1",
+      "UTIL-REVIEW-gcp-N2-Instance-Core-running-in-Americas"
+    ],
+    "perFinding": {
+      "COMMIT-GCP": 137.44,
+      "OBJ-TIERING-gcp-us-central1": 25.47,
+      "UNATTACHED-BLOCK-gcp-us-central1": 36.13,
+      "UTIL-REVIEW-gcp-N2-Instance-Core-running-in-Americas": 0
+    },
+    "droppedRows": {
+      "unparsableAmount": 0,
+      "unparsableDate": 0,
+      "ambiguousDateOrder": false
+    }
+  },
+  "caso-focus-1.4-serviceprovidername.csv": {
+    "records": 70,
+    "totalCostUSD": 1385.95,
+    "totalSavingsUSD": 228.77,
+    "findings": 7,
+    "periodStart": "2026-01-01",
+    "periodEnd": "2026-01-14",
+    "findingIds": [
+      "AI-BDR-BATCH",
+      "AI-TAG-ATTRIBUTION",
+      "AI-VIS-SPEND",
+      "NAT-GW-aws-us-east-1",
+      "OBJ-TIERING-aws-us-east-1",
+      "UNATTACHED-BLOCK-aws-us-east-1",
+      "UTIL-REVIEW-aws-BoxUsage-m6i-2xlarge"
+    ],
+    "perFinding": {
+      "AI-BDR-BATCH": 51.08,
+      "AI-TAG-ATTRIBUTION": 0,
+      "AI-VIS-SPEND": 0,
+      "NAT-GW-aws-us-east-1": 105.43,
+      "OBJ-TIERING-aws-us-east-1": 31.98,
+      "UNATTACHED-BLOCK-aws-us-east-1": 40.28,
+      "UTIL-REVIEW-aws-BoxUsage-m6i-2xlarge": 0
+    },
+    "droppedRows": {
+      "unparsableAmount": 0,
+      "unparsableDate": 0,
+      "ambiguousDateOrder": false
+    }
+  }
+}

@@ -1,0 +1,819 @@
+Billing Account ID,Project.id,Project.name,Service.description,Sku.description,Location.region,usage_start_time,Cost,usage_amount
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-05-25 00:00:00 UTC,20.38,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-05-25 00:00:00 UTC,6.79,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-05-25 00:00:00 UTC,6.17,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-05-25 00:00:00 UTC,1.95,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-05-25 00:00:00 UTC,4.29,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-05-25 00:00:00 UTC,1.30,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-05-25 00:00:00 UTC,42.60,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-05-25 00:00:00 UTC,9.44,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-05-25 00:00:00 UTC,11.16,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-05-25 00:00:00 UTC,2.51,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-05-25 00:00:00 UTC,13.26,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-25 00:00:00 UTC,3.78,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-25 00:00:00 UTC,1.88,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-05-26 00:00:00 UTC,18.86,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-05-26 00:00:00 UTC,5.63,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-05-26 00:00:00 UTC,4.73,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-05-26 00:00:00 UTC,1.45,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-05-26 00:00:00 UTC,3.25,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-05-26 00:00:00 UTC,1.06,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-05-26 00:00:00 UTC,38.60,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-05-26 00:00:00 UTC,9.71,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-05-26 00:00:00 UTC,12.95,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-05-26 00:00:00 UTC,3.21,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-05-26 00:00:00 UTC,17.79,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-26 00:00:00 UTC,5.06,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-26 00:00:00 UTC,2.38,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-05-27 00:00:00 UTC,18.66,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-05-27 00:00:00 UTC,6.31,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-05-27 00:00:00 UTC,5.89,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-05-27 00:00:00 UTC,1.92,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-05-27 00:00:00 UTC,4.37,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-05-27 00:00:00 UTC,1.37,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-05-27 00:00:00 UTC,45.93,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-05-27 00:00:00 UTC,10.33,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-05-27 00:00:00 UTC,12.20,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-05-27 00:00:00 UTC,2.70,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-05-27 00:00:00 UTC,13.76,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-27 00:00:00 UTC,3.76,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-27 00:00:00 UTC,1.79,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-05-28 00:00:00 UTC,20.57,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-05-28 00:00:00 UTC,6.17,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-05-28 00:00:00 UTC,5.12,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-05-28 00:00:00 UTC,1.52,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-05-28 00:00:00 UTC,3.27,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-05-28 00:00:00 UTC,1.02,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-05-28 00:00:00 UTC,35.96,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-05-28 00:00:00 UTC,8.88,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-05-28 00:00:00 UTC,11.84,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-05-28 00:00:00 UTC,2.97,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-05-28 00:00:00 UTC,16.91,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-28 00:00:00 UTC,4.96,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-28 00:00:00 UTC,2.41,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-05-29 00:00:00 UTC,17.13,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-05-29 00:00:00 UTC,5.76,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-05-29 00:00:00 UTC,5.43,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-05-29 00:00:00 UTC,1.81,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-05-29 00:00:00 UTC,4.24,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-05-29 00:00:00 UTC,1.37,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-05-29 00:00:00 UTC,47.64,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-05-29 00:00:00 UTC,11.02,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-05-29 00:00:00 UTC,13.28,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-05-29 00:00:00 UTC,2.96,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-05-29 00:00:00 UTC,14.93,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-29 00:00:00 UTC,3.97,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-29 00:00:00 UTC,1.81,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-05-30 00:00:00 UTC,21.78,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-05-30 00:00:00 UTC,6.68,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-05-30 00:00:00 UTC,5.61,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-05-30 00:00:00 UTC,1.66,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-05-30 00:00:00 UTC,3.49,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-05-30 00:00:00 UTC,1.05,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-05-30 00:00:00 UTC,35.34,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-05-30 00:00:00 UTC,8.39,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-05-30 00:00:00 UTC,10.90,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-05-30 00:00:00 UTC,2.71,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-05-30 00:00:00 UTC,15.56,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-30 00:00:00 UTC,4.66,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-30 00:00:00 UTC,2.33,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-05-31 00:00:00 UTC,16.35,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-05-31 00:00:00 UTC,5.33,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-05-31 00:00:00 UTC,4.96,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-05-31 00:00:00 UTC,1.66,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-05-31 00:00:00 UTC,3.96,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-05-31 00:00:00 UTC,1.32,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-05-31 00:00:00 UTC,47.11,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-05-31 00:00:00 UTC,11.27,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-05-31 00:00:00 UTC,14.00,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-05-31 00:00:00 UTC,3.20,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-05-31 00:00:00 UTC,16.35,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-31 00:00:00 UTC,4.33,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-05-31 00:00:00 UTC,1.94,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-01 00:00:00 UTC,22.05,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-01 00:00:00 UTC,6.98,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-01 00:00:00 UTC,6.02,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-01 00:00:00 UTC,1.81,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-01 00:00:00 UTC,3.82,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-01 00:00:00 UTC,1.13,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-01 00:00:00 UTC,36.96,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-01 00:00:00 UTC,8.41,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-01 00:00:00 UTC,10.46,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-01 00:00:00 UTC,2.52,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-01 00:00:00 UTC,14.22,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-01 00:00:00 UTC,4.26,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-01 00:00:00 UTC,2.17,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-02 00:00:00 UTC,16.62,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-02 00:00:00 UTC,5.19,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-02 00:00:00 UTC,4.65,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-02 00:00:00 UTC,1.52,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-02 00:00:00 UTC,3.61,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-02 00:00:00 UTC,1.22,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-02 00:00:00 UTC,44.54,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-02 00:00:00 UTC,10.98,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-02 00:00:00 UTC,14.10,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-02 00:00:00 UTC,3.33,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-02 00:00:00 UTC,17.49,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-02 00:00:00 UTC,4.73,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-02 00:00:00 UTC,2.13,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-03 00:00:00 UTC,21.27,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-03 00:00:00 UTC,6.96,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-03 00:00:00 UTC,6.21,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-03 00:00:00 UTC,1.92,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-03 00:00:00 UTC,4.14,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-03 00:00:00 UTC,1.24,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-03 00:00:00 UTC,40.25,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-03 00:00:00 UTC,8.94,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-03 00:00:00 UTC,10.70,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-03 00:00:00 UTC,2.47,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-03 00:00:00 UTC,13.38,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-03 00:00:00 UTC,3.92,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-03 00:00:00 UTC,1.98,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-04 00:00:00 UTC,17.83,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-04 00:00:00 UTC,5.37,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-04 00:00:00 UTC,4.61,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-04 00:00:00 UTC,1.45,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-04 00:00:00 UTC,3.34,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-04 00:00:00 UTC,1.11,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-04 00:00:00 UTC,40.85,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-04 00:00:00 UTC,10.26,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-04 00:00:00 UTC,13.55,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-04 00:00:00 UTC,3.30,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-04 00:00:00 UTC,17.94,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-04 00:00:00 UTC,5.00,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-04 00:00:00 UTC,2.30,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-05 00:00:00 UTC,19.74,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-05 00:00:00 UTC,6.63,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-05 00:00:00 UTC,6.10,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-05 00:00:00 UTC,1.95,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-05 00:00:00 UTC,4.34,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-05 00:00:00 UTC,1.33,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-05 00:00:00 UTC,43.99,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-05 00:00:00 UTC,9.78,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-05 00:00:00 UTC,11.52,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-05 00:00:00 UTC,2.57,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-05 00:00:00 UTC,13.36,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-05 00:00:00 UTC,3.75,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-05 00:00:00 UTC,1.83,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-06 00:00:00 UTC,19.54,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-06 00:00:00 UTC,5.82,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-06 00:00:00 UTC,4.86,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-06 00:00:00 UTC,1.47,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-06 00:00:00 UTC,3.23,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-06 00:00:00 UTC,1.04,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-06 00:00:00 UTC,37.41,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-06 00:00:00 UTC,9.37,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-06 00:00:00 UTC,12.54,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-06 00:00:00 UTC,3.13,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-06 00:00:00 UTC,17.54,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-06 00:00:00 UTC,5.05,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-06 00:00:00 UTC,2.41,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-07 00:00:00 UTC,18.02,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-07 00:00:00 UTC,6.10,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-07 00:00:00 UTC,5.73,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-07 00:00:00 UTC,1.89,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-07 00:00:00 UTC,4.34,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-07 00:00:00 UTC,1.38,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-07 00:00:00 UTC,46.82,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-07 00:00:00 UTC,10.63,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-07 00:00:00 UTC,12.63,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-07 00:00:00 UTC,2.79,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-07 00:00:00 UTC,14.15,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-07 00:00:00 UTC,3.81,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-07 00:00:00 UTC,1.79,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-08 00:00:00 UTC,21.12,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-08 00:00:00 UTC,6.38,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-08 00:00:00 UTC,5.31,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-08 00:00:00 UTC,1.57,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-08 00:00:00 UTC,3.33,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-08 00:00:00 UTC,1.02,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-08 00:00:00 UTC,35.45,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-08 00:00:00 UTC,8.64,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-08 00:00:00 UTC,11.44,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-08 00:00:00 UTC,2.87,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-08 00:00:00 UTC,16.43,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-08 00:00:00 UTC,4.87,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-08 00:00:00 UTC,2.39,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-09 00:00:00 UTC,16.72,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-09 00:00:00 UTC,5.57,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-09 00:00:00 UTC,5.25,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-09 00:00:00 UTC,1.76,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-09 00:00:00 UTC,4.15,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-09 00:00:00 UTC,1.36,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-09 00:00:00 UTC,47.71,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-09 00:00:00 UTC,11.18,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-09 00:00:00 UTC,13.61,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-09 00:00:00 UTC,3.06,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-09 00:00:00 UTC,15.47,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-09 00:00:00 UTC,4.10,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-09 00:00:00 UTC,1.85,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-10 00:00:00 UTC,22.01,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-10 00:00:00 UTC,6.83,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-10 00:00:00 UTC,5.79,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-10 00:00:00 UTC,1.72,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-10 00:00:00 UTC,3.60,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-10 00:00:00 UTC,1.07,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-10 00:00:00 UTC,35.71,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-10 00:00:00 UTC,8.33,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-10 00:00:00 UTC,10.66,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-10 00:00:00 UTC,2.63,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-10 00:00:00 UTC,15.02,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-10 00:00:00 UTC,4.51,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-10 00:00:00 UTC,2.28,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-11 00:00:00 UTC,16.33,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-11 00:00:00 UTC,5.24,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-11 00:00:00 UTC,4.82,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-11 00:00:00 UTC,1.61,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-11 00:00:00 UTC,3.82,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-11 00:00:00 UTC,1.28,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-11 00:00:00 UTC,46.34,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-11 00:00:00 UTC,11.22,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-11 00:00:00 UTC,14.12,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-11 00:00:00 UTC,3.26,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-11 00:00:00 UTC,16.84,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-11 00:00:00 UTC,4.49,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-11 00:00:00 UTC,2.01,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-12 00:00:00 UTC,21.87,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-12 00:00:00 UTC,7.01,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-12 00:00:00 UTC,6.13,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-12 00:00:00 UTC,1.86,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-12 00:00:00 UTC,3.95,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-12 00:00:00 UTC,1.17,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-12 00:00:00 UTC,38.07,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-12 00:00:00 UTC,8.56,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-12 00:00:00 UTC,10.47,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-12 00:00:00 UTC,2.48,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-12 00:00:00 UTC,13.82,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-12 00:00:00 UTC,4.12,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-12 00:00:00 UTC,2.09,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-13 00:00:00 UTC,16.99,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-13 00:00:00 UTC,5.22,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-13 00:00:00 UTC,4.60,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-13 00:00:00 UTC,1.49,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-13 00:00:00 UTC,3.49,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-13 00:00:00 UTC,1.17,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-13 00:00:00 UTC,43.20,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-13 00:00:00 UTC,10.75,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-13 00:00:00 UTC,13.96,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-13 00:00:00 UTC,3.33,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-13 00:00:00 UTC,17.76,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-13 00:00:00 UTC,4.85,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-13 00:00:00 UTC,2.20,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-14 00:00:00 UTC,20.75,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-14 00:00:00 UTC,6.87,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-14 00:00:00 UTC,16.12,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-14 00:00:00 UTC,4.67,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-14 00:00:00 UTC,4.24,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-14 00:00:00 UTC,1.28,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-14 00:00:00 UTC,41.69,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-14 00:00:00 UTC,9.24,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-14 00:00:00 UTC,10.96,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-14 00:00:00 UTC,2.49,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-14 00:00:00 UTC,13.27,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-14 00:00:00 UTC,3.83,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-14 00:00:00 UTC,1.91,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-15 00:00:00 UTC,18.45,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-15 00:00:00 UTC,5.52,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-15 00:00:00 UTC,4.67,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-15 00:00:00 UTC,1.45,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-15 00:00:00 UTC,3.27,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-15 00:00:00 UTC,1.08,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-15 00:00:00 UTC,39.44,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-15 00:00:00 UTC,9.93,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-15 00:00:00 UTC,13.20,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-15 00:00:00 UTC,3.25,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-15 00:00:00 UTC,17.89,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-15 00:00:00 UTC,5.05,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-15 00:00:00 UTC,2.35,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-16 00:00:00 UTC,19.08,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-16 00:00:00 UTC,6.44,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-16 00:00:00 UTC,5.98,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-16 00:00:00 UTC,1.94,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-16 00:00:00 UTC,4.37,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-16 00:00:00 UTC,1.36,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-16 00:00:00 UTC,45.24,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-16 00:00:00 UTC,10.12,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-16 00:00:00 UTC,11.93,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-16 00:00:00 UTC,2.65,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-16 00:00:00 UTC,13.57,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-16 00:00:00 UTC,3.74,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-16 00:00:00 UTC,1.80,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-17 00:00:00 UTC,20.19,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-17 00:00:00 UTC,6.03,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-17 00:00:00 UTC,5.01,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-17 00:00:00 UTC,1.50,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-17 00:00:00 UTC,3.24,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-17 00:00:00 UTC,1.02,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-17 00:00:00 UTC,36.43,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-17 00:00:00 UTC,9.06,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-17 00:00:00 UTC,12.11,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-17 00:00:00 UTC,3.04,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-17 00:00:00 UTC,17.18,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-17 00:00:00 UTC,5.01,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-17 00:00:00 UTC,2.41,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-18 00:00:00 UTC,17.44,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-18 00:00:00 UTC,5.89,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-18 00:00:00 UTC,5.55,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-18 00:00:00 UTC,1.85,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-18 00:00:00 UTC,4.29,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-18 00:00:00 UTC,1.38,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-18 00:00:00 UTC,47.42,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-18 00:00:00 UTC,10.89,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-18 00:00:00 UTC,13.04,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-18 00:00:00 UTC,2.89,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-18 00:00:00 UTC,14.61,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-18 00:00:00 UTC,3.90,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-18 00:00:00 UTC,1.80,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-19 00:00:00 UTC,21.57,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-19 00:00:00 UTC,6.57,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-19 00:00:00 UTC,5.49,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-19 00:00:00 UTC,1.62,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-19 00:00:00 UTC,3.42,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-19 00:00:00 UTC,1.04,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-19 00:00:00 UTC,35.28,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-19 00:00:00 UTC,8.46,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-19 00:00:00 UTC,11.09,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-19 00:00:00 UTC,2.77,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-19 00:00:00 UTC,15.90,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-19 00:00:00 UTC,4.75,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-19 00:00:00 UTC,2.36,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-20 00:00:00 UTC,16.45,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-20 00:00:00 UTC,5.41,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-20 00:00:00 UTC,5.07,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-20 00:00:00 UTC,1.70,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-20 00:00:00 UTC,4.03,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-20 00:00:00 UTC,1.33,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-20 00:00:00 UTC,47.45,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-20 00:00:00 UTC,11.26,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-20 00:00:00 UTC,13.88,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-20 00:00:00 UTC,3.15,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-20 00:00:00 UTC,16.01,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-20 00:00:00 UTC,4.24,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-20 00:00:00 UTC,1.90,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-21 00:00:00 UTC,22.08,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-21 00:00:00 UTC,6.94,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-21 00:00:00 UTC,5.94,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-21 00:00:00 UTC,1.78,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-21 00:00:00 UTC,3.73,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-21 00:00:00 UTC,1.11,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-21 00:00:00 UTC,36.39,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-21 00:00:00 UTC,8.35,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-21 00:00:00 UTC,10.51,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-21 00:00:00 UTC,2.56,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-21 00:00:00 UTC,14.51,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-21 00:00:00 UTC,4.36,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-21 00:00:00 UTC,2.21,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-22 00:00:00 UTC,16.46,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-22 00:00:00 UTC,5.19,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-22 00:00:00 UTC,4.70,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-22 00:00:00 UTC,1.55,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-22 00:00:00 UTC,3.69,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-22 00:00:00 UTC,1.24,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-22 00:00:00 UTC,45.30,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-22 00:00:00 UTC,11.10,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-22 00:00:00 UTC,14.14,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-22 00:00:00 UTC,3.31,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-22 00:00:00 UTC,17.26,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-22 00:00:00 UTC,4.64,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-22 00:00:00 UTC,2.08,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-23 00:00:00 UTC,21.54,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-23 00:00:00 UTC,7.00,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-23 00:00:00 UTC,6.19,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-23 00:00:00 UTC,1.90,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-23 00:00:00 UTC,4.07,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-23 00:00:00 UTC,1.21,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-23 00:00:00 UTC,39.37,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-23 00:00:00 UTC,8.77,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-23 00:00:00 UTC,10.58,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-23 00:00:00 UTC,2.47,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-23 00:00:00 UTC,13.52,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-23 00:00:00 UTC,3.99,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-23 00:00:00 UTC,2.02,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-24 00:00:00 UTC,17.47,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-24 00:00:00 UTC,5.30,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-24 00:00:00 UTC,4.59,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-24 00:00:00 UTC,1.46,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-24 00:00:00 UTC,3.39,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-24 00:00:00 UTC,1.13,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-24 00:00:00 UTC,41.77,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-24 00:00:00 UTC,10.46,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-24 00:00:00 UTC,13.73,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-24 00:00:00 UTC,3.32,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-24 00:00:00 UTC,17.91,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-24 00:00:00 UTC,4.95,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-24 00:00:00 UTC,2.27,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-25 00:00:00 UTC,20.15,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-25 00:00:00 UTC,6.73,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-25 00:00:00 UTC,6.15,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-25 00:00:00 UTC,1.95,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-25 00:00:00 UTC,4.31,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-25 00:00:00 UTC,1.31,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-25 00:00:00 UTC,43.13,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-25 00:00:00 UTC,9.57,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-25 00:00:00 UTC,11.28,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-25 00:00:00 UTC,2.53,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-25 00:00:00 UTC,13.28,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-25 00:00:00 UTC,3.77,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-25 00:00:00 UTC,1.86,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-26 00:00:00 UTC,19.11,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-26 00:00:00 UTC,5.70,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-26 00:00:00 UTC,4.78,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-26 00:00:00 UTC,1.45,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-26 00:00:00 UTC,3.24,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-26 00:00:00 UTC,1.05,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-26 00:00:00 UTC,38.14,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-26 00:00:00 UTC,9.58,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-26 00:00:00 UTC,12.80,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-26 00:00:00 UTC,3.18,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-26 00:00:00 UTC,17.71,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-26 00:00:00 UTC,5.06,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-26 00:00:00 UTC,2.39,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-27 00:00:00 UTC,18.41,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-27 00:00:00 UTC,6.23,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-27 00:00:00 UTC,5.84,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-27 00:00:00 UTC,1.91,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-27 00:00:00 UTC,4.36,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-27 00:00:00 UTC,1.37,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-27 00:00:00 UTC,46.29,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-27 00:00:00 UTC,10.45,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-27 00:00:00 UTC,12.36,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-27 00:00:00 UTC,2.73,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-27 00:00:00 UTC,13.90,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-27 00:00:00 UTC,3.78,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-27 00:00:00 UTC,1.79,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-28 00:00:00 UTC,20.79,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-28 00:00:00 UTC,6.25,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-28 00:00:00 UTC,5.19,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-28 00:00:00 UTC,1.54,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-28 00:00:00 UTC,3.29,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-28 00:00:00 UTC,1.02,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-28 00:00:00 UTC,35.73,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-28 00:00:00 UTC,8.79,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-28 00:00:00 UTC,11.69,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-28 00:00:00 UTC,2.94,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-28 00:00:00 UTC,16.74,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-28 00:00:00 UTC,4.93,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-28 00:00:00 UTC,2.41,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-29 00:00:00 UTC,16.96,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-29 00:00:00 UTC,5.69,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-29 00:00:00 UTC,5.36,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-29 00:00:00 UTC,1.79,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-29 00:00:00 UTC,4.21,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-29 00:00:00 UTC,1.37,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-29 00:00:00 UTC,47.71,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-29 00:00:00 UTC,11.09,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-29 00:00:00 UTC,13.41,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-29 00:00:00 UTC,3.00,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-29 00:00:00 UTC,15.13,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-29 00:00:00 UTC,4.01,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-29 00:00:00 UTC,1.83,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-30 00:00:00 UTC,21.88,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-30 00:00:00 UTC,6.74,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-30 00:00:00 UTC,5.68,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-06-30 00:00:00 UTC,1.68,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-06-30 00:00:00 UTC,3.53,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-06-30 00:00:00 UTC,1.06,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-06-30 00:00:00 UTC,35.44,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-06-30 00:00:00 UTC,8.36,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-06-30 00:00:00 UTC,10.80,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-30 00:00:00 UTC,2.68,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-06-30 00:00:00 UTC,15.36,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-30 00:00:00 UTC,4.61,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-06-30 00:00:00 UTC,2.31,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-01 00:00:00 UTC,16.33,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-01 00:00:00 UTC,5.29,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-01 00:00:00 UTC,4.91,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Ram running in Americas,southamerica-east1,2026-07-01 00:00:00 UTC,1.64,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-central1,2026-07-01 00:00:00 UTC,3.91,16
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-central1,2026-07-01 00:00:00 UTC,1.30,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Core running in Americas,us-east1,2026-07-01 00:00:00 UTC,46.86,60
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,C2 Instance Ram running in Americas,us-east1,2026-07-01 00:00:00 UTC,11.26,240
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,N2 Instance Core running in Americas,us-east1,2026-07-01 00:00:00 UTC,14.06,48
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-01 00:00:00 UTC,3.22,8
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,N2 Instance Core running in EMEA,europe-west1,2026-07-01 00:00:00 UTC,16.54,48
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-07-01 00:00:00 UTC,4.39,16
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,E2 Instance Core running in EMEA,europe-west1,2026-07-01 00:00:00 UTC,1.97,8
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-05-25 00:00:00 UTC,4.63,46
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-05-25 00:00:00 UTC,6.81,68
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-05-25 00:00:00 UTC,2.96,30
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-05-25 00:00:00 UTC,4.95,49
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-05-26 00:00:00 UTC,3.82,38
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-05-26 00:00:00 UTC,6.29,63
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-05-26 00:00:00 UTC,3.10,31
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-05-26 00:00:00 UTC,5.84,58
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-05-27 00:00:00 UTC,4.89,49
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-05-27 00:00:00 UTC,7.36,74
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-05-27 00:00:00 UTC,3.24,32
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-05-27 00:00:00 UTC,5.40,54
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-05-28 00:00:00 UTC,3.66,37
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-05-28 00:00:00 UTC,5.84,58
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-05-28 00:00:00 UTC,2.84,28
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-05-28 00:00:00 UTC,5.35,53
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-05-29 00:00:00 UTC,4.93,49
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-05-29 00:00:00 UTC,7.68,77
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-05-29 00:00:00 UTC,3.47,35
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-05-29 00:00:00 UTC,5.89,59
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-05-30 00:00:00 UTC,3.73,37
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-05-30 00:00:00 UTC,5.70,57
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-05-30 00:00:00 UTC,2.66,27
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-05-30 00:00:00 UTC,4.91,49
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-05-31 00:00:00 UTC,4.75,47
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-05-31 00:00:00 UTC,7.63,76
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-05-31 00:00:00 UTC,3.56,36
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-05-31 00:00:00 UTC,6.24,62
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-01 00:00:00 UTC,4.01,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-01 00:00:00 UTC,5.92,59
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-01 00:00:00 UTC,2.65,27
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-01 00:00:00 UTC,4.69,47
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-02 00:00:00 UTC,4.40,44
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-02 00:00:00 UTC,7.25,72
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-02 00:00:00 UTC,3.49,35
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-02 00:00:00 UTC,6.32,63
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-03 00:00:00 UTC,4.40,44
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-03 00:00:00 UTC,6.43,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-03 00:00:00 UTC,2.80,28
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-03 00:00:00 UTC,4.76,48
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-04 00:00:00 UTC,4.01,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-04 00:00:00 UTC,6.66,67
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-04 00:00:00 UTC,3.28,33
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-04 00:00:00 UTC,6.10,61
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-05 00:00:00 UTC,4.75,47
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-05 00:00:00 UTC,7.04,70
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-05 00:00:00 UTC,3.06,31
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-05 00:00:00 UTC,5.10,51
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-06 00:00:00 UTC,3.73,37
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-06 00:00:00 UTC,6.09,61
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-06 00:00:00 UTC,3.00,30
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-06 00:00:00 UTC,5.66,57
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-07 00:00:00 UTC,4.93,49
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-07 00:00:00 UTC,7.52,75
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-07 00:00:00 UTC,3.34,33
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-07 00:00:00 UTC,5.59,56
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-08 00:00:00 UTC,3.66,37
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-08 00:00:00 UTC,5.74,57
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-08 00:00:00 UTC,2.75,28
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-08 00:00:00 UTC,5.17,52
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-09 00:00:00 UTC,4.89,49
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-09 00:00:00 UTC,7.70,77
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-09 00:00:00 UTC,3.52,35
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-09 00:00:00 UTC,6.05,60
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-10 00:00:00 UTC,3.82,38
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-10 00:00:00 UTC,5.74,57
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-10 00:00:00 UTC,2.64,26
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-10 00:00:00 UTC,4.79,48
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-11 00:00:00 UTC,4.63,46
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-11 00:00:00 UTC,7.52,75
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-11 00:00:00 UTC,3.56,36
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-11 00:00:00 UTC,6.30,63
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-12 00:00:00 UTC,4.15,42
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-12 00:00:00 UTC,6.09,61
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-12 00:00:00 UTC,2.69,27
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-12 00:00:00 UTC,4.68,47
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-13 00:00:00 UTC,4.25,42
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-13 00:00:00 UTC,7.04,70
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-13 00:00:00 UTC,3.42,34
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-13 00:00:00 UTC,6.27,63
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-14 00:00:00 UTC,4.54,45
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-14 00:00:00 UTC,6.66,67
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-14 00:00:00 UTC,2.89,29
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-14 00:00:00 UTC,4.86,49
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-15 00:00:00 UTC,3.89,39
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-15 00:00:00 UTC,6.43,64
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-15 00:00:00 UTC,3.17,32
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-15 00:00:00 UTC,5.95,60
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-16 00:00:00 UTC,4.84,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-16 00:00:00 UTC,7.25,72
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-16 00:00:00 UTC,3.17,32
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-16 00:00:00 UTC,5.28,53
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-17 00:00:00 UTC,3.68,37
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-17 00:00:00 UTC,5.92,59
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-17 00:00:00 UTC,2.89,29
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-17 00:00:00 UTC,5.47,55
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-18 00:00:00 UTC,4.94,49
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-18 00:00:00 UTC,7.63,76
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-18 00:00:00 UTC,3.42,34
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-18 00:00:00 UTC,5.78,58
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-19 00:00:00 UTC,3.69,37
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-19 00:00:00 UTC,5.70,57
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-19 00:00:00 UTC,2.69,27
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-19 00:00:00 UTC,5.00,50
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-20 00:00:00 UTC,4.81,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-20 00:00:00 UTC,7.68,77
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-20 00:00:00 UTC,3.56,36
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-20 00:00:00 UTC,6.17,62
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-21 00:00:00 UTC,3.93,39
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-21 00:00:00 UTC,5.84,58
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-21 00:00:00 UTC,2.64,26
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-21 00:00:00 UTC,4.71,47
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-22 00:00:00 UTC,4.49,45
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-22 00:00:00 UTC,7.37,74
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-22 00:00:00 UTC,3.52,35
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-22 00:00:00 UTC,6.32,63
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-23 00:00:00 UTC,4.30,43
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-23 00:00:00 UTC,6.29,63
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-23 00:00:00 UTC,2.75,28
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-23 00:00:00 UTC,4.71,47
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-24 00:00:00 UTC,4.10,41
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-24 00:00:00 UTC,6.81,68
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-24 00:00:00 UTC,3.34,33
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-24 00:00:00 UTC,6.17,62
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-25 00:00:00 UTC,4.67,47
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-25 00:00:00 UTC,6.90,69
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-25 00:00:00 UTC,3.00,30
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-25 00:00:00 UTC,5.00,50
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-26 00:00:00 UTC,3.78,38
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-26 00:00:00 UTC,6.22,62
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-26 00:00:00 UTC,3.06,31
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-26 00:00:00 UTC,5.78,58
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-27 00:00:00 UTC,4.91,49
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-27 00:00:00 UTC,7.43,74
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-27 00:00:00 UTC,3.28,33
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-27 00:00:00 UTC,5.47,55
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-28 00:00:00 UTC,3.66,37
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-28 00:00:00 UTC,5.80,58
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-28 00:00:00 UTC,2.80,28
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-28 00:00:00 UTC,5.28,53
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-29 00:00:00 UTC,4.92,49
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-29 00:00:00 UTC,7.69,77
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-29 00:00:00 UTC,3.49,35
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-29 00:00:00 UTC,5.95,59
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-06-30 00:00:00 UTC,3.76,38
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-06-30 00:00:00 UTC,5.71,57
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-06-30 00:00:00 UTC,2.65,27
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-06-30 00:00:00 UTC,4.86,49
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Storage PD Capacity,europe-west1,2026-07-01 00:00:00 UTC,4.71,47
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-central1,2026-07-01 00:00:00 UTC,7.60,76
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Capacity,us-east1,2026-07-01 00:00:00 UTC,3.56,36
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Capacity,europe-west1,2026-07-01 00:00:00 UTC,6.27,63
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-05-25 00:00:00 UTC,1.84,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-05-25 00:00:00 UTC,2.59,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-05-26 00:00:00 UTC,1.85,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-05-26 00:00:00 UTC,2.31,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-05-27 00:00:00 UTC,1.68,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-05-27 00:00:00 UTC,2.38,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-05-28 00:00:00 UTC,1.99,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-05-28 00:00:00 UTC,2.53,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-05-29 00:00:00 UTC,1.56,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-05-29 00:00:00 UTC,2.18,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-05-30 00:00:00 UTC,2.07,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-05-30 00:00:00 UTC,2.70,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-05-31 00:00:00 UTC,1.53,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-05-31 00:00:00 UTC,2.06,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-01 00:00:00 UTC,2.04,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-01 00:00:00 UTC,2.76,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-02 00:00:00 UTC,1.60,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-02 00:00:00 UTC,2.06,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-03 00:00:00 UTC,1.93,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-03 00:00:00 UTC,2.69,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-04 00:00:00 UTC,1.74,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-04 00:00:00 UTC,2.19,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-05 00:00:00 UTC,1.77,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-05 00:00:00 UTC,2.52,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-06 00:00:00 UTC,1.91,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-06 00:00:00 UTC,2.39,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-07 00:00:00 UTC,1.62,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-07 00:00:00 UTC,2.30,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-08 00:00:00 UTC,2.03,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-08 00:00:00 UTC,2.60,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-09 00:00:00 UTC,1.54,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-09 00:00:00 UTC,2.12,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-10 00:00:00 UTC,2.07,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-10 00:00:00 UTC,2.74,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-11 00:00:00 UTC,1.55,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-11 00:00:00 UTC,2.04,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-12 00:00:00 UTC,2.01,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-12 00:00:00 UTC,2.75,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-13 00:00:00 UTC,1.65,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-13 00:00:00 UTC,2.09,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-14 00:00:00 UTC,1.88,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-14 00:00:00 UTC,2.63,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-15 00:00:00 UTC,1.81,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-15 00:00:00 UTC,2.26,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-16 00:00:00 UTC,1.71,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-16 00:00:00 UTC,2.43,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-17 00:00:00 UTC,1.96,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-17 00:00:00 UTC,2.48,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-18 00:00:00 UTC,1.58,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-18 00:00:00 UTC,2.22,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-19 00:00:00 UTC,2.06,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-19 00:00:00 UTC,2.66,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-20 00:00:00 UTC,1.53,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-20 00:00:00 UTC,2.07,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-21 00:00:00 UTC,2.06,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-21 00:00:00 UTC,2.76,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-22 00:00:00 UTC,1.58,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-22 00:00:00 UTC,2.05,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-23 00:00:00 UTC,1.97,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-23 00:00:00 UTC,2.72,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-24 00:00:00 UTC,1.71,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-24 00:00:00 UTC,2.15,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-25 00:00:00 UTC,1.81,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-25 00:00:00 UTC,2.56,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-26 00:00:00 UTC,1.87,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-26 00:00:00 UTC,2.34,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-27 00:00:00 UTC,1.66,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-27 00:00:00 UTC,2.35,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-28 00:00:00 UTC,2.01,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-28 00:00:00 UTC,2.56,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-29 00:00:00 UTC,1.55,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-29 00:00:00 UTC,2.15,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-30 00:00:00 UTC,2.07,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-06-30 00:00:00 UTC,2.71,40
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-07-01 00:00:00 UTC,1.54,30
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Compute Engine,Storage PD Snapshot,us-east1,2026-07-01 00:00:00 UTC,2.05,40
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Snapshot,europe-west1,2026-06-27 00:00:00 UTC,0.63,10
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Snapshot,europe-west1,2026-06-28 00:00:00 UTC,0.60,10
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Snapshot,europe-west1,2026-06-29 00:00:00 UTC,0.57,10
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Snapshot,europe-west1,2026-06-30 00:00:00 UTC,0.65,10
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Storage PD Snapshot,europe-west1,2026-07-01 00:00:00 UTC,0.53,10
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,BigQuery,Analysis,us-east1,2026-06-25 00:00:00 UTC,19.00,18998
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,BigQuery,Analysis,us-east1,2026-06-26 00:00:00 UTC,28.12,28115
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,BigQuery,Analysis,us-east1,2026-06-27 00:00:00 UTC,26.43,26435
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,BigQuery,Analysis,us-east1,2026-06-28 00:00:00 UTC,32.95,32955
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,BigQuery,Analysis,us-east1,2026-06-29 00:00:00 UTC,35.65,35646
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,BigQuery,Analysis,us-east1,2026-06-30 00:00:00 UTC,36.30,36297
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,BigQuery,Analysis,us-east1,2026-07-01 00:00:00 UTC,45.83,45831
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-05-25 00:00:00 UTC,20.53,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-05-25 00:00:00 UTC,14.81,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-05-26 00:00:00 UTC,15.99,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-05-26 00:00:00 UTC,13.45,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-05-27 00:00:00 UTC,21.25,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-05-27 00:00:00 UTC,17.81,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-05-28 00:00:00 UTC,15.76,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-05-28 00:00:00 UTC,14.28,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-05-29 00:00:00 UTC,20.97,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-05-29 00:00:00 UTC,20.24,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-05-30 00:00:00 UTC,16.53,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-05-30 00:00:00 UTC,15.90,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-05-31 00:00:00 UTC,19.78,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-05-31 00:00:00 UTC,21.69,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-01 00:00:00 UTC,18.02,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-01 00:00:00 UTC,18.59,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-02 00:00:00 UTC,18.13,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-02 00:00:00 UTC,22.11,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-03 00:00:00 UTC,19.68,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-03 00:00:00 UTC,22.15,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-04 00:00:00 UTC,16.62,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-04 00:00:00 UTC,21.91,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-05 00:00:00 UTC,20.91,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-05 00:00:00 UTC,26.01,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-06 00:00:00 UTC,15.79,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-06 00:00:00 UTC,21.80,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-07 00:00:00 UTC,21.26,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-07 00:00:00 UTC,29.35,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-08 00:00:00 UTC,15.95,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-08 00:00:00 UTC,22.61,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-09 00:00:00 UTC,20.61,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-09 00:00:00 UTC,31.46,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-10 00:00:00 UTC,17.04,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-10 00:00:00 UTC,24.87,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-11 00:00:00 UTC,19.18,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-11 00:00:00 UTC,32.03,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-12 00:00:00 UTC,18.66,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-12 00:00:00 UTC,28.59,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-13 00:00:00 UTC,17.51,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-13 00:00:00 UTC,31.37,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-14 00:00:00 UTC,20.23,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-14 00:00:00 UTC,33.18,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-15 00:00:00 UTC,16.20,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-15 00:00:00 UTC,30.29,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-16 00:00:00 UTC,21.16,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-16 00:00:00 UTC,37.65,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-17 00:00:00 UTC,15.73,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-17 00:00:00 UTC,29.91,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-18 00:00:00 UTC,21.13,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-18 00:00:00 UTC,40.92,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-19 00:00:00 UTC,16.27,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-19 00:00:00 UTC,31.15,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-20 00:00:00 UTC,20.13,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-20 00:00:00 UTC,42.27,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-21 00:00:00 UTC,17.62,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-21 00:00:00 UTC,34.41,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-22 00:00:00 UTC,18.54,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-22 00:00:00 UTC,41.69,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-23 00:00:00 UTC,19.30,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-23 00:00:00 UTC,39.32,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-24 00:00:00 UTC,16.93,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-24 00:00:00 UTC,39.92,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-25 00:00:00 UTC,20.68,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-25 00:00:00 UTC,44.82,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-26 00:00:00 UTC,15.90,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-26 00:00:00 UTC,38.24,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-27 00:00:00 UTC,21.27,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-27 00:00:00 UTC,49.53,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-28 00:00:00 UTC,15.82,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-28 00:00:00 UTC,38.00,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-29 00:00:00 UTC,20.85,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-29 00:00:00 UTC,52.26,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-06-30 00:00:00 UTC,16.71,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-06-30 00:00:00 UTC,40.12,18
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Vertex AI,Vertex AI Online Prediction (committed use),us-east1,2026-07-01 00:00:00 UTC,19.57,24
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,Vertex AI,Vertex AI Online Prediction,us-east1,2026-07-01 00:00:00 UTC,52.48,18
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Sustained use discount,us-central1,2026-06-04 00:00:00 UTC,-145.32,0
+01A2B3-C4D5E6-F7G8H9,acme-eu-prod-1a5b,acme-eu-prod,Compute Engine,Sustained use discount,europe-west1,2026-06-09 00:00:00 UTC,-89.10,0
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Google Cloud promotional credit,europe-west1,2026-05-30 00:00:00 UTC,(60.00),0
+01A2B3-C4D5E6-F7G8H9,acme-analytics-prod-9d2e,acme-analytics-prod,BigQuery,Free trial credit,us-east1,2026-06-27 00:00:00 UTC,-12.50,0
+01A2B3-C4D5E6-F7G8H9,acme-ml-prod-4c8f,acme-ml-prod,Compute Engine,Sustained use discount,us-east1,2026-06-19 00:00:00 UTC,(200.75),0
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Sustained use discount,us-central1,2026-06-12 00:00:00 UTC,-6.42,0
+01A2B3-C4D5E6-F7G8H9,acme-shared-svc-6e3d,acme-shared-services,Compute Engine,Network Egress via Carrier Peering Network Interconnect,europe-west1,2026-06-06 00:00:00 UTC,0.0009,1
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Load Balancing,us-central1,2026-06-14 00:00:00 UTC,"1,842.67",500000

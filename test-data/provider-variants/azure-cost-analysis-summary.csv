@@ -1,0 +1,3 @@
+Month,Service name,Resource group name,Cost (USD),Currency
+2026-06,Virtual Machines,rg-prod,410.25,USD
+2026-07,Azure OpenAI,rg-ai,188.70,USD

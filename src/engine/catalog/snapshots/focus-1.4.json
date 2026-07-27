@@ -1,0 +1,986 @@
+{
+  "provider": "focus",
+  "sourceType": "FOCUS requirements model",
+  "sourceUrl": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS_Spec/tree/main/specification/requirements_model/releases/1.4",
+  "sourceVersion": "1.4",
+  "fetchedAt": "2026-07-26T00:12:59.283Z",
+  "services": [],
+  "concepts": [
+    {
+      "id": "allocatedmethoddetails",
+      "name": "AllocatedMethodDetails",
+      "dataset": "cost-and-usage",
+      "focusConcept": "allocatedmethoddetails",
+      "supportedByParser": false
+    },
+    {
+      "id": "allocatedmethodid",
+      "name": "AllocatedMethodId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "allocatedmethodid",
+      "supportedByParser": false
+    },
+    {
+      "id": "allocatedresourceid",
+      "name": "AllocatedResourceId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "allocatedresourceid",
+      "supportedByParser": false
+    },
+    {
+      "id": "allocatedresourcename",
+      "name": "AllocatedResourceName",
+      "dataset": "cost-and-usage",
+      "focusConcept": "allocatedresourcename",
+      "supportedByParser": false
+    },
+    {
+      "id": "allocatedtags",
+      "name": "AllocatedTags",
+      "dataset": "cost-and-usage",
+      "focusConcept": "allocatedtags",
+      "supportedByParser": false
+    },
+    {
+      "id": "availabilityzone",
+      "name": "AvailabilityZone",
+      "dataset": "cost-and-usage",
+      "focusConcept": "availabilityzone",
+      "supportedByParser": true
+    },
+    {
+      "id": "billedcost",
+      "name": "BilledCost",
+      "dataset": "cost-and-usage",
+      "focusConcept": "billedcost",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingaccountid",
+      "name": "BillingAccountId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "billingaccountid",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingaccountname",
+      "name": "BillingAccountName",
+      "dataset": "cost-and-usage",
+      "focusConcept": "billingaccountname",
+      "supportedByParser": false
+    },
+    {
+      "id": "billingaccounttype",
+      "name": "BillingAccountType",
+      "dataset": "cost-and-usage",
+      "focusConcept": "billingaccounttype",
+      "supportedByParser": false
+    },
+    {
+      "id": "billingcurrency",
+      "name": "BillingCurrency",
+      "dataset": "cost-and-usage",
+      "focusConcept": "billingcurrency",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingperiodend",
+      "name": "BillingPeriodEnd",
+      "dataset": "cost-and-usage",
+      "focusConcept": "billingperiodend",
+      "supportedByParser": false
+    },
+    {
+      "id": "billingperiodstart",
+      "name": "BillingPeriodStart",
+      "dataset": "cost-and-usage",
+      "focusConcept": "billingperiodstart",
+      "supportedByParser": false
+    },
+    {
+      "id": "capacityreservationid",
+      "name": "CapacityReservationId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "capacityreservationid",
+      "supportedByParser": false
+    },
+    {
+      "id": "capacityreservationstatus",
+      "name": "CapacityReservationStatus",
+      "dataset": "cost-and-usage",
+      "focusConcept": "capacityreservationstatus",
+      "supportedByParser": false
+    },
+    {
+      "id": "chargecategory",
+      "name": "ChargeCategory",
+      "dataset": "cost-and-usage",
+      "focusConcept": "chargecategory",
+      "supportedByParser": true
+    },
+    {
+      "id": "chargeclass",
+      "name": "ChargeClass",
+      "dataset": "cost-and-usage",
+      "focusConcept": "chargeclass",
+      "supportedByParser": true
+    },
+    {
+      "id": "chargedescription",
+      "name": "ChargeDescription",
+      "dataset": "cost-and-usage",
+      "focusConcept": "chargedescription",
+      "supportedByParser": true
+    },
+    {
+      "id": "chargefrequency",
+      "name": "ChargeFrequency",
+      "dataset": "cost-and-usage",
+      "focusConcept": "chargefrequency",
+      "supportedByParser": false
+    },
+    {
+      "id": "chargeperiodend",
+      "name": "ChargePeriodEnd",
+      "dataset": "cost-and-usage",
+      "focusConcept": "chargeperiodend",
+      "supportedByParser": false
+    },
+    {
+      "id": "chargeperiodstart",
+      "name": "ChargePeriodStart",
+      "dataset": "cost-and-usage",
+      "focusConcept": "chargeperiodstart",
+      "supportedByParser": true
+    },
+    {
+      "id": "commitmentdiscountcategory",
+      "name": "CommitmentDiscountCategory",
+      "dataset": "cost-and-usage",
+      "focusConcept": "commitmentdiscountcategory",
+      "supportedByParser": false
+    },
+    {
+      "id": "commitmentdiscountid",
+      "name": "CommitmentDiscountId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "commitmentdiscountid",
+      "supportedByParser": true
+    },
+    {
+      "id": "commitmentdiscountname",
+      "name": "CommitmentDiscountName",
+      "dataset": "cost-and-usage",
+      "focusConcept": "commitmentdiscountname",
+      "supportedByParser": false
+    },
+    {
+      "id": "commitmentdiscountquantity",
+      "name": "CommitmentDiscountQuantity",
+      "dataset": "cost-and-usage",
+      "focusConcept": "commitmentdiscountquantity",
+      "supportedByParser": false
+    },
+    {
+      "id": "commitmentdiscountstatus",
+      "name": "CommitmentDiscountStatus",
+      "dataset": "cost-and-usage",
+      "focusConcept": "commitmentdiscountstatus",
+      "supportedByParser": false
+    },
+    {
+      "id": "commitmentdiscounttype",
+      "name": "CommitmentDiscountType",
+      "dataset": "cost-and-usage",
+      "focusConcept": "commitmentdiscounttype",
+      "supportedByParser": false
+    },
+    {
+      "id": "commitmentdiscountunit",
+      "name": "CommitmentDiscountUnit",
+      "dataset": "cost-and-usage",
+      "focusConcept": "commitmentdiscountunit",
+      "supportedByParser": false
+    },
+    {
+      "id": "commitmentprogrameligibilitydetails",
+      "name": "CommitmentProgramEligibilityDetails",
+      "dataset": "cost-and-usage",
+      "focusConcept": "commitmentprogrameligibilitydetails",
+      "supportedByParser": false
+    },
+    {
+      "id": "consumedquantity",
+      "name": "ConsumedQuantity",
+      "dataset": "cost-and-usage",
+      "focusConcept": "consumedquantity",
+      "supportedByParser": true
+    },
+    {
+      "id": "consumedunit",
+      "name": "ConsumedUnit",
+      "dataset": "cost-and-usage",
+      "focusConcept": "consumedunit",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractapplied",
+      "name": "ContractApplied",
+      "dataset": "cost-and-usage",
+      "focusConcept": "contractapplied",
+      "supportedByParser": false
+    },
+    {
+      "id": "contractedcost",
+      "name": "ContractedCost",
+      "dataset": "cost-and-usage",
+      "focusConcept": "contractedcost",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractedunitprice",
+      "name": "ContractedUnitPrice",
+      "dataset": "cost-and-usage",
+      "focusConcept": "contractedunitprice",
+      "supportedByParser": true
+    },
+    {
+      "id": "effectivecost",
+      "name": "EffectiveCost",
+      "dataset": "cost-and-usage",
+      "focusConcept": "effectivecost",
+      "supportedByParser": true
+    },
+    {
+      "id": "hostprovidername",
+      "name": "HostProviderName",
+      "dataset": "cost-and-usage",
+      "focusConcept": "hostprovidername",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoicedetailid",
+      "name": "InvoiceDetailId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "invoicedetailid",
+      "supportedByParser": false
+    },
+    {
+      "id": "invoiceid",
+      "name": "InvoiceId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "invoiceid",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoiceissuername",
+      "name": "InvoiceIssuerName",
+      "dataset": "cost-and-usage",
+      "focusConcept": "invoiceissuername",
+      "supportedByParser": false
+    },
+    {
+      "id": "listcost",
+      "name": "ListCost",
+      "dataset": "cost-and-usage",
+      "focusConcept": "listcost",
+      "supportedByParser": true
+    },
+    {
+      "id": "listunitprice",
+      "name": "ListUnitPrice",
+      "dataset": "cost-and-usage",
+      "focusConcept": "listunitprice",
+      "supportedByParser": true
+    },
+    {
+      "id": "pricingcategory",
+      "name": "PricingCategory",
+      "dataset": "cost-and-usage",
+      "focusConcept": "pricingcategory",
+      "supportedByParser": true
+    },
+    {
+      "id": "pricingcurrency",
+      "name": "PricingCurrency",
+      "dataset": "cost-and-usage",
+      "focusConcept": "pricingcurrency",
+      "supportedByParser": true
+    },
+    {
+      "id": "pricingcurrencycontractedunitprice",
+      "name": "PricingCurrencyContractedUnitPrice",
+      "dataset": "cost-and-usage",
+      "focusConcept": "pricingcurrencycontractedunitprice",
+      "supportedByParser": false
+    },
+    {
+      "id": "pricingcurrencyeffectivecost",
+      "name": "PricingCurrencyEffectiveCost",
+      "dataset": "cost-and-usage",
+      "focusConcept": "pricingcurrencyeffectivecost",
+      "supportedByParser": false
+    },
+    {
+      "id": "pricingcurrencylistunitprice",
+      "name": "PricingCurrencyListUnitPrice",
+      "dataset": "cost-and-usage",
+      "focusConcept": "pricingcurrencylistunitprice",
+      "supportedByParser": false
+    },
+    {
+      "id": "pricingquantity",
+      "name": "PricingQuantity",
+      "dataset": "cost-and-usage",
+      "focusConcept": "pricingquantity",
+      "supportedByParser": true
+    },
+    {
+      "id": "pricingunit",
+      "name": "PricingUnit",
+      "dataset": "cost-and-usage",
+      "focusConcept": "pricingunit",
+      "supportedByParser": true
+    },
+    {
+      "id": "regionid",
+      "name": "RegionId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "regionid",
+      "supportedByParser": true
+    },
+    {
+      "id": "regionname",
+      "name": "RegionName",
+      "dataset": "cost-and-usage",
+      "focusConcept": "regionname",
+      "supportedByParser": true
+    },
+    {
+      "id": "resourceid",
+      "name": "ResourceId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "resourceid",
+      "supportedByParser": true
+    },
+    {
+      "id": "resourcename",
+      "name": "ResourceName",
+      "dataset": "cost-and-usage",
+      "focusConcept": "resourcename",
+      "supportedByParser": false
+    },
+    {
+      "id": "resourcetype",
+      "name": "ResourceType",
+      "dataset": "cost-and-usage",
+      "focusConcept": "resourcetype",
+      "supportedByParser": true
+    },
+    {
+      "id": "servicecategory",
+      "name": "ServiceCategory",
+      "dataset": "cost-and-usage",
+      "focusConcept": "servicecategory",
+      "supportedByParser": true
+    },
+    {
+      "id": "servicename",
+      "name": "ServiceName",
+      "dataset": "cost-and-usage",
+      "focusConcept": "servicename",
+      "supportedByParser": true
+    },
+    {
+      "id": "serviceprovidername",
+      "name": "ServiceProviderName",
+      "dataset": "cost-and-usage",
+      "focusConcept": "serviceprovidername",
+      "supportedByParser": true
+    },
+    {
+      "id": "servicesubcategory",
+      "name": "ServiceSubcategory",
+      "dataset": "cost-and-usage",
+      "focusConcept": "servicesubcategory",
+      "supportedByParser": true
+    },
+    {
+      "id": "skuid",
+      "name": "SkuId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "skuid",
+      "supportedByParser": true
+    },
+    {
+      "id": "skumeter",
+      "name": "SkuMeter",
+      "dataset": "cost-and-usage",
+      "focusConcept": "skumeter",
+      "supportedByParser": false
+    },
+    {
+      "id": "skupricedetails",
+      "name": "SkuPriceDetails",
+      "dataset": "cost-and-usage",
+      "focusConcept": "skupricedetails",
+      "supportedByParser": false
+    },
+    {
+      "id": "skupriceid",
+      "name": "SkuPriceId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "skupriceid",
+      "supportedByParser": true
+    },
+    {
+      "id": "subaccountid",
+      "name": "SubAccountId",
+      "dataset": "cost-and-usage",
+      "focusConcept": "subaccountid",
+      "supportedByParser": true
+    },
+    {
+      "id": "subaccountname",
+      "name": "SubAccountName",
+      "dataset": "cost-and-usage",
+      "focusConcept": "subaccountname",
+      "supportedByParser": true
+    },
+    {
+      "id": "subaccounttype",
+      "name": "SubAccountType",
+      "dataset": "cost-and-usage",
+      "focusConcept": "subaccounttype",
+      "supportedByParser": false
+    },
+    {
+      "id": "tags",
+      "name": "Tags",
+      "dataset": "cost-and-usage",
+      "focusConcept": "tags",
+      "supportedByParser": false
+    },
+    {
+      "id": "billingperiodcreated",
+      "name": "BillingPeriodCreated",
+      "dataset": "billing-period",
+      "focusConcept": "billingperiodcreated",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingperiodend",
+      "name": "BillingPeriodEnd",
+      "dataset": "billing-period",
+      "focusConcept": "billingperiodend",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingperiodlastupdated",
+      "name": "BillingPeriodLastUpdated",
+      "dataset": "billing-period",
+      "focusConcept": "billingperiodlastupdated",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingperiodstart",
+      "name": "BillingPeriodStart",
+      "dataset": "billing-period",
+      "focusConcept": "billingperiodstart",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingperiodstatus",
+      "name": "BillingPeriodStatus",
+      "dataset": "billing-period",
+      "focusConcept": "billingperiodstatus",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoiceissuername",
+      "name": "InvoiceIssuerName",
+      "dataset": "billing-period",
+      "focusConcept": "invoiceissuername",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingcurrency",
+      "name": "BillingCurrency",
+      "dataset": "contract-commitment",
+      "focusConcept": "billingcurrency",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentapplicability",
+      "name": "ContractCommitmentApplicability",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentapplicability",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentbenefitcategory",
+      "name": "ContractCommitmentBenefitCategory",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentbenefitcategory",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentcategory",
+      "name": "ContractCommitmentCategory",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentcategory",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentcost",
+      "name": "ContractCommitmentCost",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentcost",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentcreated",
+      "name": "ContractCommitmentCreated",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentcreated",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentdescription",
+      "name": "ContractCommitmentDescription",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentdescription",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentdiscountpercentage",
+      "name": "ContractCommitmentDiscountPercentage",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentdiscountpercentage",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentdurationtype",
+      "name": "ContractCommitmentDurationType",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentdurationtype",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentfulfillmentinterval",
+      "name": "ContractCommitmentFulfillmentInterval",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentfulfillmentinterval",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentid",
+      "name": "ContractCommitmentId",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentid",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentlastupdated",
+      "name": "ContractCommitmentLastUpdated",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentlastupdated",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentlifecyclestatus",
+      "name": "ContractCommitmentLifecycleStatus",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentlifecyclestatus",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentmodel",
+      "name": "ContractCommitmentModel",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentmodel",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentoffercategory",
+      "name": "ContractCommitmentOfferCategory",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentoffercategory",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentpaymentinterval",
+      "name": "ContractCommitmentPaymentInterval",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentpaymentinterval",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentpaymentmodel",
+      "name": "ContractCommitmentPaymentModel",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentpaymentmodel",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentpaymentupfrontpercentage",
+      "name": "ContractCommitmentPaymentUpfrontPercentage",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentpaymentupfrontpercentage",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentperiodend",
+      "name": "ContractCommitmentPeriodEnd",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentperiodend",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentperiodstart",
+      "name": "ContractCommitmentPeriodStart",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentperiodstart",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentquantity",
+      "name": "ContractCommitmentQuantity",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentquantity",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmenttype",
+      "name": "ContractCommitmentType",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmenttype",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractcommitmentunit",
+      "name": "ContractCommitmentUnit",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractcommitmentunit",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractid",
+      "name": "ContractId",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractid",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractperiodend",
+      "name": "ContractPeriodEnd",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractperiodend",
+      "supportedByParser": true
+    },
+    {
+      "id": "contractperiodstart",
+      "name": "ContractPeriodStart",
+      "dataset": "contract-commitment",
+      "focusConcept": "contractperiodstart",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoiceissuername",
+      "name": "InvoiceIssuerName",
+      "dataset": "contract-commitment",
+      "focusConcept": "invoiceissuername",
+      "supportedByParser": true
+    },
+    {
+      "id": "pricingcurrency",
+      "name": "PricingCurrency",
+      "dataset": "contract-commitment",
+      "focusConcept": "pricingcurrency",
+      "supportedByParser": true
+    },
+    {
+      "id": "pricingcurrencycontractcommitmentcost",
+      "name": "PricingCurrencyContractCommitmentCost",
+      "dataset": "contract-commitment",
+      "focusConcept": "pricingcurrencycontractcommitmentcost",
+      "supportedByParser": true
+    },
+    {
+      "id": "serviceprovidername",
+      "name": "ServiceProviderName",
+      "dataset": "contract-commitment",
+      "focusConcept": "serviceprovidername",
+      "supportedByParser": true
+    },
+    {
+      "id": "billedcost",
+      "name": "BilledCost",
+      "dataset": "invoice-detail",
+      "focusConcept": "billedcost",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingaccountid",
+      "name": "BillingAccountId",
+      "dataset": "invoice-detail",
+      "focusConcept": "billingaccountid",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingcurrency",
+      "name": "BillingCurrency",
+      "dataset": "invoice-detail",
+      "focusConcept": "billingcurrency",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingperiodend",
+      "name": "BillingPeriodEnd",
+      "dataset": "invoice-detail",
+      "focusConcept": "billingperiodend",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingperiodstart",
+      "name": "BillingPeriodStart",
+      "dataset": "invoice-detail",
+      "focusConcept": "billingperiodstart",
+      "supportedByParser": true
+    },
+    {
+      "id": "chargecategory",
+      "name": "ChargeCategory",
+      "dataset": "invoice-detail",
+      "focusConcept": "chargecategory",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoicedetailcreated",
+      "name": "InvoiceDetailCreated",
+      "dataset": "invoice-detail",
+      "focusConcept": "invoicedetailcreated",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoicedetaildescription",
+      "name": "InvoiceDetailDescription",
+      "dataset": "invoice-detail",
+      "focusConcept": "invoicedetaildescription",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoicedetailgrain",
+      "name": "InvoiceDetailGrain",
+      "dataset": "invoice-detail",
+      "focusConcept": "invoicedetailgrain",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoicedetailid",
+      "name": "InvoiceDetailId",
+      "dataset": "invoice-detail",
+      "focusConcept": "invoicedetailid",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoicedetaillastupdated",
+      "name": "InvoiceDetailLastUpdated",
+      "dataset": "invoice-detail",
+      "focusConcept": "invoicedetaillastupdated",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoiceid",
+      "name": "InvoiceId",
+      "dataset": "invoice-detail",
+      "focusConcept": "invoiceid",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoiceissuedate",
+      "name": "InvoiceIssueDate",
+      "dataset": "invoice-detail",
+      "focusConcept": "invoiceissuedate",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoiceissuername",
+      "name": "InvoiceIssuerName",
+      "dataset": "invoice-detail",
+      "focusConcept": "invoiceissuername",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoiceissuestatus",
+      "name": "InvoiceIssueStatus",
+      "dataset": "invoice-detail",
+      "focusConcept": "invoiceissuestatus",
+      "supportedByParser": true
+    },
+    {
+      "id": "paymentcurrency",
+      "name": "PaymentCurrency",
+      "dataset": "invoice-detail",
+      "focusConcept": "paymentcurrency",
+      "supportedByParser": true
+    },
+    {
+      "id": "paymentcurrencybilledcost",
+      "name": "PaymentCurrencyBilledCost",
+      "dataset": "invoice-detail",
+      "focusConcept": "paymentcurrencybilledcost",
+      "supportedByParser": true
+    },
+    {
+      "id": "paymentcurrencyinvoicedetailid",
+      "name": "PaymentCurrencyInvoiceDetailId",
+      "dataset": "invoice-detail",
+      "focusConcept": "paymentcurrencyinvoicedetailid",
+      "supportedByParser": true
+    },
+    {
+      "id": "paymentduedate",
+      "name": "PaymentDueDate",
+      "dataset": "invoice-detail",
+      "focusConcept": "paymentduedate",
+      "supportedByParser": true
+    },
+    {
+      "id": "paymentterms",
+      "name": "PaymentTerms",
+      "dataset": "invoice-detail",
+      "focusConcept": "paymentterms",
+      "supportedByParser": true
+    },
+    {
+      "id": "purchaseordernumber",
+      "name": "PurchaseOrderNumber",
+      "dataset": "invoice-detail",
+      "focusConcept": "purchaseordernumber",
+      "supportedByParser": true
+    },
+    {
+      "id": "referenceinvoiceid",
+      "name": "ReferenceInvoiceId",
+      "dataset": "invoice-detail",
+      "focusConcept": "referenceinvoiceid",
+      "supportedByParser": true
+    }
+  ],
+  "warnings": [],
+  "metadata": {
+    "datasetColumnCounts": {
+      "cost-and-usage": 65,
+      "billing-period": 6,
+      "contract-commitment": 30,
+      "invoice-detail": 22
+    },
+    "serviceCategories": [
+      "AI and Machine Learning",
+      "Analytics",
+      "Business Applications",
+      "Compute",
+      "Databases",
+      "Developer Tools",
+      "Identity",
+      "Integration",
+      "Internet of Things",
+      "Management and Governance",
+      "Media",
+      "Migration",
+      "Mobile",
+      "Multicloud",
+      "Networking",
+      "Other",
+      "Security",
+      "Storage",
+      "Web"
+    ],
+    "serviceSubcategories": [
+      "AI Platforms",
+      "API Management",
+      "Analytics Platforms",
+      "Application Networking",
+      "Application Platforms",
+      "Architecture",
+      "Backup Storage",
+      "Block Storage",
+      "Bots",
+      "Business Intelligence",
+      "Caching",
+      "Compliance",
+      "Containers",
+      "Content Creation",
+      "Content Delivery",
+      "Continuous Integration and Deployment",
+      "Cost Management",
+      "Data Governance",
+      "Data Migration",
+      "Data Processing",
+      "Data Warehouses",
+      "Developer Platforms",
+      "Development Environments",
+      "Disaster Recovery",
+      "End User Computing",
+      "Endpoint Management",
+      "File Storage",
+      "Gaming",
+      "Generative AI",
+      "Identity and Access Management",
+      "IoT Analytics",
+      "IoT Platforms",
+      "Ledger Databases",
+      "Machine Learning",
+      "Media Streaming",
+      "Messaging",
+      "Mixed Reality",
+      "Multicloud Integration",
+      "Natural Language Processing",
+      "Network Connectivity",
+      "Network Infrastructure",
+      "Network Routing",
+      "Network Security",
+      "NoSQL Databases",
+      "Object Storage",
+      "Observability",
+      "Other (AI and Machine Learning)",
+      "Other (Analytics)",
+      "Other (Business Applications)",
+      "Other (Compute)",
+      "Other (Databases)",
+      "Other (Developer Tools)",
+      "Other (Identity)",
+      "Other (Integration)",
+      "Other (Internet of Things)",
+      "Other (Management and Governance)",
+      "Other (Media)",
+      "Other (Migration)",
+      "Other (Mobile)",
+      "Other (Multicloud)",
+      "Other (Networking)",
+      "Other (Other)",
+      "Other (Security)",
+      "Other (Storage)",
+      "Other (Web)",
+      "Productivity and Collaboration",
+      "Quality Assurance",
+      "Quantum Compute",
+      "Relational Databases",
+      "Resource Migration",
+      "Search",
+      "Secret Management",
+      "Security Posture Management",
+      "Serverless Compute",
+      "Source Code Management",
+      "Storage Platforms",
+      "Streaming Analytics",
+      "Support",
+      "Threat Detection and Response",
+      "Time Series Databases",
+      "Virtual Machines",
+      "Workflow Orchestration"
+    ]
+  },
+  "sha256": "4b897a92560ad0f6bbf78a06722cc0e75aabe7df230bb60c49653d47bccdf443"
+}

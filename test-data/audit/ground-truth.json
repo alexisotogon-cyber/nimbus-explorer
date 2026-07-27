@@ -1,0 +1,261 @@
+{
+  "focus-6dias.csv": {
+    "format": "focus",
+    "distinctDays": 6,
+    "totalEffectiveCost": 907.2,
+    "dailyCost": 151.2,
+    "projectedMonthly": 4536,
+    "byCategory": {
+      "compute": 240,
+      "block-storage": 120,
+      "object-storage": 90,
+      "snapshot": 48,
+      "nat": 72,
+      "ip-address": 7.2,
+      "ai-ml": 150,
+      "database": 180
+    },
+    "expect": {
+      "aggregateFindings": false,
+      "trends": false,
+      "note": "Umbral documentado: hallazgos agregados requieren >=7 días distintos; tendencias >=14."
+    }
+  },
+  "focus-7dias.csv": {
+    "format": "focus",
+    "distinctDays": 7,
+    "totalEffectiveCost": 1058.4,
+    "dailyCost": 151.2,
+    "projectedMonthly": 4536,
+    "byCategory": {
+      "compute": 280,
+      "block-storage": 140,
+      "object-storage": 105,
+      "snapshot": 56,
+      "nat": 84,
+      "ip-address": 8.4,
+      "ai-ml": 175,
+      "database": 210
+    },
+    "expect": {
+      "aggregateFindings": true,
+      "trends": false,
+      "note": "Umbral documentado: hallazgos agregados requieren >=7 días distintos; tendencias >=14."
+    }
+  },
+  "focus-13dias.csv": {
+    "format": "focus",
+    "distinctDays": 13,
+    "totalEffectiveCost": 1965.6,
+    "dailyCost": 151.2,
+    "projectedMonthly": 4536,
+    "byCategory": {
+      "compute": 520,
+      "block-storage": 260,
+      "object-storage": 195,
+      "snapshot": 104,
+      "nat": 156,
+      "ip-address": 15.6,
+      "ai-ml": 325,
+      "database": 390
+    },
+    "expect": {
+      "aggregateFindings": true,
+      "trends": false
+    }
+  },
+  "focus-14dias.csv": {
+    "format": "focus",
+    "distinctDays": 14,
+    "totalEffectiveCost": 2116.8,
+    "dailyCost": 151.2,
+    "projectedMonthly": 4536,
+    "byCategory": {
+      "compute": 560,
+      "block-storage": 280,
+      "object-storage": 210,
+      "snapshot": 112,
+      "nat": 168,
+      "ip-address": 16.8,
+      "ai-ml": 350,
+      "database": 420
+    },
+    "expect": {
+      "aggregateFindings": true,
+      "trends": true
+    }
+  },
+  "focus-effective-vs-billed.csv": {
+    "format": "focus",
+    "distinctDays": 14,
+    "totalEffectiveCost": 2116.8,
+    "dailyCost": 151.2,
+    "projectedMonthly": 4536,
+    "byCategory": {
+      "compute": 560,
+      "block-storage": 280,
+      "object-storage": 210,
+      "snapshot": 112,
+      "nat": 168,
+      "ip-address": 16.8,
+      "ai-ml": 350,
+      "database": 420
+    },
+    "billedTotal": 2646,
+    "expect": {
+      "engineMustUse": "EffectiveCost",
+      "totalCostUSD": 4536,
+      "note": "BilledCost = EffectiveCost * 1.25 en TODAS las filas. Si el motor usara BilledCost el total sería 25% mayor."
+    }
+  },
+  "focus-commitment-purchase.csv": {
+    "format": "focus",
+    "distinctDays": 14,
+    "totalEffectiveCost": 3516.8,
+    "purchaseBilledCost": 5000,
+    "dailyCost": 251.2,
+    "projectedMonthly": 7536,
+    "byCategory": {
+      "compute": 1960,
+      "block-storage": 280,
+      "object-storage": 210,
+      "snapshot": 112,
+      "nat": 168,
+      "ip-address": 16.8,
+      "ai-ml": 350,
+      "database": 420
+    },
+    "expect": {
+      "purchaseRowExcluded": true,
+      "totalCostUSD": 7536,
+      "note": "La fila Purchase (BilledCost 5000, EffectiveCost 0) NO debe sumarse. Si se sumara el total subiría 5000."
+    }
+  },
+  "focus-tax-credits.csv": {
+    "format": "focus",
+    "distinctDays": 14,
+    "totalEffectiveCostAllRows": 1906.8,
+    "totalEffectiveCostUsageOnly": 2116.8,
+    "taxTotal": 210,
+    "creditTotal": -420,
+    "dailyCost": 151.2,
+    "projectedMonthly": 4536,
+    "byCategory": {
+      "compute": 560,
+      "block-storage": 280,
+      "object-storage": 210,
+      "snapshot": 112,
+      "nat": 168,
+      "ip-address": 16.8,
+      "ai-ml": 350,
+      "database": 420
+    },
+    "expect": {
+      "taxExcluded": true,
+      "creditsExcluded": "a documentar — el motor descarta cost<=0",
+      "note": "Impuestos 15/día y créditos -30/día. Si ambos se excluyen, el neto real de la factura (netCash) queda 15/día por encima y 30/día por debajo del análisis.",
+      "netCashPerDay": 136.2
+    }
+  },
+  "focus-con-subcategory.csv": {
+    "format": "focus",
+    "distinctDays": 14,
+    "totalEffectiveCost": 2116.8,
+    "dailyCost": 151.2,
+    "projectedMonthly": 4536,
+    "byCategory": {
+      "compute": 560,
+      "block-storage": 280,
+      "object-storage": 210,
+      "snapshot": 112,
+      "nat": 168,
+      "ip-address": 16.8,
+      "ai-ml": 350,
+      "database": 420
+    },
+    "expect": {
+      "pairWith": "focus-sin-subcategory.csv"
+    }
+  },
+  "focus-sin-subcategory.csv": {
+    "format": "focus",
+    "distinctDays": 14,
+    "totalEffectiveCost": 2116.8,
+    "dailyCost": 151.2,
+    "projectedMonthly": 4536,
+    "byCategory": {
+      "compute": 560,
+      "block-storage": 280,
+      "object-storage": 210,
+      "snapshot": 112,
+      "nat": 168,
+      "ip-address": 16.8,
+      "ai-ml": 350,
+      "database": 420
+    },
+    "expect": {
+      "pairWith": "focus-con-subcategory.csv",
+      "note": "La clasificación por categoría debe coincidir con el par que sí trae ServiceSubcategory."
+    }
+  },
+  "aws-cur-14dias.csv": {
+    "format": "aws",
+    "distinctDays": 14,
+    "totalEffectiveCost": 1766.8,
+    "dailyCost": 126.2,
+    "projectedMonthly": 3786,
+    "byCategory": {
+      "compute": 560,
+      "block-storage": 280,
+      "object-storage": 210,
+      "snapshot": 112,
+      "nat": 168,
+      "ip-address": 16.8,
+      "database": 420
+    },
+    "expect": {
+      "aggregateFindings": true,
+      "trends": true
+    }
+  },
+  "azure-cm-14dias.csv": {
+    "format": "azure",
+    "distinctDays": 14,
+    "totalEffectiveCost": 1512,
+    "dailyCost": 108,
+    "projectedMonthly": 3240,
+    "byCategory": {
+      "compute": 630,
+      "block-storage": 252,
+      "object-storage": 196,
+      "network-egress": 126,
+      "database": 308
+    }
+  },
+  "gcp-billing-14dias.csv": {
+    "format": "gcp",
+    "distinctDays": 14,
+    "totalEffectiveCost": 1587.6,
+    "dailyCost": 113.4,
+    "projectedMonthly": 3402,
+    "byCategory": {
+      "compute": 532,
+      "block-storage": 224,
+      "object-storage": 182,
+      "snapshot": 98,
+      "nat": 154,
+      "ip-address": 33.6,
+      "database": 364
+    }
+  },
+  "focus-ahorro-agresivo.csv": {
+    "format": "focus",
+    "distinctDays": 20,
+    "totalEffectiveCost": 49000,
+    "dailyCost": 2450,
+    "projectedMonthly": 73500,
+    "expect": {
+      "note": "Perfil diseñado para maximizar el ahorro agregado y comprobar el techo ahorro<=coste."
+    }
+  }
+}

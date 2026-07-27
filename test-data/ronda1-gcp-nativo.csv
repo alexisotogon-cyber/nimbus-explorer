@@ -1,0 +1,399 @@
+Billing Account ID,Project.id,Project.name,Service.description,Sku.description,Location.region,usage_start_time,Cost,usage_amount
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-25 00:00:00 UTC,18.80,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-25 00:00:00 UTC,5.93,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-25 00:00:00 UTC,4.21,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-25 00:00:00 UTC,11.08,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-06-25 00:00:00 UTC,3.53,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-06-25 00:00:00 UTC,2.68,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-06-25 00:00:00 UTC,1.00,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-25 00:00:00 UTC,0.90,150
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-06-25 00:00:00 UTC,1.15,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-06-25 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-06-25 00:00:00 UTC,5.11,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-06-25 00:00:00 UTC,1.03,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-06-25 00:00:00 UTC,12.41,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-06-25 00:00:00 UTC,1.95,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-06-25 00:00:00 UTC,3.61,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-06-25 00:00:00 UTC,0.66,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-06-25 00:00:00 UTC,7.20,3200000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Custom Training - A2 vCPU,us-central1,2026-06-25 00:00:00 UTC,22.73,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-06-25 00:00:00 UTC,1.92,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-25 00:00:00 UTC,-1.80,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-26 00:00:00 UTC,19.80,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-26 00:00:00 UTC,5.65,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-26 00:00:00 UTC,3.56,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-26 00:00:00 UTC,9.21,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-06-26 00:00:00 UTC,2.84,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-06-26 00:00:00 UTC,3.21,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-06-26 00:00:00 UTC,0.94,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-06-26 00:00:00 UTC,1.30,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-06-26 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-06-26 00:00:00 UTC,5.90,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-06-26 00:00:00 UTC,0.96,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-06-26 00:00:00 UTC,13.43,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-06-26 00:00:00 UTC,1.61,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-06-26 00:00:00 UTC,2.78,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-06-26 00:00:00 UTC,0.61,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-06-26 00:00:00 UTC,7.36,3200000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-06-26 00:00:00 UTC,2.14,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-27 00:00:00 UTC,19.86,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-27 00:00:00 UTC,5.84,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-27 00:00:00 UTC,3.63,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-27 00:00:00 UTC,8.65,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-06-27 00:00:00 UTC,3.22,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-06-27 00:00:00 UTC,2.64,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-06-27 00:00:00 UTC,1.19,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-06-27 00:00:00 UTC,1.44,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-06-27 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-06-27 00:00:00 UTC,6.39,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-06-27 00:00:00 UTC,0.96,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-06-27 00:00:00 UTC,11.06,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-06-27 00:00:00 UTC,1.58,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-06-27 00:00:00 UTC,3.17,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-06-27 00:00:00 UTC,0.56,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-06-27 00:00:00 UTC,6.61,3200000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Custom Training - A2 vCPU,us-central1,2026-06-27 00:00:00 UTC,23.57,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-06-27 00:00:00 UTC,2.30,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-28 00:00:00 UTC,19.86,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-28 00:00:00 UTC,6.35,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-28 00:00:00 UTC,3.97,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-28 00:00:00 UTC,8.36,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-06-28 00:00:00 UTC,3.76,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-06-28 00:00:00 UTC,3.00,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-06-28 00:00:00 UTC,1.21,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-06-28 00:00:00 UTC,0.88,150
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-06-28 00:00:00 UTC,1.42,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-06-28 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-06-28 00:00:00 UTC,6.21,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-06-28 00:00:00 UTC,1.02,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-06-28 00:00:00 UTC,11.80,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-06-28 00:00:00 UTC,1.88,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-06-28 00:00:00 UTC,2.81,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-06-28 00:00:00 UTC,0.69,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-06-28 00:00:00 UTC,6.33,3200000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-06-28 00:00:00 UTC,2.16,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-29 00:00:00 UTC,16.90,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-29 00:00:00 UTC,6.18,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-29 00:00:00 UTC,4.40,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-29 00:00:00 UTC,8.73,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-06-29 00:00:00 UTC,3.75,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-06-29 00:00:00 UTC,2.55,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-06-29 00:00:00 UTC,0.97,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-06-29 00:00:00 UTC,1.54,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-06-29 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-06-29 00:00:00 UTC,6.04,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-06-29 00:00:00 UTC,1.02,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-06-29 00:00:00 UTC,11.60,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-06-29 00:00:00 UTC,1.72,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-06-29 00:00:00 UTC,3.65,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-06-29 00:00:00 UTC,0.61,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-06-29 00:00:00 UTC,7.98,3200000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Custom Training - A2 vCPU,us-central1,2026-06-29 00:00:00 UTC,21.53,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-06-29 00:00:00 UTC,2.32,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-30 00:00:00 UTC,21.12,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-06-30 00:00:00 UTC,5.27,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-06-30 00:00:00 UTC,4.47,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-06-30 00:00:00 UTC,11.19,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-06-30 00:00:00 UTC,3.21,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-06-30 00:00:00 UTC,2.48,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-06-30 00:00:00 UTC,1.12,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-06-30 00:00:00 UTC,1.17,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-06-30 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-06-30 00:00:00 UTC,5.80,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-06-30 00:00:00 UTC,0.84,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-06-30 00:00:00 UTC,13.78,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-06-30 00:00:00 UTC,1.96,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-06-30 00:00:00 UTC,3.18,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-06-30 00:00:00 UTC,0.53,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-06-30 00:00:00 UTC,6.47,3200000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-06-30 00:00:00 UTC,2.15,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-06-30 00:00:00 UTC,-1.80,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-01 00:00:00 UTC,19.70,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-01 00:00:00 UTC,6.39,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-01 00:00:00 UTC,3.61,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-01 00:00:00 UTC,9.23,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-01 00:00:00 UTC,3.32,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-01 00:00:00 UTC,2.63,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-01 00:00:00 UTC,0.98,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-07-01 00:00:00 UTC,0.81,150
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-01 00:00:00 UTC,1.41,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-01 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-01 00:00:00 UTC,6.17,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-01 00:00:00 UTC,0.77,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-01 00:00:00 UTC,11.37,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-01 00:00:00 UTC,2.01,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-01 00:00:00 UTC,3.00,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-01 00:00:00 UTC,0.54,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-01 00:00:00 UTC,6.39,3200000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Custom Training - A2 vCPU,us-central1,2026-07-01 00:00:00 UTC,25.00,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-01 00:00:00 UTC,1.87,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-02 00:00:00 UTC,16.91,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-02 00:00:00 UTC,5.73,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-02 00:00:00 UTC,3.52,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-02 00:00:00 UTC,11.05,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-02 00:00:00 UTC,3.52,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-02 00:00:00 UTC,2.56,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-02 00:00:00 UTC,1.24,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-02 00:00:00 UTC,1.40,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-02 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-02 00:00:00 UTC,5.33,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-02 00:00:00 UTC,0.83,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-02 00:00:00 UTC,14.17,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-02 00:00:00 UTC,2.02,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-02 00:00:00 UTC,3.24,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-02 00:00:00 UTC,0.54,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-02 00:00:00 UTC,7.49,3200000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-02 00:00:00 UTC,1.94,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-03 00:00:00 UTC,16.18,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-03 00:00:00 UTC,5.46,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-03 00:00:00 UTC,4.54,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-03 00:00:00 UTC,11.21,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-03 00:00:00 UTC,3.32,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-03 00:00:00 UTC,2.90,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-03 00:00:00 UTC,1.17,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-03 00:00:00 UTC,1.22,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-03 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-03 00:00:00 UTC,5.00,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-03 00:00:00 UTC,0.85,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-03 00:00:00 UTC,13.87,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-03 00:00:00 UTC,1.96,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-03 00:00:00 UTC,2.76,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-03 00:00:00 UTC,0.62,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-03 00:00:00 UTC,7.76,3200000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Custom Training - A2 vCPU,us-central1,2026-07-03 00:00:00 UTC,25.62,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-03 00:00:00 UTC,2.01,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-04 00:00:00 UTC,15.94,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-04 00:00:00 UTC,5.78,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-04 00:00:00 UTC,3.62,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-04 00:00:00 UTC,10.52,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-04 00:00:00 UTC,3.30,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-04 00:00:00 UTC,2.74,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-04 00:00:00 UTC,1.09,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-07-04 00:00:00 UTC,0.95,150
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-04 00:00:00 UTC,1.24,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-04 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-04 00:00:00 UTC,5.43,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-04 00:00:00 UTC,0.86,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-04 00:00:00 UTC,11.64,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-04 00:00:00 UTC,2.06,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-04 00:00:00 UTC,3.58,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-04 00:00:00 UTC,0.53,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-04 00:00:00 UTC,7.16,3200000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-04 00:00:00 UTC,2.00,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-05 00:00:00 UTC,20.75,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-05 00:00:00 UTC,6.63,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-05 00:00:00 UTC,3.78,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-05 00:00:00 UTC,9.10,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-05 00:00:00 UTC,3.30,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-05 00:00:00 UTC,3.04,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-05 00:00:00 UTC,0.99,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-05 00:00:00 UTC,1.46,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-05 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-05 00:00:00 UTC,5.66,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-05 00:00:00 UTC,0.97,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-05 00:00:00 UTC,14.23,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-05 00:00:00 UTC,1.93,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-05 00:00:00 UTC,3.63,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-05 00:00:00 UTC,0.55,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-05 00:00:00 UTC,7.68,3200000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Custom Training - A2 vCPU,us-central1,2026-07-05 00:00:00 UTC,19.56,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-05 00:00:00 UTC,1.98,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-05 00:00:00 UTC,-1.80,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-06 00:00:00 UTC,20.26,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-06 00:00:00 UTC,6.73,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-06 00:00:00 UTC,4.58,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-06 00:00:00 UTC,8.45,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-06 00:00:00 UTC,3.69,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-06 00:00:00 UTC,2.81,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-06 00:00:00 UTC,1.11,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-06 00:00:00 UTC,1.39,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-06 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-06 00:00:00 UTC,5.95,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-06 00:00:00 UTC,0.87,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-06 00:00:00 UTC,14.44,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-06 00:00:00 UTC,1.75,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-06 00:00:00 UTC,3.23,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-06 00:00:00 UTC,0.65,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-06 00:00:00 UTC,8.10,3200000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-06 00:00:00 UTC,1.98,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-07 00:00:00 UTC,16.30,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-07 00:00:00 UTC,5.61,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-07 00:00:00 UTC,4.44,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-07 00:00:00 UTC,10.31,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-07 00:00:00 UTC,3.45,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-07 00:00:00 UTC,3.20,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-07 00:00:00 UTC,1.25,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-07-07 00:00:00 UTC,0.85,150
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-07 00:00:00 UTC,1.50,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-07 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-07 00:00:00 UTC,5.95,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-07 00:00:00 UTC,1.02,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-07 00:00:00 UTC,11.52,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-07 00:00:00 UTC,1.86,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-07 00:00:00 UTC,2.80,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-07 00:00:00 UTC,0.55,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-07 00:00:00 UTC,8.42,3200000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Custom Training - A2 vCPU,us-central1,2026-07-07 00:00:00 UTC,24.73,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-07 00:00:00 UTC,2.36,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-08 00:00:00 UTC,19.44,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-08 00:00:00 UTC,6.68,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-08 00:00:00 UTC,4.59,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-08 00:00:00 UTC,9.84,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-08 00:00:00 UTC,2.89,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-08 00:00:00 UTC,2.62,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-08 00:00:00 UTC,1.07,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-08 00:00:00 UTC,1.15,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-08 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-08 00:00:00 UTC,5.00,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-08 00:00:00 UTC,0.91,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-08 00:00:00 UTC,13.06,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-08 00:00:00 UTC,1.74,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-08 00:00:00 UTC,3.17,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-08 00:00:00 UTC,0.58,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-08 00:00:00 UTC,6.76,3200000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-08 00:00:00 UTC,1.99,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-09 00:00:00 UTC,16.65,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-09 00:00:00 UTC,5.40,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-09 00:00:00 UTC,4.56,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-09 00:00:00 UTC,10.03,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-09 00:00:00 UTC,3.60,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-09 00:00:00 UTC,3.06,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-09 00:00:00 UTC,0.99,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-09 00:00:00 UTC,1.24,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-09 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-09 00:00:00 UTC,5.12,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-09 00:00:00 UTC,1.03,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-09 00:00:00 UTC,12.96,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-09 00:00:00 UTC,1.97,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-09 00:00:00 UTC,2.95,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-09 00:00:00 UTC,0.55,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-09 00:00:00 UTC,7.16,3200000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Custom Training - A2 vCPU,us-central1,2026-07-09 00:00:00 UTC,21.43,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-09 00:00:00 UTC,2.09,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-10 00:00:00 UTC,18.48,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-10 00:00:00 UTC,6.60,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-10 00:00:00 UTC,4.65,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-10 00:00:00 UTC,8.92,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-10 00:00:00 UTC,3.40,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-10 00:00:00 UTC,3.16,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-10 00:00:00 UTC,0.97,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-07-10 00:00:00 UTC,0.77,150
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-10 00:00:00 UTC,1.49,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-10 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-10 00:00:00 UTC,5.30,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-10 00:00:00 UTC,0.92,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-10 00:00:00 UTC,11.06,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-10 00:00:00 UTC,1.61,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-10 00:00:00 UTC,3.41,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-10 00:00:00 UTC,0.63,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-10 00:00:00 UTC,7.70,3200000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-10 00:00:00 UTC,2.17,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-10 00:00:00 UTC,-1.80,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-11 00:00:00 UTC,15.94,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-11 00:00:00 UTC,5.79,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-11 00:00:00 UTC,4.53,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-11 00:00:00 UTC,9.12,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-11 00:00:00 UTC,3.44,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-11 00:00:00 UTC,2.87,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-11 00:00:00 UTC,1.26,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-11 00:00:00 UTC,1.42,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-11 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-11 00:00:00 UTC,5.55,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-11 00:00:00 UTC,0.95,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-11 00:00:00 UTC,12.74,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-11 00:00:00 UTC,1.83,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-11 00:00:00 UTC,3.59,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-11 00:00:00 UTC,0.57,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-11 00:00:00 UTC,7.62,3200000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Custom Training - A2 vCPU,us-central1,2026-07-11 00:00:00 UTC,25.72,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-11 00:00:00 UTC,2.41,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-12 00:00:00 UTC,19.62,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-12 00:00:00 UTC,5.60,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-12 00:00:00 UTC,4.27,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-12 00:00:00 UTC,10.88,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-12 00:00:00 UTC,3.18,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-12 00:00:00 UTC,2.99,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-12 00:00:00 UTC,0.96,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-12 00:00:00 UTC,1.20,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-12 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-12 00:00:00 UTC,5.43,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-12 00:00:00 UTC,1.02,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-12 00:00:00 UTC,12.98,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-12 00:00:00 UTC,1.72,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-12 00:00:00 UTC,3.56,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-12 00:00:00 UTC,0.67,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-12 00:00:00 UTC,8.44,3200000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-12 00:00:00 UTC,2.17,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-13 00:00:00 UTC,17.66,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-13 00:00:00 UTC,6.68,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-13 00:00:00 UTC,4.64,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-13 00:00:00 UTC,10.94,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-13 00:00:00 UTC,2.84,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-13 00:00:00 UTC,3.13,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-13 00:00:00 UTC,1.07,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-07-13 00:00:00 UTC,0.81,150
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-13 00:00:00 UTC,1.32,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-13 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-13 00:00:00 UTC,5.67,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-13 00:00:00 UTC,0.92,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-13 00:00:00 UTC,11.28,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-13 00:00:00 UTC,1.86,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-13 00:00:00 UTC,3.40,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-13 00:00:00 UTC,0.64,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-13 00:00:00 UTC,6.84,3200000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Custom Training - A2 vCPU,us-central1,2026-07-13 00:00:00 UTC,19.99,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-13 00:00:00 UTC,2.22,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-14 00:00:00 UTC,16.12,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-14 00:00:00 UTC,6.18,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-14 00:00:00 UTC,3.91,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-14 00:00:00 UTC,8.66,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-14 00:00:00 UTC,2.98,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-14 00:00:00 UTC,2.88,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-14 00:00:00 UTC,1.00,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-14 00:00:00 UTC,1.38,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-14 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-14 00:00:00 UTC,6.15,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-14 00:00:00 UTC,0.90,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-14 00:00:00 UTC,11.70,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-14 00:00:00 UTC,1.66,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-14 00:00:00 UTC,3.61,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-14 00:00:00 UTC,0.66,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-14 00:00:00 UTC,8.44,3200000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-14 00:00:00 UTC,2.30,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-15 00:00:00 UTC,16.98,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-15 00:00:00 UTC,6.02,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-15 00:00:00 UTC,4.51,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-15 00:00:00 UTC,9.73,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-15 00:00:00 UTC,2.85,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-15 00:00:00 UTC,3.29,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-15 00:00:00 UTC,1.15,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-15 00:00:00 UTC,1.24,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-15 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-15 00:00:00 UTC,4.92,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-15 00:00:00 UTC,0.95,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-15 00:00:00 UTC,13.52,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-15 00:00:00 UTC,1.73,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-15 00:00:00 UTC,3.35,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-15 00:00:00 UTC,0.67,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-15 00:00:00 UTC,7.94,3200000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Custom Training - A2 vCPU,us-central1,2026-07-15 00:00:00 UTC,21.63,8
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-15 00:00:00 UTC,2.16,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-15 00:00:00 UTC,-1.80,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Core running in Americas,us-central1,2026-07-16 00:00:00 UTC,19.21,96
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,N2 Instance Ram running in Americas,us-central1,2026-07-16 00:00:00 UTC,5.32,384
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,E2 Instance Core running in Americas,southamerica-east1,2026-07-16 00:00:00 UTC,4.39,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Core running in Americas,us-east1,2026-07-16 00:00:00 UTC,10.03,48
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,N1 Predefined Instance Ram running in Americas,us-east1,2026-07-16 00:00:00 UTC,3.13,180
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Capacity,us-central1,2026-07-16 00:00:00 UTC,3.17,500
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Storage PD Capacity,us-east1,2026-07-16 00:00:00 UTC,1.08,200
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Storage PD Snapshot,us-central1,2026-07-16 00:00:00 UTC,0.81,150
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Cloud NAT Gateway Uptime,us-central1,2026-07-16 00:00:00 UTC,1.30,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-staging-2b1c,acme-retail-staging,Compute Engine,Static Ip Charge (unused),us-east1,2026-07-16 00:00:00 UTC,0.24,24
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Standard Storage US Multi-region,us-central1,2026-07-16 00:00:00 UTC,6.30,2100
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Storage,Class A Operations,us-central1,2026-07-16 00:00:00 UTC,0.86,45000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL for PostgreSQL: Zonal - Standard db-n1-standard-4,us-central1,2026-07-16 00:00:00 UTC,11.43,24
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Cloud SQL,Cloud SQL: SSD storage,us-central1,2026-07-16 00:00:00 UTC,1.97,250
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Run,Cloud Run - CPU Allocation Time,us-central1,2026-07-16 00:00:00 UTC,3.25,620000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Cloud Functions,Invocations,us-central1,2026-07-16 00:00:00 UTC,0.59,180000
+01A2B3-C4D5E6-F7G8H9,acme-data-platform-91de,acme-data-platform,Vertex AI,Vertex AI Online Prediction - gemini-flash,us-central1,2026-07-16 00:00:00 UTC,7.02,3200000
+01A2B3-C4D5E6-F7G8H9,acme-retail-prod-7f3a,acme-retail-prod,Compute Engine,Network Internet Egress from Americas to Americas,us-central1,2026-07-16 00:00:00 UTC,1.82,180

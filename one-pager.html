@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nimbus Explorer — FinOps Agent</title>
+<style>
+  :root{
+    --surface:#ffffff; --ink:#172033; --ink-muted:#526077; --ink-faint:#8a94a6;
+    --brand:#1d4ed8; --brand-soft:#ebf2ff; --brand-strong:#173fb2;
+    --positive:#047857; --positive-soft:#ecfdf5;
+    --caution:#b45309; --caution-soft:#fffbeb;
+    --line:rgba(15,23,42,.10); --line-strong:rgba(15,23,42,.18);
+    --shell:#172033;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --surface:#141b25; --ink:#edf2f7; --ink-muted:#b2bec4; --ink-faint:#82909d;
+      --brand:#93c5fd; --brand-soft:#182f4e; --brand-strong:#bfdbfe;
+      --positive:#34d399; --positive-soft:#10241d;
+      --caution:#fbbf24; --caution-soft:#2a1f0d;
+      --line:rgba(255,255,255,.12); --line-strong:rgba(255,255,255,.20);
+      --shell:#0b0e13;
+    }
+  }
+  :root[data-theme="dark"]{
+    --surface:#141b25; --ink:#edf2f7; --ink-muted:#b2bec4; --ink-faint:#82909d;
+    --brand:#93c5fd; --brand-soft:#182f4e; --brand-strong:#bfdbfe;
+    --positive:#34d399; --positive-soft:#10241d;
+    --caution:#fbbf24; --caution-soft:#2a1f0d;
+    --line:rgba(255,255,255,.12); --line-strong:rgba(255,255,255,.20);
+    --shell:#0b0e13;
+  }
+  :root[data-theme="light"]{
+    --surface:#ffffff; --ink:#172033; --ink-muted:#526077; --ink-faint:#8a94a6;
+    --brand:#1d4ed8; --brand-soft:#ebf2ff; --brand-strong:#173fb2;
+    --positive:#047857; --positive-soft:#ecfdf5;
+    --caution:#b45309; --caution-soft:#fffbeb;
+    --line:rgba(15,23,42,.10); --line-strong:rgba(15,23,42,.18);
+    --shell:#172033;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--surface); color:var(--ink);
+    font-family:"IBM Plex Sans","Segoe UI",-apple-system,BlinkMacSystemFont,Arial,sans-serif;
+    line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  .page{ max-width:920px; margin:0 auto; padding:56px 32px 80px; }
+  .eyebrow{
+    font-size:12.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--ink-muted); margin:0 0 10px;
+  }
+  h1{ font-size:34px; font-weight:700; margin:0 0 6px; letter-spacing:-.01em; }
+  .tagline{ font-size:17px; color:var(--ink-muted); margin:0 0 28px; max-width:640px; }
+  .lede{ font-size:16.5px; color:var(--ink); max-width:680px; margin:0 0 40px; }
+  .lede strong{ color:var(--ink); }
+
+  section{ margin-bottom:44px; }
+  h2{
+    font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--ink-muted); margin:0 0 18px; padding-bottom:10px; border-bottom:1px solid var(--line);
+  }
+
+  /* Cómo funciona — horizontal steps */
+  .steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .step .num{
+    width:26px; height:26px; border-radius:50%; background:var(--brand-soft); color:var(--brand-strong);
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; margin-bottom:10px;
+  }
+  .step h3{ font-size:14.5px; font-weight:600; margin:0 0 4px; }
+  .step p{ font-size:13.5px; color:var(--ink-muted); margin:0; }
+
+  /* Arquitectura — flow */
+  .flow{ display:flex; align-items:stretch; gap:0; overflow-x:auto; }
+  .flow-col{ display:flex; flex-direction:column; gap:10px; min-width:150px; flex:1; }
+  .flow-col.center{ flex:1.15; }
+  .flow-label{ font-size:11.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:2px; }
+  .flow-node{
+    border:1px solid var(--line-strong); border-radius:8px; padding:12px 14px; font-size:13.5px;
+    background:var(--surface);
+  }
+  .flow-node.engine{ border-color:var(--positive); background:var(--positive-soft); font-weight:600; }
+  .flow-node.atlas{ border-color:var(--brand); background:var(--brand-soft); }
+  .flow-arrow{ display:flex; align-items:center; justify-content:center; color:var(--ink-faint); font-size:18px; padding:0 6px; align-self:center; }
+  .flow-note{ font-size:12px; color:var(--ink-faint); margin-top:2px; }
+
+  /* Seguridad */
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px 28px; }
+  .sec-item{ display:flex; gap:12px; }
+  .sec-mark{
+    width:8px; height:8px; border-radius:50%; background:var(--caution); margin-top:7px; flex:none;
+  }
+  .sec-item h3{ font-size:14.5px; font-weight:600; margin:0 0 3px; }
+  .sec-item p{ font-size:13.5px; color:var(--ink-muted); margin:0; }
+
+  /* Kiro timeline */
+  .timeline{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .phase{ border-left:2px solid var(--brand); padding-left:14px; }
+  .phase .tag{ font-size:11.5px; font-weight:700; color:var(--brand-strong); letter-spacing:.04em; text-transform:uppercase; }
+  .phase h3{ font-size:14.5px; font-weight:600; margin:6px 0 4px; }
+  .phase p{ font-size:13px; color:var(--ink-muted); margin:0 0 8px; }
+  .gate{ font-size:12px; color:var(--positive); font-weight:600; }
+  .gate::before{ content:"✓ "; }
+
+  /* Criterios de evaluación mapping */
+  table.criteria{ width:100%; border-collapse:collapse; font-size:13.5px; }
+  table.criteria th{ text-align:left; font-size:11.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-faint); font-weight:700; padding:0 0 8px; border-bottom:1px solid var(--line); }
+  table.criteria td{ padding:10px 0; border-bottom:1px solid var(--line); vertical-align:top; color:var(--ink-muted); }
+  table.criteria td:first-child{ color:var(--ink); font-weight:600; white-space:nowrap; padding-right:16px; }
+  table.criteria td:nth-child(2){ color:var(--ink); white-space:nowrap; padding-right:16px; }
+
+  /* Entregables */
+  .deliverables{ display:flex; flex-direction:column; gap:10px; }
+  .deliv{ display:flex; align-items:baseline; gap:10px; font-size:14px; }
+  .deliv .label{ color:var(--ink-muted); min-width:130px; }
+  .deliv .value{ color:var(--brand-strong); font-weight:600; }
+  .deliv .value.placeholder{ color:var(--caution); font-weight:500; font-style:italic; }
+
+  footer{ margin-top:56px; padding-top:20px; border-top:1px solid var(--line); font-size:12.5px; color:var(--ink-faint); display:flex; justify-content:space-between; }
+
+  @media (max-width:640px){
+    .steps{ grid-template-columns:1fr 1fr; }
+    .grid2{ grid-template-columns:1fr; }
+    .timeline{ grid-template-columns:1fr; }
+    .flow{ flex-direction:column; }
+    .flow-arrow{ transform:rotate(90deg); padding:6px 0; }
+  }
+
+  @media print{
+    body{ background:#fff; color:#172033; }
+    .page{ padding:0 8mm; max-width:none; }
+    section{ break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <p class="eyebrow">Hackathon IA Masivo AWS × Código Facilito · construido con Kiro</p>
+  <h1>Nimbus Explorer — FinOps Agent</h1>
+  <p class="tagline">Auditor de costos multi-nube (AWS, Azure, GCP) con motor de reglas determinístico y un agente conversacional, Atlas, sobre Amazon Bedrock.</p>
+
+  <p class="lede">
+    Las facturas cloud multi-proveedor son difíciles de auditar a mano y poco confiables cuando la IA
+    calcula las cifras. Nimbus separa ambos problemas: <strong>un motor determinístico calcula</strong>
+    hallazgos y rangos de ahorro a partir de tu facturación real (demo, CSV o conexión de solo lectura),
+    y <strong>Atlas explica</strong> esos resultados en lenguaje natural — nunca al revés.
+  </p>
+
+  <section>
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Elige tu nube</h3><p>AWS, Azure, GCP o FOCUS (estándar abierto multi-nube).</p></div>
+      <div class="step"><div class="num">2</div><h3>Fuente de datos</h3><p>Demo en 1 clic, subir CSV, o conectar cuenta AWS de solo lectura.</p></div>
+      <div class="step"><div class="num">3</div><h3>Motor de reglas</h3><p>Calcula hallazgos con rangos de ahorro (conservador → optimista) y supuestos declarados.</p></div>
+      <div class="step"><div class="num">4</div><h3>Reporte + Atlas</h3><p>Dashboard exportable (PDF/Excel/Markdown); chat opcional para explicar o comparar.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Arquitectura</h2>
+    <div class="flow">
+      <div class="flow-col">
+        <div class="flow-label">Fuente de datos</div>
+        <div class="flow-node">Demo sintética</div>
+        <div class="flow-node">CSV / FOCUS</div>
+        <div class="flow-node">Cost Explorer · S3<br><span class="flow-note">IAM solo lectura</span></div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-col center">
+        <div class="flow-label">Verdad financiera</div>
+        <div class="flow-node engine">Motor determinístico<br><span class="flow-note" style="color:inherit;opacity:.75">Parsers · reglas · pricing · reconciliación</span></div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-col">
+        <div class="flow-label">Salida</div>
+        <div class="flow-node">Dashboard · PDF · Excel</div>
+        <div class="flow-node atlas">Atlas (Bedrock)<br><span class="flow-note">explica, no calcula</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Modelo de seguridad</h2>
+    <div class="grid2">
+      <div class="sec-item"><div class="sec-mark"></div><div><h3>Credenciales de Bedrock</h3><p>Viven solo en variables de entorno del servidor. Nunca se piden ni se aceptan desde el navegador.</p></div></div>
+      <div class="sec-item"><div class="sec-mark"></div><div><h3>Credenciales de tu cuenta AWS</h3><p>Tus propias keys IAM de solo lectura (<code>ce:Get*</code>), usadas solo en memoria durante cada request. Nunca a disco, BD ni logs.</p></div></div>
+      <div class="sec-item"><div class="sec-mark"></div><div><h3>Ruta de 0 tokens</h3><p>Gasto, conciliación, proveedores y principales hallazgos se responden desde el reporte, sin invocar IA.</p></div></div>
+      <div class="sec-item"><div class="sec-mark"></div><div><h3>Control de consumo y modo emergencia</h3><p>Presupuesto diario/mensual, circuit breaker, rate limit. <code>ATLAS_MODE=emergency</code> corta la IA sin apagar el producto.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Uso de Kiro en el desarrollo</h2>
+    <div class="timeline">
+      <div class="phase">
+        <div class="tag">Fase 1</div>
+        <h3>Parser FOCUS 1.x</h3>
+        <p>Detección automática multi-nube sobre el estándar abierto de la FinOps Foundation.</p>
+        <div class="gate">build limpio · fixture con hallazgos</div>
+      </div>
+      <div class="phase">
+        <div class="tag">Fase 2</div>
+        <h3>Lente de gasto en IA</h3>
+        <p>Reglas para Bedrock, SageMaker y GPU siempre encendidas — nunca recomienda terminar instancias.</p>
+        <div class="gate">demo "startup IA" con 3 hallazgos esperados</div>
+      </div>
+      <div class="phase">
+        <div class="tag">Fase 3</div>
+        <h3>Conector S3 en vivo</h3>
+        <p>Lectura directa del FOCUS Data Export de AWS con credenciales mínimas.</p>
+        <div class="gate">0 credenciales en logs · errores claros</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Este documento frente a los criterios de evaluación</h2>
+    <table class="criteria">
+      <thead><tr><th>Criterio</th><th>Peso</th><th>Dónde se evidencia</th></tr></thead>
+      <tbody>
+        <tr><td>Impacto tecnológico</td><td>30%</td><td>Auditoría de costos real sobre facturación multi-nube — sección "Cómo funciona"</td></tr>
+        <tr><td>Innovación</td><td>30%</td><td>Separación motor determinístico / IA explicativa — sección "Arquitectura"</td></tr>
+        <tr><td>Software funcional y entregables</td><td>30%</td><td>Repo, demo y video (ver Entregables) + diagramas en <code>ARCHITECTURE.md</code></td></tr>
+        <tr><td>Uso de AWS y Kiro</td><td>10%</td><td>Bedrock, Cost Explorer, S3 — sección "Arquitectura"; specs por fases — sección "Uso de Kiro"</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section style="margin-bottom:8px;">
+    <h2>Entregables</h2>
+    <div class="deliverables">
+      <div class="deliv"><span class="label">Repositorio</span><span class="value placeholder">pendiente — agrega el link público de GitHub</span></div>
+      <div class="deliv"><span class="label">Demo en línea</span><span class="value placeholder">pendiente — agrega el link del deploy</span></div>
+      <div class="deliv"><span class="label">Video (≤ 5 min)</span><span class="value placeholder">pendiente — agrega el link del video</span></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>NodoBravo — FinOps Agent (Nimbus Explorer)</span>
+    <span>Hackathon IA Masivo AWS · Código Facilito · 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>

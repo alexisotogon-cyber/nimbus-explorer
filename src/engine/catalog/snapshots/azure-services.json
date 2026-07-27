@@ -1,0 +1,405 @@
+{
+  "provider": "azure",
+  "sourceType": "Azure Retail Prices API service-family snapshot",
+  "sourceUrl": "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview&meterRegion='primary'",
+  "sourceVersion": "2023-01-01-preview",
+  "fetchedAt": "2026-07-26T00:25:26.968Z",
+  "services": [
+    {
+      "id": "family:analytics",
+      "name": "Analytics",
+      "family": "Analytics",
+      "aliases": []
+    },
+    {
+      "id": "family:azurearc",
+      "name": "Azure Arc",
+      "family": "Azure Arc",
+      "aliases": []
+    },
+    {
+      "id": "family:azurecommunicationservices",
+      "name": "Azure Communication Services",
+      "family": "Azure Communication Services",
+      "aliases": []
+    },
+    {
+      "id": "family:azuresecurity",
+      "name": "Azure Security",
+      "family": "Azure Security",
+      "aliases": []
+    },
+    {
+      "id": "family:azurestack",
+      "name": "Azure Stack",
+      "family": "Azure Stack",
+      "aliases": []
+    },
+    {
+      "id": "family:compute",
+      "name": "Compute",
+      "family": "Compute",
+      "aliases": []
+    },
+    {
+      "id": "family:containers",
+      "name": "Containers",
+      "family": "Containers",
+      "aliases": []
+    },
+    {
+      "id": "family:data",
+      "name": "Data",
+      "family": "Data",
+      "aliases": []
+    },
+    {
+      "id": "family:databases",
+      "name": "Databases",
+      "family": "Databases",
+      "aliases": []
+    },
+    {
+      "id": "family:developertools",
+      "name": "Developer Tools",
+      "family": "Developer Tools",
+      "aliases": []
+    },
+    {
+      "id": "family:dynamics",
+      "name": "Dynamics",
+      "family": "Dynamics",
+      "aliases": []
+    },
+    {
+      "id": "family:gaming",
+      "name": "Gaming",
+      "family": "Gaming",
+      "aliases": []
+    },
+    {
+      "id": "family:integration",
+      "name": "Integration",
+      "family": "Integration",
+      "aliases": []
+    },
+    {
+      "id": "family:internetofthings",
+      "name": "Internet of Things",
+      "family": "Internet of Things",
+      "aliases": []
+    },
+    {
+      "id": "family:managementandgovernance",
+      "name": "Management and Governance",
+      "family": "Management and Governance",
+      "aliases": []
+    },
+    {
+      "id": "family:microsoftsyntex",
+      "name": "Microsoft Syntex",
+      "family": "Microsoft Syntex",
+      "aliases": []
+    },
+    {
+      "id": "family:mixedreality",
+      "name": "Mixed Reality",
+      "family": "Mixed Reality",
+      "aliases": []
+    },
+    {
+      "id": "family:networking",
+      "name": "Networking",
+      "family": "Networking",
+      "aliases": []
+    },
+    {
+      "id": "family:other",
+      "name": "Other",
+      "family": "Other",
+      "aliases": []
+    },
+    {
+      "id": "family:powerplatform",
+      "name": "Power Platform",
+      "family": "Power Platform",
+      "aliases": []
+    },
+    {
+      "id": "family:quantumcomputing",
+      "name": "Quantum Computing",
+      "family": "Quantum Computing",
+      "aliases": []
+    },
+    {
+      "id": "family:security",
+      "name": "Security",
+      "family": "Security",
+      "aliases": []
+    },
+    {
+      "id": "family:storage",
+      "name": "Storage",
+      "family": "Storage",
+      "aliases": []
+    },
+    {
+      "id": "family:telecommunications",
+      "name": "Telecommunications",
+      "family": "Telecommunications",
+      "aliases": []
+    },
+    {
+      "id": "family:web",
+      "name": "Web",
+      "family": "Web",
+      "aliases": []
+    },
+    {
+      "id": "family:windowsvirtualdesktop",
+      "name": "Windows Virtual Desktop",
+      "family": "Windows Virtual Desktop",
+      "aliases": []
+    }
+  ],
+  "concepts": [
+    {
+      "id": "date",
+      "name": "Date",
+      "providerField": "Date",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "servicename",
+      "name": "ServiceName",
+      "providerField": "ServiceName",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "serviceid",
+      "name": "ServiceId",
+      "providerField": "ServiceId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "servicefamily",
+      "name": "ServiceFamily",
+      "providerField": "ServiceFamily",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "consumedservice",
+      "name": "ConsumedService",
+      "providerField": "ConsumedService",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "productid",
+      "name": "ProductId",
+      "providerField": "ProductId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "productname",
+      "name": "ProductName",
+      "providerField": "ProductName",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "skuid",
+      "name": "SkuId",
+      "providerField": "SkuId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "meterid",
+      "name": "MeterId",
+      "providerField": "MeterId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "metername",
+      "name": "MeterName",
+      "providerField": "MeterName",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "metercategory",
+      "name": "MeterCategory",
+      "providerField": "MeterCategory",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "metersubcategory",
+      "name": "MeterSubCategory",
+      "providerField": "MeterSubCategory",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "resourceid",
+      "name": "ResourceId",
+      "providerField": "ResourceId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "resourcelocation",
+      "name": "ResourceLocation",
+      "providerField": "ResourceLocation",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "subscriptionid",
+      "name": "SubscriptionId",
+      "providerField": "SubscriptionId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "costinbillingcurrency",
+      "name": "CostInBillingCurrency",
+      "providerField": "CostInBillingCurrency",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "costinusd",
+      "name": "CostInUSD",
+      "providerField": "CostInUSD",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingcurrencycode",
+      "name": "BillingCurrencyCode",
+      "providerField": "BillingCurrencyCode",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "quantity",
+      "name": "Quantity",
+      "providerField": "Quantity",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "unitofmeasure",
+      "name": "UnitOfMeasure",
+      "providerField": "UnitOfMeasure",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "effectiveprice",
+      "name": "EffectivePrice",
+      "providerField": "EffectivePrice",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "paygprice",
+      "name": "PayGPrice",
+      "providerField": "PayGPrice",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "pricingmodel",
+      "name": "PricingModel",
+      "providerField": "PricingModel",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "chargetype",
+      "name": "ChargeType",
+      "providerField": "ChargeType",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "reservationid",
+      "name": "ReservationId",
+      "providerField": "ReservationId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "benefitid",
+      "name": "BenefitId",
+      "providerField": "BenefitId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoiceid",
+      "name": "InvoiceId",
+      "providerField": "InvoiceId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "billingprofileid",
+      "name": "BillingProfileId",
+      "providerField": "BillingProfileId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "invoicesectionid",
+      "name": "InvoiceSectionId",
+      "providerField": "InvoiceSectionId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    }
+  ],
+  "warnings": [
+    "Snapshot inicial limitado a las 26 familias oficiales por throttling del catálogo completo.",
+    "CI debe ejecutar el refresco sin AZURE_CATALOG_METADATA_ONLY para deduplicar servicios, productos, SKU y meters."
+  ],
+  "metadata": {
+    "serviceFamilies": [
+      "Analytics",
+      "Azure Arc",
+      "Azure Communication Services",
+      "Azure Security",
+      "Azure Stack",
+      "Compute",
+      "Containers",
+      "Data",
+      "Databases",
+      "Developer Tools",
+      "Dynamics",
+      "Gaming",
+      "Integration",
+      "Internet of Things",
+      "Management and Governance",
+      "Microsoft Syntex",
+      "Mixed Reality",
+      "Networking",
+      "Other",
+      "Power Platform",
+      "Quantum Computing",
+      "Security",
+      "Storage",
+      "Telecommunications",
+      "Web",
+      "Windows Virtual Desktop"
+    ]
+  },
+  "sha256": "76310d2bcbdee168d215fc3d4764928f6f0ff4532c85caed0b595a7bb32a9da3"
+}

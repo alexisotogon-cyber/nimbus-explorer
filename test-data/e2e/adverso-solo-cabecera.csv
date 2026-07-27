@@ -1,0 +1,1 @@
+ProviderName,BillingAccountId,BillingAccountName,SubAccountId,SubAccountName,ServiceName,ServiceCategory,ServiceSubcategory,SkuId,ChargeDescription,ChargeCategory,BilledCost,EffectiveCost,ListCost,BillingCurrency,ChargePeriodStart,ChargePeriodEnd,RegionId,ResourceId,ResourceType,ConsumedQuantity,ConsumedUnit,CommitmentDiscountId

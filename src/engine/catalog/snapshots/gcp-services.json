@@ -1,0 +1,204 @@
+{
+  "provider": "gcp",
+  "sourceType": "Google Cloud Billing Catalog API",
+  "sourceUrl": "https://cloudbilling.googleapis.com/v1/services",
+  "sourceVersion": "v1",
+  "fetchedAt": "2026-07-26T00:25:27.157Z",
+  "sha256": "045453ee43b6472b304ccac0bc5c9f6b4b82c0619ade8f446632b62041df8206",
+  "services": [],
+  "concepts": [
+    {
+      "id": "billingaccountid",
+      "name": "billing_account_id",
+      "providerField": "billing_account_id",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "projectid",
+      "name": "project.id",
+      "providerField": "project.id",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "projectname",
+      "name": "project.name",
+      "providerField": "project.name",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "projectancestrynumbers",
+      "name": "project.ancestry_numbers",
+      "providerField": "project.ancestry_numbers",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "serviceid",
+      "name": "service.id",
+      "providerField": "service.id",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "servicedescription",
+      "name": "service.description",
+      "providerField": "service.description",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "skuid",
+      "name": "sku.id",
+      "providerField": "sku.id",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "skudescription",
+      "name": "sku.description",
+      "providerField": "sku.description",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "locationregion",
+      "name": "location.region",
+      "providerField": "location.region",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "usagestarttime",
+      "name": "usage_start_time",
+      "providerField": "usage_start_time",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "usageamount",
+      "name": "usage.amount",
+      "providerField": "usage.amount",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "usageunit",
+      "name": "usage.unit",
+      "providerField": "usage.unit",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "cost",
+      "name": "cost",
+      "providerField": "cost",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "currency",
+      "name": "currency",
+      "providerField": "currency",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "currencyconversionrate",
+      "name": "currency_conversion_rate",
+      "providerField": "currency_conversion_rate",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "costtype",
+      "name": "cost_type",
+      "providerField": "cost_type",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "creditsamount",
+      "name": "credits.amount",
+      "providerField": "credits.amount",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "creditstype",
+      "name": "credits.type",
+      "providerField": "credits.type",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "resourceglobalname",
+      "name": "resource.global_name",
+      "providerField": "resource.global_name",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "resourcename",
+      "name": "resource.name",
+      "providerField": "resource.name",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "tags",
+      "name": "tags",
+      "providerField": "tags",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "xcredits",
+      "name": "x_Credits",
+      "providerField": "x_Credits",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "xconsumptionmodelid",
+      "name": "x_ConsumptionModelId",
+      "providerField": "x_ConsumptionModelId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "xconsumptionmodeldescription",
+      "name": "x_ConsumptionModelDescription",
+      "providerField": "x_ConsumptionModelDescription",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "xsubscriptioninstanceid",
+      "name": "x_SubscriptionInstanceId",
+      "providerField": "x_SubscriptionInstanceId",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "xlistcost",
+      "name": "x_ListCost",
+      "providerField": "x_ListCost",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    },
+    {
+      "id": "xeffectivecost",
+      "name": "x_EffectiveCost",
+      "providerField": "x_EffectiveCost",
+      "dataset": "cost-and-usage",
+      "supportedByParser": true
+    }
+  ],
+  "warnings": [
+    "El catálogo de GCP requiere GCP_BILLING_CATALOG_API_KEY en CI; no se inventaron servicios.",
+    "Los precios contractuales requieren Cloud Billing Pricing API o export de la cuenta."
+  ]
+}
