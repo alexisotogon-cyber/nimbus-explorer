@@ -515,7 +515,15 @@ export function tryBuildDeterministicAtlasAnswer(
     };
   }
 
+  // "¿Cuánto gasto en IA y cómo lo reduzco?" (one of the app's own suggested
+  // prompts) matches asksSpend below on "cuanto...gast" alone — the generic
+  // gross/net/credits summary can't answer "cómo lo reduzco" anyway, and it
+  // silently ignores the "en IA" qualifier. Route AI-specific spend
+  // questions to the LLM (which has AI-VIS-SPEND's real numbers AND
+  // remediation context) instead of this generic financial template.
+  const asksAboutAI = /\b(ia|ai|ml)\b|inteligencia artificial|bedrock|sagemaker|\bgpu\b/.test(query);
   const asksSpend =
+    !asksAboutAI &&
     /\b(cuanto (estoy |llevo |he )?gast|cuanto llevo de gasto|gasto acumulado|gasto total|costo total|total gastado|gasto bruto|costo bruto|gasto mensual proyectado|costo mensual proyectado|how much (am i |have i )?(spending|spent|spend)|total spend|total cost|gross spend|gross cost|projected monthly spend)/
       .test(query);
   const asksNet = /\b(neto|factura neta|net|net invoice|net bill)\b/.test(query);
