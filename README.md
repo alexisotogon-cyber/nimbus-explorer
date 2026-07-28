@@ -397,8 +397,8 @@ sesiones, rate limits y presupuestos de Atlas.
 | Entregable requerido | Estado | Enlace |
 |---|:---:|---|
 | Repositorio público con README | Listo | [GitHub](https://github.com/alexisotogon-cyber/nimbus-explorer) |
-| Demo funcional en línea | Pendiente de URL final | `PENDIENTE` |
-| Video público de máximo 5 minutos | Pendiente de grabación/publicación | `PENDIENTE` |
+| Demo funcional en línea | Listo | [nimbus-explorer.netlify.app](https://nimbus-explorer.netlify.app) |
+| Video público de máximo 5 minutos | Listo | Entregado por separado en el formulario de la convocatoria |
 | Arquitectura | Lista | [ARCHITECTURE.md](ARCHITECTURE.md) |
 | Evidencia de uso de Kiro | Lista | [.kiro](.kiro) |
 
